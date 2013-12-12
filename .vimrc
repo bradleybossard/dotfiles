@@ -127,6 +127,10 @@ set tm=500
 
 " Add a bit extra margin to the left
 set foldcolumn=1
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -175,7 +179,7 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
+" 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
 
@@ -415,3 +419,18 @@ set relativenumber
 set number  
 
 
+"set nocompatible               " be iMproved
+" filetype off                   " required!
+"
+ set rtp+=~/.vim/bundle/vundle/
+ call vundle#rc()
+"
+" " let Vundle manage Vundle
+" " required! 
+ Bundle 'gmarik/vundle'
+"
+" " My Bundles here:
+" Bundle 'wakatime/vim-wakatime'
+"
+Bundle 'git://github.com/miripiruni/CSScomb-for-Vim.git'
+Bundle 'mattn/emmet-vim'
