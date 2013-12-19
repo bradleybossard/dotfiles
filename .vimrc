@@ -418,6 +418,16 @@ endfunction
 set relativenumber 
 set number  
 
+" Refreshes all buffers (for instance, after a repo update)
+fun! RefreshAllBuffers()
+  set noconfirm
+  "git pull
+  "svn update
+  bufdo e!
+  set confirm
+endfun
+
+command R call RefreshAllBuffers()
 
 "set nocompatible               " be iMproved
 " filetype off                   " required!
