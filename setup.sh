@@ -1,5 +1,5 @@
 
-for filename in '.vimrc' '.bashrc'
+for filename in '.vimrc' '.bashrc' '.tmux.conf'
 do
   rm ~/$filename
   ln -s `pwd`/$filename ~/$filename 
