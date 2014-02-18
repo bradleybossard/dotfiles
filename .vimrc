@@ -415,7 +415,7 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
-set relativenumber 
+"set relativenumber 
 set number  
 
 " Refreshes all buffers (for instance, after a repo update)
