@@ -116,6 +116,9 @@ fi
 
 set PS1='$'
 
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 alias pythonhttp='python -m SimpleHTTPServer'
 alias rebash='source ~/.bashrc'
 
