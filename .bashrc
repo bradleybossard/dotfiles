@@ -135,13 +135,19 @@ svnlog ()
 { 
     days_since_today=$1;
     days_since_today_plus_one=`echo $1 - 1 | bc`;
-    echo $days_since_today;
-    echo $days_since_today_plus_one;
     TODAY=`date +%s`;
     START_DATE_SECONDS=`echo $TODAY - "$days_since_today * 24 * 60 *60" | bc`;
     END_DATE_SECONDS=`echo $TODAY - "$days_since_today_plus_one * 24 * 60 *60" | bc`;
-    START_DATE=`date -r $START_DATE_SECONDS +%Y-%m-%d`;
-    END_DATE=`date -r $END_DATE_SECONDS +%Y-%m-%d`;
+
+    if [[ "$OSTYPE" == "linux-gnu" ]]; then
+       DATE_COMMAND="date -d @" 
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+       DATE_COMMAND="date -r " 
+    fi
+
+    START_DATE=`$DATE_COMMAND$START_DATE_SECONDS +%Y-%m-%d`;
+    END_DATE=`$DATE_COMMAND$END_DATE_SECONDS +%Y-%m-%d`;
+    ## For Linux, it needs to be date -d @1392763114 +%Y-%m-%d
     echo $START_DATE $END_DATE;
     USERNAME='bbossard';
     svn log -r '{'$(echo $START_DATE)'}:{'$(echo $END_DATE)'}' | sed -n '1p; 2,/^-/d; /bbossard/,/^-/p'
