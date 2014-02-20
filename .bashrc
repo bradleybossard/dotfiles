@@ -153,3 +153,6 @@ svnlog ()
     USERNAME='bbossard';
     svn log -r '{'$(echo $START_DATE)'}:{'$(echo $END_DATE)'}' | sed -n '1p; 2,/^-/d; /bbossard/,/^-/p'
 }
+
+source ~/.coolcommands.sh
+
