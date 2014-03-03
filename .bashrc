@@ -122,8 +122,11 @@ export PATH=$PATH:$GOPATH/bin
 alias pythonhttp='python -m SimpleHTTPServer'
 alias rebash='source ~/.bashrc'
 
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
+# TODO(bradleybossard) : These don't seem to work on Digital Ocean virtual box.
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  alias pbcopy='xsel --clipboard --input'
+  alias pbpaste='xsel --clipboard --output'
+fi
 
 alias hisgrep='history | grep $0'
 
@@ -150,5 +153,9 @@ svnlog ()
     ## For Linux, it needs to be date -d @1392763114 +%Y-%m-%d
     echo $START_DATE $END_DATE;
     USERNAME='bbossard';
+    #CMD="svn log -r '{'$(echo $START_DATE)'}:{'$(echo $END_DATE)'}' | sed -n '1p; 2,/^-/d; /bbossard/,/^-/p'"
+    #echo $CMD
+    #`$CMD`
     svn log -r '{'$(echo $START_DATE)'}:{'$(echo $END_DATE)'}' | sed -n '1p; 2,/^-/d; /bbossard/,/^-/p'
+
 }
