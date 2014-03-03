@@ -132,8 +132,7 @@ function grepcode  {
   grep -RnsI --color=auto $1 *
 }
 
-svnlog () 
-{ 
+svnlog () { 
     days_since_today=$1;
     days_since_today_plus_one=`echo $1 - 1 | bc`;
     TODAY=`date +%s`;
