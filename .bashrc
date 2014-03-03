@@ -88,7 +88,8 @@ fi
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
+#alias l='ls -CF'
+alias l='ls -lF --group-directories-first'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -134,8 +135,7 @@ function grepcode  {
   grep -RnsI --color=auto $1 *
 }
 
-svnlog () 
-{ 
+svnlog () { 
     days_since_today=$1;
     days_since_today_plus_one=`echo $1 - 1 | bc`;
     TODAY=`date +%s`;
@@ -159,3 +159,6 @@ svnlog ()
     svn log -r '{'$(echo $START_DATE)'}:{'$(echo $END_DATE)'}' | sed -n '1p; 2,/^-/d; /bbossard/,/^-/p'
 
 }
+
+source ~/.coolcommands.sh
+
