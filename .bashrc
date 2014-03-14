@@ -132,6 +132,11 @@ function grepcode  {
   grep -RnsI --color=auto $1 *
 }
 
+set -o vi
+#bindkey -v
+
+export SVN_EDITOR=vim
+
 svnlog () { 
     days_since_today=$1;
     days_since_today_plus_one=`echo $1 - 1 | bc`;
