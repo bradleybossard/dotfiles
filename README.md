@@ -4,7 +4,7 @@ bradleybossard dotfiles
 TODO
 -
 * Absorb tips & practices from http://dotfiles.github.io/
-
+* Some good practices here http://www.danielmiessler.com/blog/enhancements-to-shell-and-vim-productivity
 
 zsh
 -
