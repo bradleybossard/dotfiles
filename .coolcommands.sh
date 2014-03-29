@@ -6,6 +6,22 @@
 #
 #
 
+function print_system_commands {
+  echo '  **  SYSTEM COMMANDS **'
+  echo 'uname -a     -- Display Linux system information'
+  echo 'uname -r     -- Display Linux system information'
+  echo 'uptime       -- Show how long the system has been running'
+  echo 'hostname     -- Show system host name'
+  echo 'hostname i-  -- Show ip address'
+  echo 'last reboot' -- Show system reboot history'
+  echo 'date'        -- Show current date and time'
+  echo 'cal'         -- Show ascii calendar for current month'
+  echo 'cal -y'      -- Show calendar for entire year'
+  echo 'w            -- Displays who is online'
+  echo 'whoami       -- Displays current username'
+  echo 'finger <user> -- Displays info about <user>'
+}
+
 function print_inet_commands {
   echo '  **  INTERNET COMMANDS **'
   echo 'nmap - Network exploration tool'
