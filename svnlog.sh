@@ -2,17 +2,14 @@
 
 escapeString()
 {
-  #newString=`echo $@ | sed 's/\:/\\\:/g' | sed 's/\+/\\\+/g' | sed 's/\-/\\\-/g'`
   newString=`echo $@ | sed 's/\:/\\\:/g' | sed 's/\-/\\\-/g'`
-  #newString=`echo $@`
   echo $newString
 }
 
-svn log | sed -n '/bbossard/,/-----$/ p' > svn.tmp
+svn log | head -800 | sed -n '/bbossard/,/-----$/ p' > svn.tmp
 dates_replace=$(cat svn.tmp | grep -v bbossard | sed 's/bbossard \| \(.*\) |/\1/')
 cat svn.tmp | grep bbossard | cut -d"|" -f3 | cut -d"(" -f1 > svn.dates.tmp
 
-#for date in $dates_replace; do 
 while read line; do
   oldDate=$line
   newDate=$(TZ="America/Los_Angeles" date --date "$oldDate")
