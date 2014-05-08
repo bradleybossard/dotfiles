@@ -9,3 +9,4 @@ install watch
 install wget
 install tmux
 install nmap
+install hub

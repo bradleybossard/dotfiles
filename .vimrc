@@ -446,4 +446,6 @@ Bundle 'git://github.com/miripiruni/CSScomb-for-Vim.git'
 Bundle 'mattn/emmet-vim'
 Bundle 'fatih/vim-go'
 Bundle 'airblade/vim-gitgutter'
-
+"Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/syntastic.git'
+Bundle 'mileszs/ack.vim'
