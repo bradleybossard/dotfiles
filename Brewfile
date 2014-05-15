@@ -10,3 +10,9 @@ install wget
 install tmux
 install nmap
 install hub
+
+# OpenGL Windowing Manager
+install glfw3
+
+# OpenGL bindings
+install glew
