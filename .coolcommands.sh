@@ -4,6 +4,8 @@
 #  http://www.howtoforge.com/useful_linux_commands
 #  http://www.danielmiessler.com/blog/collection-of-less-commonly-used-unix-commands
 #  http://linoxide.com/guide/linux-command-shelf.html
+#  http://www.pixelbeat.org/docs/linux_commands.html
+#  http://www.pixelbeat.org/cmdline.html
 #
 
 function print_system_commands {
