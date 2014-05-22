@@ -59,6 +59,17 @@ function print_disk_commands {
   echo ''
 }
 
+function print_git_commands {
+  echo '**  GIT COMMANDS **'
+  # http://gitready.com/advanced/2009/01/20/bend-logs-to-your-will.html
+  # http://www.andyjeffries.co.uk/25-tips-for-intermediate-git-users/
+}
+
+function print_mac_shortcuts {
+  echo '**  MAC SHORTCUTS **'
+  #http://mattgemmell.com/mac-keyboard-shortcuts/
+}
+
 function cool {
   print_system_commands 
   print_hardware_commands 
