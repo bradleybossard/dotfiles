@@ -47,8 +47,8 @@
 set history=700
 
 " Enable filetype plugins
-filetype plugin on
-filetype indent on
+"filetype plugin on
+"filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -158,7 +158,8 @@ endif
 set encoding=utf8
 
 " Use Unix as the standard file type
-set ffs=unix,dos,mac
+"set ffs=unix,dos,mac
+set ff=unix
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -180,8 +181,8 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
@@ -437,17 +438,28 @@ command R call RefreshAllBuffers()
 "
 " " let Vundle manage Vundle
 " " required! 
- Bundle 'gmarik/vundle'
+Bundle 'gmarik/vundle'
+
 "
 " " My Bundles here:
-" Bundle 'wakatime/vim-wakatime'
 "
-Bundle 'git://github.com/miripiruni/CSScomb-for-Vim.git'
+"Bundle 'git://github.com/miripiruni/CSScomb-for-Vim'
+"Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'fatih/vim-go'
 Bundle 'airblade/vim-gitgutter'
 "Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/syntastic.git'
+"Bundle 'scrooloose/syntastic.git'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'mileszs/ack.vim'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'rizzatti/dash.vim'
+Bundle 'klen/python-mode'
+Bundle 'ciaranm/detectindent'
+Bundle 'ervandew/supertab'
+
+
+filetype plugin on
+filetype indent on
+filetype plugin indent on
+"set runtimepath^=~/.vim/bundle/ctrlp.vim
