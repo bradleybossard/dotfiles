@@ -5,7 +5,6 @@ do
   unlink ~/$filename
   ln -s `pwd`/$filename ~/$filename 
 done
-exit
 
 # Git credentials
 GIT_AUTHOR_NAME="Bradley Bossard"
