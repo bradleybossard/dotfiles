@@ -1,0 +1,15 @@
+[user]
+	name = Bradley Bossard
+	email = bradleybossard@gmail.com
+[color]
+	ui = true
+[diff]
+	tool = vimdiff
+[merge]
+  tool = /Users/bradleybossard/scripts/diffwrap.sh 
+[difftool "gvimdiff"]
+	path = mvim
+[push]
+	default = simple
+[core]
+	autocrlf = true
