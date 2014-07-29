@@ -454,7 +454,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'mileszs/ack.vim'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'rizzatti/dash.vim'
-Bundle 'klen/python-mode'
+"Bundle 'klen/python-mode'
 Bundle 'ciaranm/detectindent'
 Bundle 'ervandew/supertab'
 
