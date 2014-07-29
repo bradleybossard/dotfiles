@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for filename in '.coolcommands.sh' '.vimrc' '.bashrc' '.tmux.conf' '.gitconfig' '.ackrc'
+for filename in '.coolcommands.sh' '.vimrc' '.bashrc' '.tmux.conf' '.gitconfig' '.ackrc' '.pylintrc'
 do
   unlink ~/$filename
   ln -s `pwd`/$filename ~/$filename 
