@@ -265,7 +265,7 @@ set viminfo^=%
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l,%c
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -452,7 +452,7 @@ Bundle 'airblade/vim-gitgutter'
 "Bundle 'scrooloose/syntastic.git'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'mileszs/ack.vim'
-Bundle 'marijnh/tern_for_vim'
+"Bundle 'marijnh/tern_for_vim'
 Bundle 'rizzatti/dash.vim'
 "Bundle 'klen/python-mode'
 Bundle 'ciaranm/detectindent'
