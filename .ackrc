@@ -1,5 +1,8 @@
 --break
 --color
+--color-filename=RED
+--color-lineno=BLUE
+--color-match=BLACK
 
 # I'm tired of grouping
 # --noheading
