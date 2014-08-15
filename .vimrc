@@ -192,6 +192,13 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+""""""""""""""""""""""""""""""""
+" => Copy selected text to/from clipboard in visual mode with Ctrl-C, Ctrl-P on OSX vim
+" that is not compiled with xterm_clipboard
+""""""""""""""""""""""""""""""""
+
+vnoremap <C-c> :w !pbcopy<CR><CR>
+vnoremap <C-v> :r !pbpaste<CR><CR>
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
