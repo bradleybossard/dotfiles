@@ -6,6 +6,7 @@ escapeString()
   echo $newString
 }
 
+svnlog () { 
 svn log | head -1000 | sed -n '/bbossard/,/-----$/ p' > svn.tmp
 dates_replace=$(cat svn.tmp | grep -v bbossard | sed 's/bbossard \| \(.*\) |/\1/')
 cat svn.tmp | grep bbossard | cut -d"|" -f3 | cut -d"(" -f1 > svn.dates.tmp
@@ -24,3 +25,4 @@ while read line; do
 done < svn.dates.tmp
 rm svn.dates.tmp
 less svn.tmp
+}
