@@ -16,7 +16,8 @@
 #declare -a arr=(".coolcommands.sh") # ".vimrc" ".bashrc" ".tmux.conf")
 #for filename in "${arr[@]}"
 
-for filename in '.coolcommands.sh' '.vimrc' '.bashrc' '.tmux.conf' '.gitconfig' '.ackrc' '.pylintrc'
+for filename in '.coolcommands.sh' '.vimrc' '.bashrc' \
+                '.tmux.conf' '.gitconfig' '.ackrc' '.pylintrc' '.svnlog.sh'
 do
   unlink ~/$filename
   ln -s `pwd`/$filename ~/$filename 
