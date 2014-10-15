@@ -10,6 +10,9 @@ install wget
 install tmux
 install nmap
 install hub
+install cairo
+install coreutils
+install ffmpeg
 
 # OpenGL Windowing Manager
 install glfw3
