@@ -6,4 +6,6 @@ export PATH=/usr/local/bin:/usr/local/opt/ruby/bin:$PATH
 defaults write com.apple.screencapture location ~/Screenshots
 killall SystemUIServer
 
+export ANDROID_HOME=~/android-sdk
+
 source ~/.bashrc
