@@ -8,4 +8,6 @@ killall SystemUIServer
 
 export ANDROID_HOME=~/android-sdk
 
+alias pwdpb="pwd | pbcopy"
+
 source ~/.bashrc
