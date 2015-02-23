@@ -127,6 +127,7 @@ export PATH=$PATH:$GOBIN
 
 alias pythonhttp='python -m SimpleHTTPServer'
 alias rebash='source ~/.bashrc'
+alias slack='cd ~/gitsrc/dotfiles; python slack.py; cd -'
 
 # TODO(bradleybossard) : These don't seem to work on Digital Ocean virtual box.
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
