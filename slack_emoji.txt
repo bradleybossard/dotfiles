@@ -3,7 +3,6 @@
 100
 1234
 8ball
-a
 ab
 abc
 abcd
@@ -48,7 +47,6 @@ articulated_lorry
 astonished
 athletic_shoe
 atm
-b
 baby
 baby_bottle
 baby_chick
@@ -414,7 +412,6 @@ information_source
 innocent
 interrobang
 iphone
-it
 izakaya_lantern
 jack_o_lantern
 japan
@@ -469,7 +466,6 @@ loudspeaker
 love_hotel
 love_letter
 low_brightness
-m
 mag
 mag_right
 mahjong
@@ -546,7 +542,6 @@ notebook
 notebook_with_decorative_cover
 notes
 nut_and_bolt
-o
 o2
 ocean
 octocat
@@ -851,7 +846,6 @@ underage
 unlock
 up
 us
-v
 vertical_traffic_light
 vhs
 vibration_mode
@@ -897,7 +891,6 @@ womans_hat
 womens
 worried
 wrench
-x
 yellow_heart
 yen
 yum
