@@ -13,6 +13,7 @@ install gifsicle
 install hub
 install cairo
 install coreutils
+install par2
 #install ffmpeg
 install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libbluray --with-libcaca --with-libquvi --with-libvidstab --with-libvo-aacenc --with-libvorbis \
                --with-libvpx --with-opencore-amr --with-openjpeg --with-openssl --with-opus --with-rtmpdump --with-schroedinger --with-speex --with-theora --with-tools --with-x265
@@ -21,9 +22,12 @@ install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with
 brew install libpng --build-from-source
 brew install -v imagemagick --build-from-source
 
+install icdiff
 
 # OpenGL Windowing Manager
 install glfw3
 
 # OpenGL bindings
 install glew
+
+install inkscape
