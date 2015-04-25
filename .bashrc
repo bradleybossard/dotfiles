@@ -125,6 +125,9 @@ export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
+# for pipsi, next-gen pip tool
+export PATH=~/.local/bin:$PATH
+
 alias pythonhttp='python -m SimpleHTTPServer'
 alias rebash='source ~/.bashrc'
 alias slack='cd ~/gitsrc/dotfiles; python slack.py; cd -'
