@@ -80,6 +80,22 @@ function print_web_shortcuts {
   echo ''
 }
 
+function print_imagemagick_shortcuts {
+  echo '** IMAGEMAGICK SHORTCUTS **'
+  echo 'convert   -delay 20   -loop 0   sphere*.gif   animatespheres.gif -- Create an animated GIF'
+  echo ''
+}
+
+function print_gifsicle_shortcuts {
+  echo '** GIFSICLE SHORTCUTS **'
+  echo 'gifsicle input.gif --scale 0.7 > output.gif  -- Scale GIF'
+}
+
+function print_tmux_shortcuts {
+  echo 'scroll   - ctrl+a ['
+  echo ''
+}
+
 function cool {
   print_system_commands 
   print_hardware_commands 
@@ -92,4 +108,7 @@ function cool {
   print_git_commands
   print_mac_shortcuts
   print_web_shortcuts
+  print_imagemagick_shortcuts
+  print_gifsicle_shortcuts 
+  print_tmux_shortcuts
 }
