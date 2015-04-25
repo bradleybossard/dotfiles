@@ -1,0 +1,14 @@
+Make new            : tmux new -s session_name
+List sessions       : tmux ls
+Attach to session   : tmux attach -t session_name
+Kill session        : tmux kill-session -t myname
+Kill all sessions   : tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill
+
+Change session menu : <mod> s 
+Rename session      : <mod> $ 
+
+New window          : <mod> c
+List windows        : <mod> w
+
+More here.
+https://gist.github.com/MohamedAlaa/2961058
