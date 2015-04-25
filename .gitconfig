@@ -13,3 +13,5 @@
 	default = simple
 [core]
 	autocrlf = input
+[alias]
+	co = checkout
