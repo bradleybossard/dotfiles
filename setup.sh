@@ -1,11 +1,10 @@
 #!/bin/bash
 
-
-for filename in '.coolcommands.sh' '.vimrc' '.bashrc' \
-                '.tmux.conf' '.gitconfig' '.ackrc' '.pylintrc' '.svnlog.sh'
-do
-  unlink ~/$filename
-  ln -s `pwd`/$filename ~/$filename 
+# Copy all dotfiles in this directory to home
+files=$(for f in \.*; do [[ -d "$f" ]] || echo "$f"; done)
+for file in $files; do
+  unlink ~/$file
+  ln -s `pwd`/$file ~/$file
 done
 
 # Setup my preferred Git configuration
@@ -28,3 +27,4 @@ vim +BundleInstall +qall
 
 echo
 echo 'Run command source ~/.bashrc'
+
