@@ -73,6 +73,7 @@ unset color_prompt force_color_prompt
 #    ;;
 #esac
 
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -131,6 +132,10 @@ export PATH=~/.local/bin:$PATH
 alias pythonhttp='python -m SimpleHTTPServer'
 alias rebash='source ~/.bashrc'
 alias slack='cd ~/gitsrc/dotfiles; python slack.py; cd -'
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
 
 # TODO(bradleybossard) : These don't seem to work on Digital Ocean virtual box.
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
