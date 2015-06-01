@@ -91,6 +91,10 @@ function print_gifsicle_shortcuts {
   echo 'gifsicle input.gif --scale 0.7 > output.gif  -- Scale GIF'
 }
 
+function print_ffmpeg_shortcuts {
+  echo 'ffmpeg -i input.flv -vf scale=320:-1 -t 10 -r 10 output.gif'
+}
+
 function print_tmux_shortcuts {
   echo 'scroll   - ctrl+a ['
   echo ''
@@ -111,4 +115,5 @@ function cool {
   print_imagemagick_shortcuts
   print_gifsicle_shortcuts 
   print_tmux_shortcuts
+  print_ffmpeg_shortcuts
 }
