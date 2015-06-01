@@ -10,8 +10,17 @@
 [difftool "gvimdiff"]
 	path = mvim
 [push]
-	default = simple
+  #default = simple
+  default = tracking
+[pull]
+     rebase = true
+[branch]
+      autosetuprebase = always
 [core]
 	autocrlf = input
 [alias]
 	co = checkout
+	st = status 
+  lol = log --oneline --graph --decorate
+  incoming = log origin/master ^master
+  outgoing = log master ^origin/master
