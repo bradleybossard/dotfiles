@@ -18,6 +18,7 @@
       autosetuprebase = always
 [core]
 	autocrlf = input
+	editor = vim
 [alias]
 	co = checkout
 	st = status 
