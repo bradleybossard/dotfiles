@@ -25,3 +25,5 @@
   lol = log --oneline --graph --decorate
   incoming = log origin/master ^master
   outgoing = log master ^origin/master
+  unstage = reset HEAD --
+  last = log -1 HEAD
