@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# TODO(bradleybossard) : Figure out how to get latest rev number of SVN repo and use that in this command so we don't sync everything.
+# git svn clone https://address-to-repo  --trunk=trunk/Program --branches=branches/*/Program --tags=tags/*/Program
+
+alias mamplog="tail -f /Applications/MAMP/logs/php_error.log"
+
 escapeString() {
   newString=`echo $@ | sed 's/\:/\\\:/g' | sed 's/\-/\\\-/g'`
   echo $newString
@@ -18,10 +23,7 @@ svnlog () {
 
     escapeOldDate=$(escapeString $oldDate)
     escapeNewDate=$(escapeString $newDate)
-    #echo $oldDate $newDate $escapeOldDate
-    #echo sed "s/$escapeOldDate/$escapeNewDate/" -i svn.tmp 
     command="sed 's/$escapeOldDate/$escapeNewDate/' -i svn.tmp"
-    #echo $command
     eval $command
   done < svn.dates.tmp
   rm svn.dates.tmp
