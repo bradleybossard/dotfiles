@@ -22,6 +22,8 @@
 [alias]
 	co = checkout
 	st = status 
+  logp = log -p
+  logpretty = log --pretty=oneline
   lol = log --oneline --graph --decorate
   incoming = log origin/master ^master
   outgoing = log master ^origin/master
