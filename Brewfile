@@ -30,4 +30,8 @@ install glfw3
 # OpenGL bindings
 install glew
 
+# Needed for tmux on OSX
+install reattach-to-user-namespace
+
+
 install inkscape
