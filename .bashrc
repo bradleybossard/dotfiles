@@ -154,6 +154,10 @@ set -o vi
 
 export SVN_EDITOR=vim
 
+export WORKON_HOME="$HOME/.virtualenvs"
+source /usr/local/bin/virtualenvwrapper.sh
+
+
 source ~/.coolcommands.sh
 source ~/.svnlog.sh
 

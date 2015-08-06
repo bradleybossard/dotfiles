@@ -17,6 +17,7 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
   alias dockershell="bash -c \"clear && DOCKER_HOST=tcp://192.168.99.100:2376 DOCKER_CERT_PATH=/Users/bradleybossard/.docker/machine/machines/dev DOCKER_TLS_VERIFY=1 $SHELL\" "
 
   source ~/.xsh
+  source ~/.ssh_aliases
 fi
 
 source ~/.bashrc
