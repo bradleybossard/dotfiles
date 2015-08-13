@@ -4,6 +4,7 @@
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
   platform='linux'
+  source /usr/local/bin/virtualenvwrapper.sh
 elif [[ "$unamestr" == 'Darwin' ]]; then
   platform='osx'
   export ANDROID_HOME=~/android-sdk
