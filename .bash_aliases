@@ -13,3 +13,12 @@ alias ports='netstat -tulanp'
 
 alias dockermem='for line in `docker ps | awk '"'"'{print $1}'"'"' | grep -v CONTAINER`; do docker ps | grep $line | awk '"'"'{printf $NF" "}'"'"' && echo $(( `cat /sys/fs/cgroup/memory/docker/$line*/memory.usage_in_bytes` / 1024 / 1024 ))MB ; done'
 alias dockerstop='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)'
+
+
+alias sass="docker run -it --rm -v \$(pwd):\$(pwd) -w \$(pwd) jbergknoff/sass"
+
+# Pretty print and colorize json files.
+alias pp='python -mjson.tool|pygmentize -l js'
+
+# Shutdown DO machine
+alias poweroff="sudo poweroff"
