@@ -29,3 +29,5 @@
   outgoing = log master ^origin/master
   unstage = reset HEAD --
   last = log -1 HEAD
+[credential]
+	helper = cache
