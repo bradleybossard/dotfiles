@@ -18,6 +18,15 @@ shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
+# Add timestamps for history commands
+HISTTIMEFORMAT="%d/%m/%y %T "
+# Create seperate directories for history commands, preserve for all time :P
+HISTFILE="${HOME}/.history/$(date -u +%Y/%m/%d.%H.%M.%S)_${HOSTNAME_SHORT}_$$"
+`mkdir -p $(dirname  $HISTFILE)`
+
+# Save to history files before issuing command
+export PROMPT_COMMAND='history -a'
+
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -148,6 +157,7 @@ alias hisgrep='history | grep $0'
 function grepcode  {
   grep -RnsI --color=auto $1 *
 }
+
 
 set -o vi
 #bindkey -v
