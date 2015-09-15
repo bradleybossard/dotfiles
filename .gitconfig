@@ -22,6 +22,9 @@
 [alias]
 	co = checkout
 	st = status 
+  br = branch
+  ci = commit
+  aci = commit -a --message
   logp = log -p
   logpretty = log --pretty=oneline
   lol = log --oneline --graph --decorate
