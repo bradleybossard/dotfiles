@@ -25,6 +25,8 @@
   br = branch
   ci = commit
   aci = commit -a --message
+  cleandry = clean -n
+  cleanreal = clean -f
   logp = log -p
   logpretty = log --pretty=oneline
   lol = log --oneline --graph --decorate
