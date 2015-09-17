@@ -10,12 +10,11 @@
 [difftool "gvimdiff"]
 	path = mvim
 [push]
-  #default = simple
   default = tracking
 [pull]
-     rebase = true
+  rebase = true
 [branch]
-      autosetuprebase = always
+  autosetuprebase = always
 [core]
 	autocrlf = input
 	editor = vim
