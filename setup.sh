@@ -10,7 +10,6 @@ done
 rm -rf ~/.vim/bundle
 #Install Vundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-git clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle
 
 #Install Vundle Bundles
 vim +BundleInstall +qall

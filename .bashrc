@@ -88,33 +88,12 @@ unset color_prompt force_color_prompt
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-#alias l='ls -CF'
-alias l='ls -lF --group-directories-first'
-
-# Android compilation commands
-alias andrun='./gradlew android:installDebug android:run'
-
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
+# Source aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -139,10 +118,6 @@ export PATH=$PATH:$GOBIN
 # for pipsi, next-gen pip tool
 export PATH=~/.local/bin:$PATH
 
-alias pythonhttp='python -m SimpleHTTPServer'
-alias rebash='source ~/.bashrc'
-alias slack='cd ~/gitsrc/dotfiles; python slack.py; cd -'
-
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
@@ -153,25 +128,9 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
   alias pbpaste='xsel --clipboard --output'
 fi
 
-alias hisgrep='history | grep $0'
-
-function grepcode  {
-  grep -RnsI --color=auto $1 *
-}
-
-
 set -o vi
-#bindkey -v
 
 export SVN_EDITOR=vim
-
-export WORKON_HOME="$HOME/.virtualenvs"
-source /usr/local/bin/virtualenvwrapper.sh
-
-
-source ~/.coolcommands.sh
-source ~/.svnlog.sh
-
 
 # Do some platform specific commands
 unamestr=`uname`
