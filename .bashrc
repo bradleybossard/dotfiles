@@ -135,7 +135,7 @@ export SVN_EDITOR=vim
 # Do some platform specific commands
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
-  source /usr/local/bin/virtualenvwrapper.sh
+  : # Do nothing
 elif [[ "$unamestr" == 'Darwin' ]]; then
   export ANDROID_HOME=~/android-sdk
   export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:/usr/local/bin:/usr/local/opt/ruby/bin:$PATH
