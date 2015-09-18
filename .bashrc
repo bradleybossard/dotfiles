@@ -20,7 +20,11 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 # Add timestamps for history commands
 HISTTIMEFORMAT="%d/%m/%y %T "
-TMUX_SESSION_NAME=`tmux display-message -p '#S'`
+
+TMUX_SESSION_NAME=""
+if { [ "$TMUX" != "" ]; } then
+  TMUX_SESSION_NAME=`tmux display-message -p '#S'`
+fi
 # Create seperate directories for history commands, preserve for all time :P
 HISTFILE="${HOME}/.history/$(date -u +%Y/%m/%d.%H.%M.%S)_${TMUX_SESSION_NAME}_${HOSTNAME}_$$"
 `mkdir -p $(dirname  $HISTFILE)`
