@@ -19,6 +19,8 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
 
   source ~/.xsh
   source ~/.ssh_aliases
+elif [[ "$unamestr" == 'CYGWIN_NT-6.1' ]]; then
+  source ~/.ssh_aliases
 fi
 
 source ~/.bashrc
