@@ -1,4 +1,5 @@
 # Assuming brew is install and we want to use the bins installed by it
+
 # we need to add /usr/local/bin to override the OSX defaults.
 
 unamestr=`uname`
@@ -26,3 +27,4 @@ fi
 source ~/.bashrc
 
 
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
