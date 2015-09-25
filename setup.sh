@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Copy all dotfiles in this directory to home
-files=$(for f in \.*; do [[ -d "$f" ]] || echo "$f"; done)
 for file in $files; do
-  unlink ~/$file
-  ln -s `pwd`/$file ~/$file
+  if [ ! -h ~/$file ]; then
+    ln -s `pwd`/$file ~/$file
+  fi
 done
 
 rm -rf ~/.vim/bundle
