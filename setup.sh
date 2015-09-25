@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Copy all dotfiles in this directory to home
-for file in $files; do
+for file in \.*; do
   if [ ! -h ~/$file ]; then
     ln -s `pwd`/$file ~/$file
   fi
