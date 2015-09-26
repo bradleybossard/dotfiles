@@ -2,7 +2,7 @@
 --color
 --color-filename=RED
 --color-lineno=BLUE
---color-match=BLACK
+--color-match=YELLOW
 
 # I'm tired of grouping
 # --noheading
