@@ -3,6 +3,7 @@
 # Copy all dotfiles in this directory to home
 for file in \.*; do
   if [ ! -h ~/$file ]; then
+    rm ~/$file
     ln -s `pwd`/$file ~/$file
   fi
 done
