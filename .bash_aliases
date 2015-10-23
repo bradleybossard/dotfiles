@@ -20,7 +20,7 @@ alias hisgrep='history | grep $0'
 alias tls='tmux list-session'
 alias tsw='tmux switch -t '
 alias tlc='tmux list-command'
-alias tat='tmux attach -t'
+alias tat='tmux attach -dt'
 alias tks='tmux kill-session -t'
 # Attach to first session
 alias tat1='tat $(tls | head -1 | cut -d: -f1)'
@@ -38,3 +38,23 @@ alias pp='python -mjson.tool | pygmentize -l js'
 
 # Shutdown DO machine
 alias poweroff="sudo poweroff"
+
+
+
+GRC=`which grc`
+if [ "$TERM" != dumb ] && [ -n GRC ]
+then
+    alias colourify="$GRC -es --colour=auto"
+    alias configure='colourify ./configure'
+    alias diff='colourify diff'
+    alias make='colourify make'
+    alias gcc='colourify gcc'
+    alias g++='colourify g++'
+    alias as='colourify as'
+    alias gas='colourify gas'
+    alias ld='colourify ld'
+    alias netstat='colourify netstat'
+    alias ping='colourify ping'
+    alias traceroute='colourify /usr/sbin/traceroute'
+fi
+
