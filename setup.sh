@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Copy all dotfiles in this directory to home
-for file in \.*; do
+for file in $(find . -maxdepth 1 -not -type d | grep "./\." | sed 's/.\/././'); do
   if [ ! -h ~/$file ]; then
     rm ~/$file
     ln -s `pwd`/$file ~/$file
