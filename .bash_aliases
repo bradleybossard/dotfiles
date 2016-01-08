@@ -31,6 +31,7 @@ alias ports='netstat -tulanp'
 alias dockermem='for line in `docker ps | awk '"'"'{print $1}'"'"' | grep -v CONTAINER`; do docker ps | grep $line | awk '"'"'{printf $NF" "}'"'"' && echo $(( `cat /sys/fs/cgroup/memory/docker/$line*/memory.usage_in_bytes` / 1024 / 1024 ))MB ; done'
 alias dockerstop='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)'
 alias dockername='cat /proc/self/cgroup | grep "docker" | sed "s/^.*\///" | tail -n1'
+alias dockershort='docker ps --format "table {{.Names}}:\t{{.Image}}\t{{.Ports}}"'
 
 alias sass="docker run -it --rm -v \$(pwd):\$(pwd) -w \$(pwd) jbergknoff/sass"
 
