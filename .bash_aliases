@@ -1,7 +1,6 @@
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
-#alias l='ls -CF'
 alias l='ls -lF --group-directories-first'
 
 # Android compilation commands
@@ -27,7 +26,6 @@ alias tat1='tat $(tls | head -1 | cut -d: -f1)'
 
 alias ports='netstat -tulanp'
 
-
 alias sass="docker run -it --rm -v \$(pwd):\$(pwd) -w \$(pwd) jbergknoff/sass"
 
 # Pretty print and colorize json files.
@@ -35,8 +33,6 @@ alias pp='python -mjson.tool | pygmentize -l js'
 
 # Shutdown DO machine
 alias poweroff="sudo poweroff"
-
-
 
 GRC=`which grc`
 if [ "$TERM" != dumb ] && [ -n GRC ]
@@ -55,12 +51,39 @@ then
     alias traceroute='colourify /usr/sbin/traceroute'
 fi
 
-
 # TIP: To have a ' inside alias, replace it with '"'"'
-alias dockermem='for line in `docker ps | awk '"'"'{print $1}'"'"' | grep -v CONTAINER`; do docker ps | grep $line | awk '"'"'{printf $NF" "}'"'"' && echo $(( `cat /sys/fs/cgroup/memory/docker/$line*/memory.usage_in_bytes` / 1024 / 1024 ))MB ; done'
+# Docker top - Lists all docker containers with top-like stats, mem, cpu, io
+alias dockertop='docker stats $(docker ps --format '"'"'{{.Names}}'"'"')'
+# Stop and remove all running containers
 alias dockerstop='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)'
-alias dockername='cat /proc/self/cgroup | grep "docker" | sed "s/^.*\///" | tail -n1'
-alias dockershort='docker ps --format "table {{.Names}}:\t{{.Image}}\t{{.Ports}}"'
-
+# Short ps listing without container IDS, etc
+alias dockerpsshort='docker ps --format "table {{.Names}}:\t{{.Image}}\t{{.Ports}}"'
+# Delete all stopped containers
+alias dockerrmstopped='docker rm -v `docker ps -a -q -f status=exited`'
+# Cleanup dangling containers and stuff not in use.
 alias dockercleanup='sh docker-cleanup.sh'
+
+# List docker containers matching a regex expression
+function dockergrep {
+  for i in $(docker ps -a | grep "$1" | tr -s ' ' | cut -f2 -d" "); do
+    echo $i;
+  done
+}
+
+# List urls set as environment variables.  Useful when running containers with jwilder/nginx-proxy
+function dockerurls {
+  RED='\033[0;31m'
+  YELLOW='\033[1;33m'
+  NC='\033[0m' # No Color
+
+  containers=$(docker ps --format '{{.Names}}');
+  for container in $containers; do
+    #echo $RED$container;
+    printf "${YELLOW}${container}${NC}\n"
+    docker inspect $container | grep \.com\" | tr -s ' ';
+  done
+}
+
+# This alias can be used inside a container to get it's name
+alias dockername='cat /proc/self/cgroup | grep "docker" | sed "s/^.*\///" | tail -n1'
 
