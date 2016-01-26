@@ -70,7 +70,8 @@ function dockergrep {
   done
 }
 
-# List urls set as environment variables.  Useful when running containers with jwilder/nginx-proxy
+# List urls/ports environment variables for containers that have them.
+# Useful when running containers with jwilder/nginx-proxy
 function dockerurls {
   RED='\033[0;31m'
   YELLOW='\033[1;33m'
@@ -78,10 +79,13 @@ function dockerurls {
 
   containers=$(docker ps --format '{{.Names}}');
   for container in $containers; do
-    #echo $RED$container;
-    printf "${YELLOW}${container}${NC}\n"
-    docker inspect $container | grep \.com\" | tr -s ' ';
-    docker inspect $container | grep -i hostport | head -1;
+    count=$(docker inspect $container | grep \.com\" | wc -l);
+    if [ $count -ne 0 ]; then
+      printf "${YELLOW}${container}${NC}\n"
+      # Grep urls and filter out LETS_ENCRYPT_EMAIL lines
+      docker inspect $container | grep \.com\" | grep -v EMAIL | tr -s ' ';
+      docker inspect $container | grep -i hostport | tr -s ' ' | head -1;
+    fi
   done
 }
 
