@@ -81,6 +81,7 @@ function dockerurls {
     #echo $RED$container;
     printf "${YELLOW}${container}${NC}\n"
     docker inspect $container | grep \.com\" | tr -s ' ';
+    docker inspect $container | grep -i hostport | head -1;
   done
 }
 
