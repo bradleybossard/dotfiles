@@ -121,8 +121,8 @@ export PATH=$PATH:$GOBIN
 # for pipsi, next-gen pip tool
 export PATH=~/.local/bin:$PATH
 
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
+if [ -e ~/.git-completion ]; then
+  source ~/.git-completion
 fi
 
 # TODO(bradleybossard) : These don't seem to work on Digital Ocean virtual box.
