@@ -31,6 +31,9 @@ alias sass="docker run -it --rm -v \$(pwd):\$(pwd) -w \$(pwd) jbergknoff/sass"
 # Pretty print and colorize json files.
 alias pp='python -mjson.tool | pygmentize -l js'
 
+# Python simple HTTP server
+alias pyhttp='python -m SimpleHTTPServer'
+
 # Shutdown DO machine
 alias poweroff="sudo poweroff"
 
