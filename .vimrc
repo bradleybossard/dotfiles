@@ -464,6 +464,7 @@ Bundle 'rizzatti/dash.vim'
 "Bundle 'klen/python-mode'
 Bundle 'ciaranm/detectindent'
 Bundle 'ervandew/supertab'
+Bundle 'easymotion/vim-easymotion'
 
 
 filetype plugin on
