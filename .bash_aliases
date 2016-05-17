@@ -92,6 +92,40 @@ function dockerurls {
   done
 }
 
+# This function iterates over existing containers and determines the max
+# value of exposed port numbers
+function dockermaxopenport {
+  # Array for collecting exposed port numbers
+  ports=()
+  containers=$(docker ps --format '{{.Names}}');
+  # Create array of port numbers
+  for container in $containers; do
+    ports+=$(echo "$(docker port $container | cut -d: -f2) ")
+  done
+  # Find max and return max
+  max=0
+  for n in ${ports[@]} ; do
+      ((n > max)) && max=$n
+  done
+  echo $max
+}
+
+function dockerrun {
+  # Get highest number port of running containers
+  maxport=$(dockermaxopenport)
+  # Increment port number
+  maxport=$(echo $maxport + 1 | bc)
+  # Check if there are atleast 2 arguments
+	if [ $# -lt 2 ]
+		then
+			echo "Usage: dockerrun <container-name> <container-path>"
+			echo "  ex. dockerrun ubuntu-test ubuntu/ubuntu"
+		  return
+	fi
+  # Launch container
+  docker run -it --rm -v $PWD:/src -p $maxport:8000 --name $1 $2
+}
+
 # This alias can be used inside a container to get it's name
 alias dockername='cat /proc/self/cgroup | grep "docker" | sed "s/^.*\///" | tail -n1'
 
