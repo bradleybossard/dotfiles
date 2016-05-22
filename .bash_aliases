@@ -110,20 +110,40 @@ function dockermaxopenport {
   echo $max
 }
 
+# Shortcut for workflow I often use.
+# docker run -it --rm -v $PWD:/src -p port:8000 --name <same-as-current-dir> <container-path>
+# This function automatically starts the container on the next highest port of the current
+# running containers, mounts the current directory and names it the same as the current directory.
 function dockerrun {
   # Get highest number port of running containers
   maxport=$(dockermaxopenport)
   # Increment port number
   maxport=$(echo $maxport + 1 | bc)
+  # Get current directory name
+  dirname=${PWD##*/} 
   # Check if there are atleast 2 arguments
-	if [ $# -lt 2 ]
+	#if [ $# -lt 2 ]
+	if [ $# -lt 1 ]
 		then
-			echo "Usage: dockerrun <container-name> <container-path>"
-			echo "  ex. dockerrun ubuntu-test ubuntu/ubuntu"
+			echo "Usage: dockerrun <container-path>"
+			echo "  ex. dockerrun ubuntu/ubuntu"
 		  return
 	fi
   # Launch container
-  docker run -it --rm -v $PWD:/src -p $maxport:8000 --name $1 $2
+  docker run -it --rm -v $PWD:/src -p $maxport:8000 --name $dirname $1
+}
+
+# Shortcut for starting bash shell in last started container
+function dockerbash {
+  # Get last started container id
+  last_container_id=$(docker ps -l -q)
+  docker exec -it $last_container_id bash
+}
+
+# Shortcut to build a Docker image and named the same as current directory
+function dockerbuild {
+  dirname=${PWD##*/} 
+  docker build -t $dirname .
 }
 
 # This alias can be used inside a container to get it's name
