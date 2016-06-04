@@ -130,7 +130,9 @@ function dockerrun {
 		  return
 	fi
   # Launch container
-  docker run -it --rm -v $PWD:/src -p $maxport:8000 --name $dirname $1
+  cmd="docker run -it --rm -v $PWD:/src -p $maxport:8000 --name $dirname $1"
+  echo $cmd
+  $cmd
 }
 
 # Shortcut for starting bash shell in last started container
