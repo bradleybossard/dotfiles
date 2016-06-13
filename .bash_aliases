@@ -130,16 +130,15 @@ function dockerrun {
 		  return
 	fi
   # Launch container
-  cmd="docker run -it --rm -v $PWD:/src -p $maxport:8000 --name $dirname $1"
+  cmd="docker run -it --rm -v $PWD:/src -p $maxport:8080 --name $dirname $1"
   echo $cmd
   $cmd
 }
 
-# Shortcut for starting bash shell in last started container
+# Shortcut for starting bash shell based on current directory name
 function dockerbash {
-  # Get last started container id
-  last_container_id=$(docker ps -l -q)
-  docker exec -it $last_container_id bash
+  dirname=${PWD##*/} 
+  docker exec -it $dirname bash
 }
 
 # Shortcut to build a Docker image and named the same as current directory
