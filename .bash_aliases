@@ -146,7 +146,9 @@ function dockerbash {
 # Shortcut to build a Docker image and named the same as current directory
 function dockerbuild {
   dirname=${PWD##*/} 
-  docker build -t $dirname .
+  cmd="docker build -t $dirname ."
+  echo $cmd
+  $cmd
 }
 
 # This alias can be used inside a container to get it's name
