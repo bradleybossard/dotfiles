@@ -138,7 +138,9 @@ function dockerrun {
 # Shortcut for starting bash shell based on current directory name
 function dockerbash {
   dirname=${PWD##*/} 
-  docker exec -it $dirname bash
+  cmd="docker exec -it $dirname bash"
+  echo $cmd
+  $cmd
 }
 
 # Shortcut to build a Docker image and named the same as current directory
