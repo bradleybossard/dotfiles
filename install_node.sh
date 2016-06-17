@@ -7,9 +7,9 @@ libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
 
 npm install -g webpack \
                webpack-dev-server \
-							 caniuse-cmd \
-							 st \
-							 wintersmith \
+               caniuse-cmd \
+               st \
+               wintersmith \
                bower \
                gulp \
                grunt \
