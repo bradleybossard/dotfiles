@@ -197,3 +197,11 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
+if hash ag 1>/dev/null; then
+  tag() {
+    command tag "$@";
+    source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null
+  }
+  alias ag='tag'
+fi
