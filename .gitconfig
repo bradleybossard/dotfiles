@@ -24,7 +24,7 @@
 	st = status 
   br = branch
   ci = commit
-  aci = commit -a --message
+  ac = commit -a --message
   cleandry = clean -n
   cleanreal = clean -f
   logp = log -p

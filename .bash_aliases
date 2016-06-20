@@ -92,6 +92,65 @@ function dockerurls {
   done
 }
 
+# This function iterates over existing containers and determines the max
+# value of exposed port numbers
+function dockermaxopenport {
+  # Array for collecting exposed port numbers
+  ports=()
+  containers=$(docker ps --format '{{.Names}}');
+  # Create array of port numbers
+  for container in $containers; do
+    ports+=$(echo "$(docker port $container | cut -d: -f2) ")
+  done
+  # Find max and return max
+  max=0
+  for n in ${ports[@]} ; do
+      ((n > max)) && max=$n
+  done
+  echo $max
+}
+
+# Shortcut for workflow I often use.
+# docker run -it --rm -v $PWD:/src -p port:8000 --name <same-as-current-dir> <container-path>
+# This function automatically starts the container on the next highest port of the current
+# running containers, mounts the current directory and names it the same as the current directory.
+function dockerrun {
+  # Get highest number port of running containers
+  maxport=$(dockermaxopenport)
+  # Increment port number
+  maxport=$(echo $maxport + 1 | bc)
+  # Get current directory name
+  dirname=${PWD##*/} 
+  # Check if there are atleast 2 arguments
+	#if [ $# -lt 2 ]
+	if [ $# -lt 1 ]
+		then
+			echo "Usage: dockerrun <container-path>"
+			echo "  ex. dockerrun ubuntu/ubuntu"
+		  return
+	fi
+  # Launch container
+  cmd="docker run -it --rm -v $PWD:/src -p $maxport:8080 --name $dirname $1"
+  echo $cmd
+  $cmd
+}
+
+# Shortcut for starting bash shell based on current directory name
+function dockerbash {
+  dirname=${PWD##*/} 
+  cmd="docker exec -it $dirname bash"
+  echo $cmd
+  $cmd
+}
+
+# Shortcut to build a Docker image and named the same as current directory
+function dockerbuild {
+  dirname=${PWD##*/} 
+  cmd="docker build -t $dirname ."
+  echo $cmd
+  $cmd
+}
+
 # This alias can be used inside a container to get it's name
 alias dockername='cat /proc/self/cgroup | grep "docker" | sed "s/^.*\///" | tail -n1'
 
