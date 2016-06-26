@@ -23,4 +23,5 @@ npm install -g webpack \
                eslint \
                browserify \
                watchify \
-               babelify
+               babelify \
+               svgo
