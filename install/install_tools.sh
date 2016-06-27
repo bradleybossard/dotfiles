@@ -1,6 +1,7 @@
 # Research for securing Ubuntu servers
 # http://www.codelitt.com/blog/my-first-10-minutes-on-a-server-primer-for-securing-ubuntu/
 # https://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers
+# https://www.inversoft.com/guides/2016-guide-to-user-data-security
 
 user=bradleybossard
 
