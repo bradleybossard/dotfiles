@@ -164,4 +164,23 @@ alias djmm='python manage.py makemigrations'
 alias djm='python manage.py migrate'
 alias djme='python manage.py makemigrations --empty'
 
+function nginxroute {
+  dirname=${PWD##*/} 
+  echo "location /$dirname {"
+  echo "  alias ${PWD};"
+  echo "  autoindex on;"
+  echo "}"
+}
+
+function nginxproxy {
+  dirname=${PWD##*/} 
+	echo "server {"
+	echo "  listen       80;"
+	echo "  server_name  $dirname.bradleybossard.com;"
+	echo "  location / {"
+	echo "    proxy_pass http://127.0.0.1:3000/;"
+	echo "  }"
+	echo "}"
+}
+
 
