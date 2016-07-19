@@ -173,14 +173,16 @@ function nginxroute {
 }
 
 function nginxproxy {
-  dirname=${PWD##*/} 
-	echo "server {"
-	echo "  listen       80;"
-	echo "  server_name  $dirname.bradleybossard.com;"
-	echo "  location / {"
-	echo "    proxy_pass http://127.0.0.1:3000/;"
-	echo "  }"
-	echo "}"
+sudo bash -c "cat >$available <<EOF
+server {
+	listen 80;
+	server_name $dirname.bradleybossard.com;
+	location / {
+		proxy_pass http://127.0.0.1:3000;
+	}
 }
+EOF"
 
+sudo ln -fs $available $enabled
+}
 
