@@ -1,7 +1,9 @@
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alF --color'
 alias la='ls -A'
 alias l='ls -lF --group-directories-first'
+alias mkdir='mkdir -vp'
+alias cp='cp -v'
 
 # Android compilation commands
 alias andrun='./gradlew android:installDebug android:run'
