@@ -193,3 +193,11 @@ EOF"
 sudo ln -fs $available $enabled
 }
 
+function nginxurl {
+  dirname=${PWD##*/} 
+  echo
+  #TODO: Fix this to use FQDN
+  echo "http://bradleybossard.com/"$dirname
+  echo
+}
+
