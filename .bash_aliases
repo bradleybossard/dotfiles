@@ -176,6 +176,10 @@ function nginxroute {
 }
 
 function nginxproxy {
+dirname=${PWD##*/} 
+available="/etc/nginx/sites-available/$dirname"
+enabled="/etc/nginx/sites-enabled/$dirname"
+
 sudo bash -c "cat >$available <<EOF
 server {
 	listen 80;
