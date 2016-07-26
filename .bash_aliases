@@ -69,6 +69,14 @@ alias dockerrmstopped='docker rm -v `docker ps -a -q -f status=exited`'
 # Cleanup dangling containers and stuff not in use.
 alias dockercleanup='sh docker-cleanup.sh'
 
+alias dockersecurity='docker run -it --net host --pid host --cap-add audit_control \
+    -v /var/lib:/var/lib \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v /usr/lib/systemd:/usr/lib/systemd \
+    -v /etc:/etc --label docker_bench_security \
+    docker/docker-bench-security'
+
+
 # List docker containers matching a regex expression
 function dockergrep {
   for i in $(docker ps -a | grep "$1" | tr -s ' ' | cut -f2 -d" "); do
