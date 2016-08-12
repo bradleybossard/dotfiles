@@ -14,3 +14,8 @@ chown $user:$user /home/$user -R
 echo "Add password for $user"
 passwd $user
 usermod -aG sudo $user
+
+echo "TODO: Write script for setting up ssh key"
+echo "Currently, I must seem to do the following:"
+echo "1.  From root, su bradleybossard"
+echo "2.  Copy /root/.ssh/authorized_keys to /home/bradleybossard/.ssh/authorized_keys"
