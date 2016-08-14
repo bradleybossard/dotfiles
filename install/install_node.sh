@@ -5,7 +5,7 @@ sudo sh -c 'curl -sL https://deb.nodesource.com/setup_6.x | bash -'
 sudo apt-get install -y nodejs pkg-config libcairo2-dev \
 libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
 
-npm install -g webpack \
+sudo npm install -g webpack \
                webpack-dev-server \
                caniuse-cmd \
                st \
