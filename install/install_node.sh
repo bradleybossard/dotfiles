@@ -18,10 +18,11 @@ sudo npm install -g webpack \
                live-server \
                typescript \
                typings \
-               nativescript \
                nodemon \
                eslint \
                browserify \
                watchify \
                babelify \
                svgo
+
+#               nativescript \
