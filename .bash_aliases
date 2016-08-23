@@ -18,14 +18,13 @@ alias rebash='source ~/.bashrc'
 #alias slack='cd ~/gitsrc/dotfiles; python slack.py; cd -'
 alias hisgrep='history | grep $0'
 
-# Aliases
+# tmux aliases
 alias tls='tmux list-session'
 alias tsw='tmux switch -t '
 alias tlc='tmux list-command'
 alias tat='tmux attach -dt'
 alias tks='tmux kill-session -t'
-# Attach to first session
-alias tat1='tat $(tls | head -1 | cut -d: -f1)'
+alias tnew='tmux -2 new-session -d -s ${PWD##*/}; tmux attach -dt ${PWD##*/}'
 
 alias ports='netstat -tulanp'
 
