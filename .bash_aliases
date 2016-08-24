@@ -186,7 +186,7 @@ alias djmm='python manage.py makemigrations'
 alias djm='python manage.py migrate'
 alias djme='python manage.py makemigrations --empty'
 
-function nginxroute {
+function ngroute {
   dirname=${PWD##*/} 
   echo "location /$dirname {"
   echo "  alias ${PWD};"
@@ -194,7 +194,7 @@ function nginxroute {
   echo "}"
 }
 
-function nginxproxy {
+function ngproxy {
 dirname=${PWD##*/} 
 available="/etc/nginx/sites-available/$dirname"
 enabled="/etc/nginx/sites-enabled/$dirname"
@@ -212,7 +212,7 @@ EOF"
 sudo ln -fs $available $enabled
 }
 
-function nginxurl {
+function ngurl {
   dirname=${PWD##*/} 
   echo
   #TODO: Fix this to use FQDN
