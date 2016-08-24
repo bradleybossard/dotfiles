@@ -18,6 +18,14 @@ alias rebash='source ~/.bashrc'
 #alias slack='cd ~/gitsrc/dotfiles; python slack.py; cd -'
 alias hisgrep='history | grep $0'
 
+_tma() {
+	TMUX_SESSIONS=$(tmux ls -F '#S' | xargs)
+
+	local cur=${COMP_WORDS[COMP_CWORD]}
+	COMPREPLY=( $(compgen -W "$TMUX_SESSIONS" -- $cur) )
+}
+complete -F _tma tma
+
 # tmux aliases
 alias tls='tmux list-session'
 alias tsw='tmux switch -t '
@@ -25,6 +33,10 @@ alias tlc='tmux list-command'
 alias tat='tmux attach -dt'
 alias tks='tmux kill-session -t'
 alias tnew='tmux -2 new-session -d -s ${PWD##*/}; tmux attach -dt ${PWD##*/}'
+alias tma='tmux attach -t $1'
+if [ -f /etc/bash_completion.d/tma ]; then
+. /etc/bash_completion.d/tma
+fi
 
 alias ports='netstat -tulanp'
 
