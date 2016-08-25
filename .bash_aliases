@@ -222,3 +222,5 @@ function ngurl {
   echo
 }
 
+
+alias ngrestart='sudo service nginx restart'
