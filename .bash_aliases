@@ -18,6 +18,8 @@ alias rebash='source ~/.bashrc'
 #alias slack='cd ~/gitsrc/dotfiles; python slack.py; cd -'
 alias hisgrep='history | grep $0'
 
+alias ghpublish='git checkout gh-pages; git merge master; git add -A; git commit -m "Publishing"; git push; git checkout master;'
+
 # tmux session name autocomplete
 _tat() {
 	TMUX_SESSIONS=$(tmux ls -F '#S' | xargs)
