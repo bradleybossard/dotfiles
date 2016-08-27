@@ -34,6 +34,7 @@ alias tls='tmux list-session'
 alias tsw='tmux switch -t '
 alias tlc='tmux list-command'
 alias tks='tmux kill-session -t'
+alias tgrep='tmux list-session | grep $0'
 alias tnew='tmux -2 new-session -d -s ${PWD##*/}; tmux attach -dt ${PWD##*/}'
 alias tat='tmux attach -d -t'
 if [ -f /etc/bash_completion.d/tat ]; then
