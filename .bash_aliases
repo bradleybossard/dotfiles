@@ -34,12 +34,27 @@ alias tls='tmux list-session'
 alias tsw='tmux switch -t '
 alias tlc='tmux list-command'
 alias tks='tmux kill-session -t'
+#alias tkall='tmux ls | grep : | cut -d. -f1 | awk '"'"'{print substr($1, 0, length($1)-1)}'"'"' | xargs tmux kill-session'
+alias tkall='for session in $(tmux ls | grep : | cut -d. -f1); do tmux kill-session -t $session; done'
 alias tgrep='tmux list-session | grep $0'
 alias tnew='tmux -2 new-session -d -s ${PWD##*/}; tmux attach -dt ${PWD##*/}'
 alias tat='tmux attach -d -t'
 if [ -f /etc/bash_completion.d/tat ]; then
 . /etc/bash_completion.d/tat
 fi
+
+# Create a tmux session for every repos under ~/src
+tnewall() {
+	pushd .
+	cd ~/src
+	for name in $(ls); do
+		cd $name
+		echo $name
+		tmux -2 new-session -d -s $name
+		cd -
+	done;
+	popd
+}
 
 alias ports='netstat -tulanp'
 
