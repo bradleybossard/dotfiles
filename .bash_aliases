@@ -204,12 +204,18 @@ alias djmm='python manage.py makemigrations'
 alias djm='python manage.py migrate'
 alias djme='python manage.py makemigrations --empty'
 
+# Replace the placeholder with route to current directory
 function ngroute {
   dirname=${PWD##*/} 
-  echo "location /$dirname {"
-  echo "  alias ${PWD};"
-  echo "  autoindex on;"
-  echo "}"
+  #echo "location /$dirname {"
+  #echo "  alias ${PWD};"
+  #echo "  autoindex on;"
+  #echo "}"
+  file='/etc/nginx/sites-available/default' 
+  #file='/tmp/default' 
+  route="  location /$dirname {\n    alias ${PWD};\n    autoindex on;\n  }\n\n"
+  comment='### INSERT NEW ROUTE HERE'  # Placeholder in nginx config
+  sudo bash -c "sed -i 's|$comment|$route$comment|' $file"
 }
 
 function ngproxy {
