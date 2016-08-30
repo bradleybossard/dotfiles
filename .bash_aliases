@@ -1,5 +1,5 @@
 # some more ls aliases
-alias ll='ls -alF --color'
+alias ll='ls -alFG'
 alias lsd='ls -ld */'  # List just directories
 alias la='ls -A'
 alias l='ls -lF --group-directories-first'
