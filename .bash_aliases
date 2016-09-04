@@ -1,4 +1,5 @@
 # some more ls aliases
+
 alias ll='ls -alFG'
 alias lsd='ls -ld */'  # List just directories
 alias la='ls -A'
@@ -18,6 +19,7 @@ alias rebash='source ~/.bashrc'
 #alias slack='cd ~/gitsrc/dotfiles; python slack.py; cd -'
 alias hisgrep='history | grep $0'
 
+alias ghurl="dirname=${PWD##*/}; printf '\nhttp://bradleybossard.github.io/%s\n\n' $dirname"
 alias ghpublish='git checkout gh-pages; git merge master; git add -A; git commit -m "Publishing"; git push; git checkout master;'
 
 # tmux session name autocomplete
@@ -204,15 +206,12 @@ alias djmm='python manage.py makemigrations'
 alias djm='python manage.py migrate'
 alias djme='python manage.py makemigrations --empty'
 
+## nginx shortcuts
+
 # Replace the placeholder with route to current directory
 function ngroute {
   dirname=${PWD##*/} 
-  #echo "location /$dirname {"
-  #echo "  alias ${PWD};"
-  #echo "  autoindex on;"
-  #echo "}"
   file='/etc/nginx/sites-available/default' 
-  #file='/tmp/default' 
   route="  location /$dirname {\n    alias ${PWD};\n    autoindex on;\n  }\n\n"
   comment='### INSERT NEW ROUTE HERE'  # Placeholder in nginx config
   sudo bash -c "sed -i 's|$comment|$route$comment|' $file"
@@ -236,13 +235,6 @@ EOF"
 sudo ln -fs $available $enabled
 }
 
-function ngurl {
-  dirname=${PWD##*/} 
-  echo
-  #TODO: Fix this to use FQDN
-  echo "http://bradleybossard.com/"$dirname
-  echo
-}
-
-
+#TODO: Fix this to use FQDN
+alias ngurl="dirname=${PWD##*/}; printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
 alias ngrestart='sudo service nginx restart'
