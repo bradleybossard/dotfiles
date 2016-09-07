@@ -10,7 +10,7 @@ sudo apt-get -y remove ack
 sudo apt-get -y install git tmux vim ack-grep curl wget grc bc tree fail2ban \
                         logwatch flex bison pandoc context golang-go haskell-platform \
                         virtualenv r-base-core silversearcher-ag imagemagick jq hugo \
-                        xmlstarlet nginx
+                        xmlstarlet nginx pylint pyflakes
 
 go get -u github.com/aykamko/tag/...
 go install github.com/aykamko/tag
