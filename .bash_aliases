@@ -207,6 +207,7 @@ alias djm='python manage.py migrate'
 alias djme='python manage.py makemigrations --empty'
 
 ## nginx shortcuts
+alias ngrestart='sudo service nginx restart'
 
 # Replace the placeholder with route to current directory
 function ngroute {
@@ -215,6 +216,7 @@ function ngroute {
   route="  location /$dirname {\n    alias ${PWD};\n    autoindex on;\n  }\n\n"
   comment='### INSERT NEW ROUTE HERE'  # Placeholder in nginx config
   sudo bash -c "sed -i 's|$comment|$route$comment|' $file"
+  ngrestart
 }
 
 function ngproxy {
@@ -237,4 +239,4 @@ sudo ln -fs $available $enabled
 
 #TODO: Fix this to use FQDN
 alias ngurl="dirname=${PWD##*/}; printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
-alias ngrestart='sudo service nginx restart'
+
