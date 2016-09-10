@@ -25,6 +25,7 @@
   br = branch
   ci = commit
   ac = commit -a --message
+  t = tag -n3
   cleandry = clean -n
   cleanreal = clean -f
   logp = log -p
