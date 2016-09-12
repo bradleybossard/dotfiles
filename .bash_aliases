@@ -20,7 +20,7 @@ alias rebash='source ~/.bashrc'
 alias hisgrep='history | grep $0'
 
 alias ghurl="dirname=${PWD##*/}; printf '\nhttp://bradleybossard.github.io/%s\n\n' $dirname"
-alias ghpublish='git checkout -B gh-pages; git merge master; git add -A; git commit -m "Publishing"; git push origin master; git checkout master;'
+alias ghpublish='git checkout -B gh-pages; git merge master; git add -A; git commit -m "Publishing"; git push --set-upstream origin gh-pages; git checkout master;'
 
 alias initbasicweb='cp ~/src/basic-web-project/*.{html,js,css} .'
 
