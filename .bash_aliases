@@ -20,7 +20,7 @@ alias rebash='source ~/.bashrc'
 alias hisgrep='history | grep $0'
 
 alias ghurl="dirname=${PWD##*/}; printf '\nhttp://bradleybossard.github.io/%s\n\n' $dirname"
-alias ghpublish='git checkout gh-pages; git merge master; git add -A; git commit -m "Publishing"; git push; git checkout master;'
+alias ghpublish='git checkout -B gh-pages; git merge master; git add -A; git commit -m "Publishing"; git push origin master; git checkout master;'
 
 # tmux session name autocomplete
 _tat() {
