@@ -240,9 +240,9 @@ sudo ln -fs $available $enabled
 
 #TODO: Fix this to use FQDN
 #alias ngurl="dirname=${PWD##*/}; printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
-alias ngurl="printf '\nhttp://bradleybossard.com/%s\n\n' ${PWD##*/}"
+#alias ngurl="printf '\nhttp://bradleybossard.com/%s\n\n' ${PWD##*/}"
 #alias ngurl="dirname=$(basename `pwd`); printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
-#pwd | rev | cut -d/ -f1 | rev
+alias ngurl="dirname=`pwd | rev | cut -d/ -f1 | rev`; printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
 #alias ngurl="dirname=$(basename `pwd`); printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
 
 
