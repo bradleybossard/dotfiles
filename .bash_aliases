@@ -38,7 +38,6 @@ alias tls='tmux list-session'
 alias tsw='tmux switch -t '
 alias tlc='tmux list-command'
 alias tks='tmux kill-session -t'
-#alias tkall='tmux ls | grep : | cut -d. -f1 | awk '"'"'{print substr($1, 0, length($1)-1)}'"'"' | xargs tmux kill-session'
 alias tkall='for session in $(tmux ls | grep : | cut -d. -f1); do tmux kill-session -t $session; done'
 alias tgrep='tmux list-session | grep $0'
 alias tnew='tmux -2 new-session -d -s ${PWD##*/}; tmux attach -dt ${PWD##*/}'
@@ -246,14 +245,18 @@ alias ngurl="dirname=$(basename `pwd`); printf '\nhttp://bradleybossard.com/%s\n
 ## git
 
 function gitinitrepo {
-  cat << EOF
-git init
-git add -A
-git commit -m "Initial commit"
-git remote add master https://github.com/bradleybossard/baby-banter.git
-git pull origin master
-git push --set-upstream origin master
-EOF
+	if [ -z "$1" ]
+		then
+			echo "Usage: $0 <path/to/git/repo>  i.e. https://github.com/username/reponame.git"
+			return
+	fi
+
+	git init
+	git add -A
+	git commit -m "Initial commit"
+	git remote add origin $1
+	git pull origin master
+	git push --set-upstream origin master
 }
 
 
