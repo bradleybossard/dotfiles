@@ -240,7 +240,11 @@ sudo ln -fs $available $enabled
 
 #TODO: Fix this to use FQDN
 #alias ngurl="dirname=${PWD##*/}; printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
-alias ngurl="dirname=$(basename `pwd`); printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
+alias ngurl="printf '\nhttp://bradleybossard.com/%s\n\n' ${PWD##*/}"
+#alias ngurl="dirname=$(basename `pwd`); printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
+#pwd | rev | cut -d/ -f1 | rev
+#alias ngurl="dirname=$(basename `pwd`); printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
+
 
 ## git
 
@@ -259,5 +263,68 @@ function gitinitrepo {
 	git push --set-upstream origin master
 }
 
+# Set up git subtree for Hugo publishing to Github Pages
+function hugoinitpublish {
+  theme=$(ls themes | head -1)
 
+  if [ -z "$theme" ]
+    then
+      echo "No theme detected"
+      return
+  fi
 
+  giturl=`git remote get-url --push origin`
+
+  # Create a new orphand branch (no commit history) named gh-pages
+  git checkout --orphan gh-pages
+
+  # Unstage all files
+  git rm --cached $(git ls-files)
+
+  # Grab one file from the master branch so we can make a commit
+  git checkout master README.md
+
+  # Add and commit that file
+  git add .
+  git commit -m "Initial commit on gh-pages branch"
+
+  # Push to remote gh-pages branch
+  git push origin gh-pages
+
+  # Return to master branch
+  git checkout master
+
+  # Remove the public folder to make room for the gh-pages subtree
+  rm -rf public
+
+  # Add the gh-pages branch of the repository. It will look like a folder named public
+  git subtree add --prefix=public $giturl gh-pages --squash
+
+  # Pull down the file we just committed. This helps avoid merge conflicts
+  git subtree pull --prefix=public $giturl gh-pages
+
+  # Run hugo. Generated site will be placed in public directory (or omit -t ThemeName if you're not using a theme)
+
+  hugo -t $theme
+
+  # Add everything
+  git add -A
+
+  # Commit and push to master
+  git commit -m "Updating site" && git push origin master
+
+  # Push the public subtree to the gh-pages branch
+  git subtree push --prefix=public $giturl gh-pages
+}
+
+function hugobuild {
+  theme=$(ls themes | head -1)
+  hugo -t=$theme
+}
+
+function hugopublish {
+  giturl=`git remote get-url --push origin`
+  git subtree push --prefix=public $giturl gh-pages
+}
+
+alias hugoundraftall='for file in $(ls content/post/*.md); do hugo undraft $file; done;'
