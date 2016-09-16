@@ -243,3 +243,18 @@ sudo ln -fs $available $enabled
 #alias ngurl="dirname=${PWD##*/}; printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
 alias ngurl="dirname=$(basename `pwd`); printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
 
+## git
+
+function gitinitrepo {
+  cat << EOF
+git init
+git add -A
+git commit -m "Initial commit"
+git remote add master https://github.com/bradleybossard/baby-banter.git
+git pull origin master
+git push --set-upstream origin master
+EOF
+}
+
+
+
