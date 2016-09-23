@@ -24,6 +24,10 @@ alias ghpublish='git checkout -B gh-pages; git merge master; git add -A; git com
 
 alias initbasicweb='cp ~/src/basic-web-project/*.{html,js,css} .'
 
+#venuenext
+#alias vnlog="git log --decorate --oneline --since=2.days | awk '{system("git describe " $1 " |tr -d '\''\n'\''");$1="";print}'"
+
+
 # tmux session name autocomplete
 _tat() {
 	TMUX_SESSIONS=$(tmux ls -F '#S' | xargs)
@@ -328,3 +332,17 @@ function hugopublish {
 }
 
 alias hugoundraftall='for file in $(ls content/post/*.md); do hugo undraft $file; done;'
+
+function slackemoji {
+  # Fetch
+  wget $1
+  filename=`basename $1`
+  ext="${filename##*.}"
+  filename_noext="${filename%.*}"
+  resized_name=$filename_noext-resized.${ext}
+  width=`identify -format %[fx:w] $filename`
+  height=`identify -format %[fx:h] $filename`
+  max=$(( $width > $height ? $width : $height ))
+  convert $filename -gravity center -extent ${max}x${max} -resize 120x120 $resized_name
+  rm $filename
+}
