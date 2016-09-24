@@ -222,6 +222,7 @@ function ngroute {
   comment='### INSERT NEW ROUTE HERE'  # Placeholder in nginx config
   sudo bash -c "sed -i 's|$comment|$route$comment|' $file"
   ngrestart
+  ngurl
 }
 
 function ngproxy {
