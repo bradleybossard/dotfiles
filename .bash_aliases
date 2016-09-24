@@ -19,7 +19,15 @@ alias rebash='source ~/.bashrc'
 #alias slack='cd ~/gitsrc/dotfiles; python slack.py; cd -'
 alias hisgrep='history | grep $0'
 
-alias ghurl="dirname=${PWD##*/}; printf '\nhttp://bradleybossard.github.io/%s\n\n' $dirname"
+#alias ghurl="dirname=${PWD##*/}; printf '\nhttp://bradleybossard.github.io/%s\n\n' $dirname"
+function gurl {
+  git_url=`git config --get remote.origin.url`
+  git_service=`echo $git_url | sed 's/.*\/\/\(git.*\)\.com.*/\1/'`
+  git_username=`echo $git_url | sed 's/.*\.com\/\(.*\)\/.*/\1/'`
+  git_reponame=`basename $git_url .git`
+  printf '\nhttp://%s.%s.io/%s\n\n' $git_username $git_service $git_reponame
+}
+
 alias ghpublish='git checkout -B gh-pages; git merge master; git add -A; git commit -m "Publishing"; git push --set-upstream origin gh-pages; git checkout master;'
 
 alias initbasicweb='cp ~/src/basic-web-project/*.{html,js,css} .'
@@ -247,8 +255,9 @@ sudo ln -fs $available $enabled
 #alias ngurl="dirname=${PWD##*/}; printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
 #alias ngurl="printf '\nhttp://bradleybossard.com/%s\n\n' ${PWD##*/}"
 #alias ngurl="dirname=$(basename `pwd`); printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
-alias ngurl="dirname=`pwd | rev | cut -d/ -f1 | rev`; printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
+#alias ngurl="dirname=`pwd | rev | cut -d/ -f1 | rev`; printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
 #alias ngurl="dirname=$(basename `pwd`); printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
+alias ngurl="reponame=$(basename $(git config --get remote.origin.url) .git); printf \"\nhttp://bradleybossard.com/%s\n\n\" $reponame"
 
 
 ## git
