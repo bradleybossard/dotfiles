@@ -205,3 +205,4 @@ if hash ag 1>/dev/null; then
   }
   alias ag='tag'
 fi
+export DISPLAY=:0.0
