@@ -19,7 +19,8 @@ sudo npm install -g webpack \
                typescript \
                typings \
                nodemon \
-               eslint \
+               #eslint \ Need to research if this should be installed globally
+               semantic-release-cli \
                browserify \
                watchify \
                babelify \
