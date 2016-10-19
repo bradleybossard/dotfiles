@@ -205,4 +205,11 @@ if hash ag 1>/dev/null; then
   }
   alias ag='tag'
 fi
+
 export DISPLAY=:0.0
+
+###-tns-completion-start-###
+if [ -f /Users/bradleybossard/.tnsrc ]; then 
+    source /Users/bradleybossard/.tnsrc 
+fi
+###-tns-completion-end-###

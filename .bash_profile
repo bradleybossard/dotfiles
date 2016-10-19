@@ -20,3 +20,9 @@ fi
 
 source ~/.bashrc
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+
+###-tns-completion-start-###
+if [ -f /Users/bradleybossard/.tnsrc ]; then 
+    source /Users/bradleybossard/.tnsrc 
+fi
+###-tns-completion-end-###
