@@ -14,10 +14,11 @@ alias andrun='./gradlew android:installDebug android:run'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias pythonhttp='python -m SimpleHTTPServer'
 alias rebash='source ~/.bashrc'
 #alias slack='cd ~/gitsrc/dotfiles; python slack.py; cd -'
 alias hisgrep='history | grep $0'
+
+alias ip='ifconfig | grep netmask'
 
 #alias ghurl="dirname=${PWD##*/}; printf '\nhttp://bradleybossard.github.io/%s\n\n' $dirname"
 function gurl {
