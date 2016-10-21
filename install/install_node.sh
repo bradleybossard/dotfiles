@@ -20,10 +20,11 @@ sudo npm install -g webpack \
                typings \
                nodemon \
                #eslint \ Need to research if this should be installed globally
-               semantic-release-cli \
+               angular-cli \
+               protractor \
                browserify \
                watchify \
                babelify \
                svgo
 
-#               nativescript \
+#              nativescript \
