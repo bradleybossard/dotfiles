@@ -235,21 +235,30 @@ function ngroute {
 }
 
 function ngproxy {
-dirname=${PWD##*/} 
-available="/etc/nginx/sites-available/$dirname"
-enabled="/etc/nginx/sites-enabled/$dirname"
+	if [ $# -lt 1 ]
+		then
+			echo "Usage: $FUNCNAME <port-to-be-forwarded>"
+			echo "  ex. $FUNCNAME 4201"
+		  return
+	fi
 
-sudo bash -c "cat >$available <<EOF
+  dirname=${PWD##*/} 
+  port=$1
+  available="/etc/nginx/sites-available/$dirname"
+  enabled="/etc/nginx/sites-enabled/$dirname"
+
+  sudo bash -c "cat >$available <<EOF
 server {
-	listen 80;
-	server_name $dirname.bradleybossard.com;
-	location / {
-		proxy_pass http://127.0.0.1:3000;
-	}
+  listen 80;
+  server_name $dirname.bradleybossard.com;
+  location / {
+    proxy_pass http://127.0.0.1:$port;
+  }
 }
-EOF"
+EOF
+"
 
-sudo ln -fs $available $enabled
+  sudo ln -fs $available $enabled
 }
 
 #TODO: Fix this to use FQDN
