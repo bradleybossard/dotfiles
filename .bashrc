@@ -32,6 +32,7 @@ HISTFILE="${HOME}/.history/$(date -u +%Y/%m/%d.%H.%M.%S)_${TMUX_SESSION_NAME}_${
 # Save to history files before issuing command
 export PROMPT_COMMAND='history -a'
 
+export WORKON_HOME='~/.virtualenvs'
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
