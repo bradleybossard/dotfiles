@@ -7,6 +7,7 @@ libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
 
 sudo npm install -g webpack \
                webpack-dev-server \
+               yarn \
                caniuse-cmd \
                st \
                wintersmith \
@@ -20,6 +21,7 @@ sudo npm install -g webpack \
                typings \
                nodemon \
                #eslint \ Need to research if this should be installed globally
+               quget \
                angular-cli \
                protractor \
                browserify \
