@@ -1,6 +1,6 @@
 # Install node 6 and a bunch of tools I like globally
 
-sudo sh -c 'curl -sL https://deb.nodesource.com/setup_6.x | bash -'
+sudo sh -c 'curl -sL https://deb.nodesource.com/setup_7.x | bash -'
 
 sudo apt-get install -y nodejs pkg-config libcairo2-dev \
 libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
