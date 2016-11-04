@@ -13,6 +13,8 @@ sudo npm install -g webpack \
                wintersmith \
                bower \
                gulp \
+               gulp-cli \
+               yo \
                grunt \
                node-inspector \
                jspm \
@@ -20,13 +22,13 @@ sudo npm install -g webpack \
                typescript \
                typings \
                nodemon \
-               #eslint \ Need to research if this should be installed globally
                quget \
                angular-cli \
                protractor \
                browserify \
                watchify \
                babelify \
+               generator-angular-fullstack \
                svgo
 
 #              nativescript \
