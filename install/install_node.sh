@@ -16,6 +16,7 @@ sudo npm install -g webpack \
                gulp-cli \
                yo \
                grunt \
+               node-gyp \
                node-inspector \
                jspm \
                live-server \
