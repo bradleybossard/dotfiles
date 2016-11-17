@@ -5,7 +5,7 @@ sudo sh -c 'curl -sL https://deb.nodesource.com/setup_7.x | bash -'
 sudo apt-get install -y nodejs pkg-config libcairo2-dev \
 libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
 
-sudo npm install -g
+sudo npm install -g \
                angular-cli \
                babelify \
                browserify \
@@ -18,12 +18,11 @@ sudo npm install -g
                jspm \
                live-server \
                node-gyp \
-               node-inspector \
                nodemon \
                protractor \
                quget \
                st \
-               svgo
+               svgo \
                typescript \
                typings \
                watchify \
@@ -32,3 +31,5 @@ sudo npm install -g
                wintersmith \
                yarn \
                yo
+
+               # node-inspector \
