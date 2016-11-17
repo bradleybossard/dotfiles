@@ -6,5 +6,11 @@ source ~/.bashrc
 #sudo apt-get -y install python-pip
 
 sudo apt-get -y install virtualenv virtualenvwrapper pylint pyflakes
-echo $WORKON_HOME
-mkdir -p $WORKON_HOME
+#mkdir -p $WORKON_HOME
+#mkdir -p $PROJECT_HOME
+
+# install pyenv
+curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+
+# install pyenv-virtualenv
+git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
