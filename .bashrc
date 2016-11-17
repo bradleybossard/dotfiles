@@ -32,7 +32,16 @@ HISTFILE="${HOME}/.history/$(date -u +%Y/%m/%d.%H.%M.%S)_${TMUX_SESSION_NAME}_${
 # Save to history files before issuing command
 export PROMPT_COMMAND='history -a'
 
-export WORKON_HOME='~/.virtualenvs'
+
+#export WORKON_HOME="~/.virtualenvs/"
+#export WORKON_HOME="/home/$USER/.virtualenvs/"
+#export PROJECT_HOME="~/.virtualenvprojects/" 
+#export PROJECT_HOME="/home/$USER/.virtualenvprojects/" 
+
+export PATH="/home/bradleybossard/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -214,3 +223,5 @@ if [ -f /Users/bradleybossard/.tnsrc ]; then
     source /Users/bradleybossard/.tnsrc 
 fi
 ###-tns-completion-end-###
+
+
