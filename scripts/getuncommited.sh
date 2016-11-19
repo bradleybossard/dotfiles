@@ -1,5 +1,8 @@
 # Script for creating clone commands for all current repos
 
+# To run type:
+# ./getuncommitted.sh
+
 pushd .
 cd ~/src
 for repo in $(ls ~/src); do
