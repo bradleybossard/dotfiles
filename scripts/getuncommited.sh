@@ -1,11 +1,15 @@
 # Script for creating clone commands for all current repos
 
+pushd .
 cd ~/src
 for repo in $(ls ~/src); do
   cd $repo;
   #repourl=$(git config --get remote.origin.url)
-  status=$(git push -n) 
+  pull_status=$(git pull) 
+  push_status=$(git push -n) 
   pwd
-  echo $status
+  echo $pull_status
+  echo $push_status
   cd ..
 done;
+popd
