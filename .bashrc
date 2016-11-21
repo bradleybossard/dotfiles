@@ -131,6 +131,9 @@ export PATH=$PATH:$GOBIN
 # for pipsi, next-gen pip tool
 export PATH=~/.local/bin:$PATH
 
+# For swift on ubuntu 16.04
+export PATH=/opt/swift/swift-3.0/usr/bin:$PATH
+
 if [ -e ~/.git-completion ]; then
   source ~/.git-completion
 fi
