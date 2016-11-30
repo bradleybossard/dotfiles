@@ -15,7 +15,3 @@ sudo apt-get -y install git tmux vim ack-grep curl wget grc bc tree fail2ban \
 go get -u github.com/aykamko/tag/...
 go install github.com/aykamko/tag
 
-curl -sSL https://get.docker.com/ | sh
-sudo usermod -aG docker bradleybossard
-echo "Added user bradleybossard to group docker, must log out to take effect"
-
