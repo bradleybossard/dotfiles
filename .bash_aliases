@@ -72,7 +72,13 @@ tnewall() {
 	popd
 }
 
+# Show active ports
 alias ports='netstat -tulanp'
+
+# Show failed login attempts
+alias sshfailedlogins='grep sshd.\*Failed /var/log/auth.log | less'
+# Show failed connect attempts (like a port scanner, for instance)
+alias sshfailedconnects='grep sshd.\*Did /var/log/auth.log | less'
 
 alias sass="docker run -it --rm -v \$(pwd):\$(pwd) -w \$(pwd) jbergknoff/sass"
 
