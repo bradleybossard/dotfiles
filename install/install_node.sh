@@ -21,6 +21,7 @@ sudo npm install -g \
                nodemon \
                protractor \
                quget \
+               create-react-app \
                st \
                svgo \
                typescript \
