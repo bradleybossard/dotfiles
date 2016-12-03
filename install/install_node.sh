@@ -11,6 +11,7 @@ sudo npm install -g \
                browserify \
                bower \
                caniuse-cmd \
+               express-generator \
                generator-angular-fullstack \
                grunt \
                gulp \
