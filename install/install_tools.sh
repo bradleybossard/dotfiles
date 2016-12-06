@@ -15,3 +15,6 @@ sudo apt-get -y install git tmux vim ack-grep curl wget grc bc tree fail2ban \
 go get -u github.com/aykamko/tag/...
 go install github.com/aykamko/tag
 
+## Youtube Downloader
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
