@@ -14,6 +14,7 @@ sudo apt-get -y install \
                   context \
                   curl \
                   fail2ban \
+                  flex \
                   git \
                   golang-go \
                   grc \
@@ -22,7 +23,7 @@ sudo apt-get -y install \
                   imagemagick \
                   jq \
                   logwatch \
-                  flex \
+                  mosh \
                   nginx \
                   pandoc \
                   r-base-core \
