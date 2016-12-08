@@ -17,10 +17,10 @@ sudo apt-get -y install \
                   flex \
                   git \
                   golang-go \
+                  graphicsmagick \
                   grc \
                   haskell-platform \
                   hugo \
-                  imagemagick \
                   jq \
                   logwatch \
                   mosh \
@@ -34,6 +34,9 @@ sudo apt-get -y install \
                   virtualenv \
                   wget \
                   xmlstarlet
+
+                  #imagemagick \
+exit
 
 
 go get -u github.com/aykamko/tag/...
