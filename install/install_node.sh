@@ -1,5 +1,7 @@
 # Install node 6 and a bunch of tools I like globally
 
+sudo apt-get install --yes curl
+
 sudo sh -c 'curl -sL https://deb.nodesource.com/setup_7.x | bash -'
 
 sudo apt-get install -y nodejs pkg-config libcairo2-dev \
