@@ -17,7 +17,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias rebash='source ~/.bashrc'
 alias hisgrep='history | grep $0'
 
-alias ip='ifconfig | grep netmask'
+# Show active ports
+alias ports='netstat -tulanp'
 
 function gurl {
   git_url=`git config --get remote.origin.url`
@@ -65,15 +66,10 @@ tnewall() {
 	popd
 }
 
-# Show active ports
-alias ports='netstat -tulanp'
-
 # Show failed login attempts
 alias sshfailedlogins='grep sshd.\*Failed /var/log/auth.log | less'
 # Show failed connect attempts (like a port scanner, for instance)
 alias sshfailedconnects='grep sshd.\*Did /var/log/auth.log | less'
-
-alias sass="docker run -it --rm -v \$(pwd):\$(pwd) -w \$(pwd) jbergknoff/sass"
 
 # Pretty print and colorize json files.
 alias pp='python -mjson.tool | pygmentize -l js'
