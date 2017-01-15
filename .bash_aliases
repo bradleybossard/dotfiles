@@ -15,12 +15,10 @@ alias andrun='./gradlew android:installDebug android:run'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 alias rebash='source ~/.bashrc'
-#alias slack='cd ~/gitsrc/dotfiles; python slack.py; cd -'
 alias hisgrep='history | grep $0'
 
 alias ip='ifconfig | grep netmask'
 
-#alias ghurl="dirname=${PWD##*/}; printf '\nhttp://bradleybossard.github.io/%s\n\n' $dirname"
 function gurl {
   git_url=`git config --get remote.origin.url`
   git_service=`echo $git_url | sed 's/.*\/\/\(git.*\)\.com.*/\1/'`
@@ -33,14 +31,9 @@ alias ghpublish='git checkout -B gh-pages; git merge master; git add -A; git com
 
 alias initbasicweb='cp ~/src/basic-web-project/*.{html,js,css} .'
 
-#venuenext
-#alias vnlog="git log --decorate --oneline --since=2.days | awk '{system("git describe " $1 " |tr -d '\''\n'\''");$1="";print}'"
-
-
 # tmux session name autocomplete
 _tat() {
 	TMUX_SESSIONS=$(tmux ls -F '#S' | xargs)
-
 	local cur=${COMP_WORDS[COMP_CWORD]}
 	COMPREPLY=( $(compgen -W "$TMUX_SESSIONS" -- $cur) )
 }
