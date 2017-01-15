@@ -77,9 +77,6 @@ alias pp='python -mjson.tool | pygmentize -l js'
 # Python simple HTTP server
 alias pyhttp='python -m SimpleHTTPServer'
 
-# Shutdown DO machine
-alias poweroff="sudo poweroff"
-
 GRC=`which grc`
 if [ "$TERM" != dumb ] && [ "$GRC" != "" ]
 then
