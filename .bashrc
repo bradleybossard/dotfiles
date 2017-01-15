@@ -35,10 +35,6 @@ export PROMPT_COMMAND='history -a'
 export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=~/.virtualenvprojects 
 
-#export PATH="/home/bradleybossard/.pyenv/bin:$PATH"
-#eval "$(pyenv init -)"
-#eval "$(pyenv virtualenv-init -)"
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -136,20 +132,9 @@ if [ -e ~/.git-completion ]; then
   source ~/.git-completion
 fi
 
-# TODO(bradleybossard) : These don't seem to work on Digital Ocean virtual box.
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  alias pbcopy='xsel --clipboard --input'
-  alias pbpaste='xsel --clipboard --output'
-fi
-
 set -o vi
 
 export SVN_EDITOR=vim
-
-#export PYENV_ROOT="$HOME/.pyenv"
-#export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init -)"
-#pyenv virtualenvwrapper
 
 ###-begin-npm-completion-###
 #
