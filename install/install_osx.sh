@@ -12,6 +12,7 @@ brew install \
   libtiff \
   libtool \
   node \
+  python3 \
   tag-ag \
   the_silver_searcher \
   tmux \
