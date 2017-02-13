@@ -17,6 +17,8 @@ brew install \
   the_silver_searcher \
   tmux \
   tree \
+  virtualenv \
+  virtualenvwrapper \
   wget
 
 # oniguruma \
