@@ -5,7 +5,12 @@
 
 user=bradleybossard
 
-sudo apt-get update
+## Youtube Downloader
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+
+sudo apt-get update --fix-missing
+
 sudo apt-get -y remove ack
 sudo apt-get -y install \
                   ack-grep \
@@ -35,13 +40,5 @@ sudo apt-get -y install \
                   wget \
                   xmlstarlet
 
-                  #imagemagick \
-exit
-
-
 go get -u github.com/aykamko/tag/...
 go install github.com/aykamko/tag
-
-## Youtube Downloader
-sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-sudo chmod a+rx /usr/local/bin/youtube-dl
