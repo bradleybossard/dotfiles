@@ -460,12 +460,14 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'mileszs/ack.vim'
-"Bundle 'marijnh/tern_for_vim'
+Bundle 'marijnh/tern_for_vim'
 Bundle 'rizzatti/dash.vim'
 "Bundle 'klen/python-mode'
 Bundle 'ciaranm/detectindent'
 Bundle 'ervandew/supertab'
 Bundle 'easymotion/vim-easymotion'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
 
 
 filetype plugin on
