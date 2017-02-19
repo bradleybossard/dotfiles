@@ -1,4 +1,4 @@
-# Install node 6 and a bunch of tools I like globally
+# Install node and a bunch of tools I like globally
 
 sudo apt-get install --yes curl
 
