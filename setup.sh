@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [[ $OSTYPE == *"linux"* ]]; then
+  sudo apt-get update --fix-missing
+  sudo apt-get install --yes vim git
+fi
 
 # Copy all dotfiles in this directory to home
 for file in $(find . -maxdepth 1 -not -type d | grep "./\." | sed 's/.\/././'); do
