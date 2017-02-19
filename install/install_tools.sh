@@ -17,6 +17,7 @@ sudo apt-get -y install \
                   bison \
                   bc \
                   context \
+                  cowsay \
                   curl \
                   fail2ban \
                   flex \
