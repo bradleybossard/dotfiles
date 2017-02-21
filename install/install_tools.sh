@@ -33,6 +33,7 @@ sudo apt-get -y install \
                   nginx \
                   pandoc \
                   r-base-core \
+                  redis-server \
                   silversearcher-ag \
                   tree \
                   tmux \
