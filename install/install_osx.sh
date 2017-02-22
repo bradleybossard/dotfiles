@@ -8,9 +8,9 @@ brew install \
   bash-completion \
   freetype \
   go \
-  jq \
   imagemagick \
   jpeg \
+  jq \
   libevent \
   libpng \
   libtiff \
