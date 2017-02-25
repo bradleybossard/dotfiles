@@ -35,6 +35,11 @@ export PROMPT_COMMAND='history -a'
 export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=~/.virtualenvprojects 
 
+# Check OSX install of virtualenv
+if [ -e /usr/local/bin/virtualenvwrapper.sh ]; then
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
