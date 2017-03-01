@@ -2,7 +2,7 @@
 
 if [[ $OSTYPE == *"linux"* ]]; then
   sudo apt-get update --fix-missing
-  sudo apt-get install --yes vim git
+  sudo apt-get install --yes vim git tmux
 fi
 
 # Copy all dotfiles in this directory to home
