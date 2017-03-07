@@ -382,3 +382,9 @@ gitprunelocal()
     [[ -n $skip ]] || { echo -e "\033[31m $(git branch -D $i) \033[0m"; }
   done
 }
+
+
+if [[ $OSTYPE == *"darwin"* ]]; then
+  # The closest substitute for lsusb on OSX
+  alias lsusb='ioreg -p IOUSB -l -w 0'
+fi
