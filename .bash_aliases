@@ -18,7 +18,11 @@ alias rebash='source ~/.bashrc'
 alias hisgrep='history | grep $0'
 
 # Show active ports
-alias ports='netstat -tulanp'
+if [[ $OSTYPE == *"linux"* ]]; then
+  alias ports='netstat -tulanp'
+elif [[ $OSTYPE == *"darwin"* ]]; then
+  alias ports='lsof -i'
+fi
 
 function gurl {
   git_url=`git config --get remote.origin.url`
