@@ -24,6 +24,11 @@ elif [[ $OSTYPE == *"darwin"* ]]; then
   alias ports='lsof -i'
 fi
 
+function killport {
+  PORT_NUMBER=$1;
+  lsof -i tcp:${PORT_NUMBER} | awk 'NR!=1 {print $2}' | xargs kill;
+}
+
 function gurl {
   git_url=`git config --get remote.origin.url`
   git_service=`echo $git_url | sed 's/.*\/\/\(git.*\)\.com.*/\1/'`
