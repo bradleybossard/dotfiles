@@ -114,6 +114,8 @@ alias dockerpsshort='docker ps --format "table {{.Names}}:\t{{.Image}}\t{{.Ports
 alias dockerrmstopped='docker rm -v `docker ps -a -q -f status=exited`'
 # Cleanup dangling containers and stuff not in use.
 alias dockercleanup='sh docker-cleanup.sh'
+# Like top for containers
+alias ctop='docker run -ti -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest'
 
 alias dockersecurity='docker run -it --net host --pid host --cap-add audit_control \
     -v /var/lib:/var/lib \
