@@ -5,7 +5,7 @@ source ~/.bashrc
 # https://virtualenvwrapper.readthedocs.io/en/latest/scripts.html#scripts-postmkvirtualenv
 
 if [[ $OSTYPE == *"darwin"* ]]; then
-  pip3 install virtualenv virtualenvwrapper
+  pip3 install virtualenv virtualenvwrapper flake8
   #pip3 install pylint pyflakes cookiecutter
 else
   # TODO: Revisit this, test OS... not sure to install pylint, etc globally
