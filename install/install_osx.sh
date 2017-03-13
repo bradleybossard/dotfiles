@@ -18,6 +18,8 @@ brew install \
   libpng \
   libtiff \
   libtool \
+  openssl \
+  python \
   python3 \
   tag-ag \
   the_silver_searcher \
@@ -39,7 +41,6 @@ mkdir ~/.nvm
 
 # oniguruma \
 # pcre \
-# openssl \
 # xz
 
 pip intall virtualenv

@@ -1,6 +1,6 @@
 [user]
 	name = Bradley Bossard
-	email = bradleybossard@gmail.com
+	email = bradley.bossard@moovel.com
 [color]
 	ui = true
 [diff]
@@ -38,6 +38,8 @@
   pullsubs = submodule foreach git pull origin master
 [credential]
 	helper = store
+[credential "https://github.com"]
+    username = bradleymoovel
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
