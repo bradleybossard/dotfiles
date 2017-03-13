@@ -31,10 +31,10 @@ nvm install node; nvm use node
 mkdir ~/.nvm
 
 # Install CUDA https://gist.github.com/Mistobaan/dd32287eeb6859c6668d 
-brew update
-brew install coreutils swig
-brew cask install cuda
-brew cask info cuda
+#brew update
+#brew install coreutils swig
+#brew cask install cuda
+#brew cask info cuda
 
 
 # oniguruma \
