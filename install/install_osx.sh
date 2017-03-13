@@ -18,13 +18,17 @@ brew install \
   libpng \
   libtiff \
   libtool \
-  node \
   python3 \
   tag-ag \
   the_silver_searcher \
   tmux \
   tree \
   wget
+
+
+brew install nvm
+nvm install node; nvm use node 
+mkdir ~/.nvm
 
 # Install CUDA https://gist.github.com/Mistobaan/dd32287eeb6859c6668d 
 brew update
