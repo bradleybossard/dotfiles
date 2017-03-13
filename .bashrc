@@ -126,6 +126,13 @@ fi
 
 
 if [[ $OSTYPE == *"darwin"* ]]; then
+  if [ -f /usr/local/opt/nvm/nvm.sh ]; then
+    export NVM_DIR="$HOME/.nvm"
+    . "/usr/local/opt/nvm/nvm.sh"
+  fi
+fi
+
+if [[ $OSTYPE == *"darwin"* ]]; then
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
   fi
