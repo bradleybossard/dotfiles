@@ -3,8 +3,6 @@
 # https://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers
 # https://www.inversoft.com/guides/2016-guide-to-user-data-security
 
-user=bradleybossard
-
 ## Youtube Downloader
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
