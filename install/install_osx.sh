@@ -27,10 +27,9 @@ brew install \
   tree \
   wget
 
-
-brew install nvm
+# Use curl install of nvm to match Linux install
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
 nvm install node; nvm use node 
-mkdir ~/.nvm
 
 # Install CUDA https://gist.github.com/Mistobaan/dd32287eeb6859c6668d 
 #brew update
