@@ -1,39 +1,39 @@
 # Install node and a bunch of tools I like globally
 
+# omnibus installer - now using nvm
+#sudo sh -c 'curl -sL https://deb.nodesource.com/setup_7.x | bash -'
+
+# install nvm then latest node
 sudo apt-get install --yes curl
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+nvm install node; nvm use node
+nvm debug;
 
-sudo sh -c 'curl -sL https://deb.nodesource.com/setup_7.x | bash -'
-
+# dependencies for building some node c libraries
 sudo apt-get install -y nodejs pkg-config libcairo2-dev \
 libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
 
-sudo npm install -g \
-               angular-cli \
-               babelify \
-               browserify \
-               bower \
-               caniuse-cmd \
-               express-generator \
-               generator-angular-fullstack \
-               grunt \
-               gulp \
-               gulp-cli \
-               jspm \
-               live-server \
-               node-gyp \
-               nodemon \
-               protractor \
-               quget \
-               create-react-app \
-               st \
-               svgo \
-               typescript \
-               typings \
-               watchify \
-               webpack \
-               webpack-dev-server \
-               wintersmith \
-               yarn \
-               yo
+# problematic packages to revist
+# angular-cli
 
-               # node-inspector \
+packages="babelify browserify bower caniuse-cmd express-generator "
+packages+="generator-angular-fullstack grunt gulp gulp-cli  jspm "
+packages+="live-server node-gyp nodemon protractor quget create-react-app "
+packages+="st svgo typescript typings watchify webpack webpack-dev-server "
+packages+="wintersmith yarn yo"
+
+for package in $packages; do
+  echo $package
+  npm install -g $package
+  if [ $? -eq 1 ]
+  then
+    RED='\033[0;31m'
+    GREEN='\033[0;32m'
+    NC='\033[0m' # No Color
+    printf "${RED}Problem installing package:${GREEN} $package${NC}\n"
+    exit
+  fi
+done
+
