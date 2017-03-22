@@ -130,6 +130,10 @@ if [ -f $NVM_DIR/nvm.sh ]; then
   . "$NVM_DIR/nvm.sh"
 fi
 
+if [ -f "$HOME/.avn/bin/avn.sh" ]; then
+  [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+fi
+
 if [[ $OSTYPE == *"darwin"* ]]; then
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
