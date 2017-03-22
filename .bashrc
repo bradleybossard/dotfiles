@@ -125,11 +125,9 @@ if ! shopt -oq posix; then
 fi
 
 
-if [[ $OSTYPE == *"darwin"* ]]; then
-  if [ -f /usr/local/opt/nvm/nvm.sh ]; then
-    export NVM_DIR="$HOME/.nvm"
-    . "/usr/local/opt/nvm/nvm.sh"
-  fi
+export NVM_DIR="$HOME/.nvm"
+if [ -f $NVM_DIR/nvm.sh ]; then
+  . "$NVM_DIR/nvm.sh"
 fi
 
 if [[ $OSTYPE == *"darwin"* ]]; then
