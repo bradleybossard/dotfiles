@@ -18,7 +18,8 @@ libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
 # problematic packages to revist
 # angular-cli
 
-packages="babelify browserify bower caniuse-cmd express-generator "
+packages="avn avn-nvm avn-n "   # Automatic version switching for node
+packages+="babelify browserify bower caniuse-cmd express-generator "
 packages+="generator-angular-fullstack grunt gulp gulp-cli  jspm "
 packages+="live-server node-gyp nodemon protractor quget create-react-app "
 packages+="st svgo typescript typings watchify webpack webpack-dev-server "
@@ -37,3 +38,5 @@ for package in $packages; do
   fi
 done
 
+# avn setup step
+avn setup
