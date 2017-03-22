@@ -1,6 +1,6 @@
 [user]
 	name = Bradley Bossard
-	email = bradley.bossard@moovel.com
+	email = bradleybossard@gmail.com
 [color]
 	ui = true
 [diff]
@@ -39,7 +39,7 @@
 [credential]
 	helper = store
 [credential "https://github.com"]
-    username = bradleymoovel
+    username = bradleybossard
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
