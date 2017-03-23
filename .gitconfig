@@ -39,7 +39,7 @@
 [credential]
 	helper = store
 [credential "https://github.com"]
-    username = bradleybossard
+    username = bradley.bossard@moovel.com
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
