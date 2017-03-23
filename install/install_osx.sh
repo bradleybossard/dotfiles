@@ -19,6 +19,7 @@ brew install \
   libtiff \
   libtool \
   openssl \
+  p7zip \
   python \
   python3 \
   tag-ag \
