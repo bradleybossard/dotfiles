@@ -28,6 +28,8 @@ brew install \
   tree \
   wget
 
+  brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste
+
 # Use curl install of nvm to match Linux install
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
 nvm install node; nvm use node 
