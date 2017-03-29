@@ -3,6 +3,9 @@ if [[ $(which brew | wc -c) -eq 0 ]]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+brew cask install iterm2
+brew cask install spectacle
+
 brew install \
   bash-completion \
   cowsay \
