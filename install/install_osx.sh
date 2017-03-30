@@ -23,7 +23,6 @@ brew install \
   p7zip \
   python \
   python3 \
-  tag-ag \
   the_silver_searcher \
   tmux \
   tree \
