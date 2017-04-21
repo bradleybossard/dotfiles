@@ -29,6 +29,24 @@ function killport {
   lsof -i tcp:${PORT_NUMBER} | awk 'NR!=1 {print $2}' | xargs kill;
 }
 
+# Opens the github page for the current git repo/branch in your browser
+function gh() {
+  giturl=$(git config --get remote.origin.url)
+  if [ "$giturl" == "" ]
+    then
+     echo "Not a git repository or no remote.origin.url set"
+     exit 1;
+  fi
+
+  giturl=${giturl/git\@github\.com\:/https://github.com/}
+  giturl=${giturl/\.git/\/tree/}
+  branch="$(git symbolic-ref HEAD 2>/dev/null)" ||
+  branch="(unnamed branch)"     # detached HEAD
+  branch=${branch##refs/heads/}
+  giturl=$giturl$branch
+  open $giturl
+}
+
 function gurl {
   git_url=`git config --get remote.origin.url`
   git_service=`echo $git_url | sed 's/.*\/\/\(git.*\)\.com.*/\1/'`
