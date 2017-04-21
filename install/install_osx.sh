@@ -9,9 +9,9 @@ brew cask install spectacle
 brew install \
   bash-completion \
   cowsay \
+  fortune \ 
   freetype \
   go \
-  fortune \ 
   imagemagick \
   jpeg \
   jq \
