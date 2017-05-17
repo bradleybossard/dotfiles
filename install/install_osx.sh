@@ -3,6 +3,8 @@ if [[ $(which brew | wc -c) -eq 0 ]]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+brew update
+
 brew cask install iterm2
 brew cask install spectacle
 
@@ -40,16 +42,15 @@ nvm install node; nvm use node
 #brew cask install cuda
 #brew cask info cuda
 
-
-# oniguruma \
-# pcre \
-# xz
-
 pip intall virtualenv
 pip intall virtualenvwrapper
 
-
 brew unlink tag  # unlink default osx tag
-
 brew tap aykamko/tag-ag
 brew install tag-ag
+
+brew install postgresql
+brew services start postgresql
+
+# Create default postgres user (requires password)
+createuser -d -a -s -P postgres
