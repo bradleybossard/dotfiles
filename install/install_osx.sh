@@ -10,6 +10,10 @@ brew tap caskroom/cask
 # https://caskroom.github.io/search
 brew cask install iterm2
 brew cask install spectacle
+brew cask install pgadmin4
+# Untested
+# brew cask install google-chrome
+# brew cask install docker-toolbox
 
 brew install \
   bash-completion \
