@@ -22,8 +22,8 @@ packages="avn avn-nvm avn-n "   # Automatic version switching for node
 packages+="babelify browserify bower caniuse-cmd express-generator "
 packages+="generator-angular-fullstack grunt gulp gulp-cli  jspm "
 packages+="live-server node-gyp nodemon protractor quget create-react-app "
-packages+="st svgo typescript typings watchify webpack webpack-dev-server "
-packages+="wintersmith yarn yo"
+packages+="st svgo typescript typings watchify webpack webpack-cli "
+packages+="webpack-dev-server wintersmith yarn yo"
 
 for package in $packages; do
   echo $package
