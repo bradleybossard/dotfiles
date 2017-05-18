@@ -5,6 +5,9 @@ fi
 
 brew update
 
+brew tap caskroom/cask
+# TODO: Search caskroom to find more installable apps
+# https://caskroom.github.io/search
 brew cask install iterm2
 brew cask install spectacle
 
