@@ -58,6 +58,7 @@ brew unlink tag  # unlink default osx tag
 brew tap aykamko/tag-ag
 brew install tag-ag
 
+# PostGres install
 brew install postgresql
 brew services start postgresql
 
