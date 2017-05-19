@@ -34,7 +34,10 @@ sudo apt-get -y install \
                   redis-server \
                   silversearcher-ag \
                   tree \
+                  tig \
                   tmux \
+                  urlview \
+                  vifm \
                   vim \
                   virtualenv \
                   wget \
