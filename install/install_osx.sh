@@ -52,8 +52,11 @@ brew install \
   python \
   python3 \
   the_silver_searcher \
+  tig \
   tmux \
   tree \
+  urlview \
+  vifm \
   wget
 
   brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste
