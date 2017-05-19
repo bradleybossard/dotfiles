@@ -11,9 +11,28 @@ brew tap caskroom/cask
 brew cask install iterm2
 brew cask install spectacle
 brew cask install pgadmin4
+
 # Untested
 # brew cask install google-chrome
 # brew cask install docker-toolbox
+# brew cask install anaconda
+# brew cask install android-file-transfer
+# brew cask install android-studio
+# brew cask install atom
+# brew cask install blender
+# brew cask install boxer
+# brew cask install charles
+# brew cask install genymotion
+# brew cask install google-earth
+# brew cask install inkscape
+# brew cask install krita
+# brew cask install opentoonz
+# brew cask install licecap
+# brew cask install pencil
+# brew cask install pencil2d-pencil
+# brew cask install processing
+# brew cask install vlc
+
 
 brew install \
   bash-completion \
