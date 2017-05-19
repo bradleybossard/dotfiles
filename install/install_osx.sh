@@ -53,6 +53,7 @@ nvm use node
 pip intall virtualenv
 pip intall virtualenvwrapper
 
+# Install tag for silversearcher (ag)
 brew unlink tag  # unlink default osx tag
 brew tap aykamko/tag-ag
 brew install tag-ag
