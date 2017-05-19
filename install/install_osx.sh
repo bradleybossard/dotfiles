@@ -63,3 +63,5 @@ brew services start postgresql
 
 # Create default postgres user (requires password)
 createuser -d -a -s -P postgres
+
+psql postgres -c 'CREATE EXTENSION "adminpack";'
