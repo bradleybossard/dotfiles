@@ -249,6 +249,11 @@ function ngroute {
   dirname=${PWD##*/} 
   file='/etc/nginx/sites-available/default' 
   route="  location /$dirname {\n    alias ${PWD};\n    autoindex on;\n  }\n\n"
+  if grep -q location\ /$dirname $file 
+  then
+    echo "Route already exists, exiting"
+    return 
+  fi
   comment='### INSERT NEW ROUTE HERE'  # Placeholder in nginx config
   sudo bash -c "sed -i 's|$comment|$route$comment|' $file"
   ngrestart
