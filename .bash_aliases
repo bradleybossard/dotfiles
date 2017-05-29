@@ -293,8 +293,7 @@ EOF
 #alias ngurl="dirname=$(basename `pwd`); printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
 #alias ngurl="dirname=`pwd | rev | cut -d/ -f1 | rev`; printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
 #alias ngurl="dirname=$(basename `pwd`); printf '\nhttp://bradleybossard.com/%s\n\n' $dirname"
-alias ngurl="reponame=$(basename $(git config --get remote.origin.url) .git); printf \"\nhttp://bradleybossard.com/%s\n\n\" $reponame"
-
+alias ngurl="reponame=$(basename $(git config --get remote.origin.url) .git); printf '\nhttp://bradleybossard.com/%s\n\n' $reponame"
 
 ## git
 
