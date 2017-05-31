@@ -244,4 +244,10 @@ if [[ $OSTYPE == *"darwin"* ]]; then
   export RMANTREE='/Applications/Pixar/RenderManProServer-21.3'
   export PATH=$RMANTREE/bin:$PATH
 fi
-  
+
+
+###-tns-completion-start-### NativeScript CLI tool
+if [ -f /Users/bradleybossard/.tnsrc ]; then 
+    source /Users/bradleybossard/.tnsrc 
+fi
+###-tns-completion-end-###
