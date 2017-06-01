@@ -253,3 +253,4 @@ if [ -f /Users/bradleybossard/.tnsrc ]; then
     source /Users/bradleybossard/.tnsrc 
 fi
 ###-tns-completion-end-###
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
