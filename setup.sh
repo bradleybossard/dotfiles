@@ -22,6 +22,9 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 #Install Vundle Bundles
 vim +BundleInstall +qall
 
+# Install tmux plugins
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 echo
 echo 'Run command source ~/.bashrc'
 
