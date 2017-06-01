@@ -11,6 +11,7 @@ fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+cp ./nvm-default-packages $NVM_DIR/default-packages
 nvm install node;
 nvm use node
 nvm debug;
