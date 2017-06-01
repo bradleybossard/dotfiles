@@ -1,0 +1,6 @@
+# TODO: default-packages will be available in next nvm release, migrate global package installation here
+babelify
+browserify
+bower
+caniuse-cmd
+express-generator
