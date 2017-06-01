@@ -5,14 +5,13 @@ if [[ $OSTYPE == *"linux"* ]]; then
   sudo apt-get install --yes vim git tmux
 fi
 
-# Copy all dotfiles in this directory to home
+# Create symlinks from home dir to files in this repo
 for file in $(find . -maxdepth 1 -not -type d | grep "./\." | sed 's/.\/././'); do
   # Delete file or link if it exists
   if [ -e ~/$file ]; then
     rm ~/$file
   fi
 
-  # Create link to file in dotfiles repo
   ln -s `pwd`/$file ~/$file
 done
 
