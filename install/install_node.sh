@@ -5,11 +5,13 @@
 
 # install nvm then latest node
 sudo apt-get install --yes curl
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-nvm install node; nvm use node
-nvm debug;
+ if [[ $(ls -a $HOME | grep .nvm | wc -c) -eq 0 ]]; then
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+  nvm install node; nvm use node
+  nvm debug;
+fi
 
 # dependencies for building some node c libraries
 sudo apt-get install -y nodejs pkg-config libcairo2-dev \
