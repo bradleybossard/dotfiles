@@ -33,6 +33,7 @@ choco install openshot
 choco install picard
 choco install python
 choco install rufus
+choco install sendtokindle
 choco install soulseek
 choco install steam
 choco install sysinternals
