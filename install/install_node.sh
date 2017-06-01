@@ -6,7 +6,7 @@
 # install nvm then latest node
 sudo apt-get install --yes curl
  if [[ $(ls -a $HOME | grep .nvm | wc -c) -eq 0 ]]; then
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 fi
 
 export NVM_DIR="$HOME/.nvm"
