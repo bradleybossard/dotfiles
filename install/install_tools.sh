@@ -28,6 +28,7 @@ sudo apt-get -y install \
                   jq \
                   logwatch \
                   mosh \
+                  ncdu \
                   nginx \
                   pandoc \
                   r-base-core \
