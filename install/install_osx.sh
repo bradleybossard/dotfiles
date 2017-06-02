@@ -47,6 +47,8 @@ brew install \
   libpng \
   libtiff \
   libtool \
+  ncdu \
+  neovim \
   openssl \
   p7zip \
   python \
