@@ -20,7 +20,6 @@ sudo apt-get -y install \
                   fail2ban \
                   flex \
                   git \
-                  golang-go \
                   graphicsmagick \
                   grc \
                   haskell-platform \
@@ -43,6 +42,8 @@ sudo apt-get -y install \
                   virtualenv \
                   wget \
                   xmlstarlet
+
+sudo snap install --classic go
 
 go get -u github.com/aykamko/tag/...
 go install github.com/aykamko/tag
