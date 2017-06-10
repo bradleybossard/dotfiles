@@ -26,7 +26,7 @@ libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
 packages="avn avn-nvm avn-n "   # Automatic version switching for node
 packages+="babelify browserify bower caniuse-cmd express-generator "
 packages+="generator-angular-fullstack grunt gulp gulp-cli  jspm "
-packages+="live-server node-gyp nodemon protractor quget create-react-app "
+packages+="live-server node-gyp nodemon prettier protractor quget create-react-app "
 packages+="st svgo typescript typings watchify webpack webpack-cli "
 packages+="webpack-dev-server wintersmith yarn yo"
 
