@@ -437,6 +437,14 @@ endfun
 
 command R call RefreshAllBuffers()
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Javascript
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use prettier for code formatting
+autocmd FileType javascript set formatprg=prettier\ --stdin
+autocmd BufWritePre *.js :normal gggqG
+autocmd BufWritePre *.js exe "normal! gggqG\<C-o>\<C-o>"
+
 "set nocompatible               " be iMproved
 " filetype off                   " required!
 "
