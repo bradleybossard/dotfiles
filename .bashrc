@@ -254,3 +254,10 @@ if [ -f /Users/bradleybossard/.tnsrc ]; then
 fi
 ###-tns-completion-end-###
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# added by Anaconda3 4.3.1 installer
+#export PATH="/Users/bradleybossard/anaconda/bin:$PATH"
+
+# avn automatic version switching for node
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
