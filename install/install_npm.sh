@@ -31,7 +31,7 @@ for package in $packages; do
   npm install -g "$package"
   if [ $? -eq 1 ]
   then
-    printf "${RED}Problem installing package:${GREEN} $package${NO_C}NO_COLOR\n"
+    printf "${RED}Problem installing package:${GREEN}%s${NO_COLOR}\n" "$package"
     exit
   fi
 done
