@@ -32,6 +32,7 @@ sudo apt-get -y install \
                   pandoc \
                   r-base-core \
                   redis-server \
+                  shellcheck \
                   silversearcher-ag \
                   tree \
                   tig \
