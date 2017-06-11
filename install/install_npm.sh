@@ -23,14 +23,15 @@ misc_packages="caniuse-cmd svgo wintersmith "
 packages+=$misc_packages
 
 for package in $packages; do
-  echo $package
+  YELLOW='\033[0;33m'
+  RED='\033[0;31m'
+  GREEN='\033[0;32m'
+  NO_COLOR='\033[0m'
+  printf "${YELLOW}$package${NO_COLOR}\n"
   npm install -g $package
   if [ $? -eq 1 ]
   then
-    RED='\033[0;31m'
-    GREEN='\033[0;32m'
-    NC='\033[0m' # No Color
-    printf "${RED}Problem installing package:${GREEN} $package${NC}\n"
+    printf "${RED}Problem installing package:${GREEN} $package${NO_C}NO_COLOR\n"
     exit
   fi
 done
