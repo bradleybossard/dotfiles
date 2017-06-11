@@ -27,8 +27,8 @@ for package in $packages; do
   RED='\033[0;31m'
   GREEN='\033[0;32m'
   NO_COLOR='\033[0m'
-  printf "${YELLOW}$package${NO_COLOR}\n"
-  npm install -g $package
+  printf "${YELLOW}%s ${NO_COLOR}\n" "$package"
+  npm install -g "$package"
   if [ $? -eq 1 ]
   then
     printf "${RED}Problem installing package:${GREEN} $package${NO_C}NO_COLOR\n"
