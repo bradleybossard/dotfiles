@@ -1,3 +1,7 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
 # install brew
 if [[ $(which brew | wc -c) -eq 0 ]]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -36,10 +40,17 @@ brew cask install pgadmin4
 
 brew install \
   bash-completion \
+  cairo \
+  coreutils \
   cowsay \
   fortune \ 
   freetype \
+  gifsicle \
+  glew \
+  glfw3 \
   go \
+  hub \
+  icdiff \
   imagemagick \
   jpeg \
   jq \
@@ -49,8 +60,11 @@ brew install \
   libtool \
   ncdu \
   neovim \
+  nmap \
   openssl \
   p7zip \
+  par2 \
+  pow \
   python \
   python3 \
   the_silver_searcher \
@@ -58,10 +72,24 @@ brew install \
   tmux \
   tree \
   urlview \
+  vim --override-system-vi \
   vifm \
+  watch \
   wget
 
-  brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste
+brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r \
+                    --with-libass --with-libbluray --with-libcaca --with-speex \
+                    --with-libquvi --with-libvidstab --with-libvo-aacenc \
+                    --with-libvorbis --with-libvpx --with-opencore-amr \
+                    --with-openjpeg --with-openssl --with-opus --with-rtmpdump \
+                    --with-schroedinger --with-theora --with-tools --with-x265
+
+# For installing imagemagick 
+brew install libpng --build-from-source
+brew install -v imagemagick --build-from-source
+
+
+brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste
 
 # Use curl install of nvm to match Linux install
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
