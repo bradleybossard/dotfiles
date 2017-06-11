@@ -445,6 +445,11 @@ autocmd FileType javascript set formatprg=prettier\ --stdin
 autocmd BufWritePre *.js :normal gggqG
 autocmd BufWritePre *.js exe "normal! gggqG\<C-o>\<C-o>"
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntastic 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_sh_checkers = ['shellcheck']
+
 "set nocompatible               " be iMproved
 " filetype off                   " required!
 "
@@ -476,7 +481,6 @@ Bundle 'ervandew/supertab'
 Bundle 'easymotion/vim-easymotion'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
-
 
 filetype plugin on
 filetype indent on
