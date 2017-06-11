@@ -1,3 +1,7 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
 # Install Neovim
 sudo apt-get install --yes software-properties-common
 sudo apt-get install --yes python-software-properties
