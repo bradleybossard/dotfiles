@@ -1,5 +1,6 @@
-# some more ls aliases
+#!/bin/bash
 
+# some more ls aliases
 alias ll='ls -alFG'
 alias lsd='ls -ld */'  # List just directories
 alias la='ls -A'
