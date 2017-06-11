@@ -1,3 +1,6 @@
+#!/bin/bash
+set -euo pipefail
+
 # problematic packages to revist
 # angular-cli
 
