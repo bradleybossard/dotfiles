@@ -4,16 +4,20 @@ source ~/.bashrc
 # Maybe they belong in postmkvirtualenv
 # https://virtualenvwrapper.readthedocs.io/en/latest/scripts.html#scripts-postmkvirtualenv
 
-if [[ $OSTYPE == *"darwin"* ]]; then
-  pip3 install virtualenv virtualenvwrapper flake8
+# TODO: Need to revisit this entire script... Installed virtualenv and virtualenvwrapper may
+# work just the same on both Linux and Darwin.
+
+#if [[ $OSTYPE == *"darwin"* ]]; then
+#  pip3 install virtualenv virtualenvwrapper flake8
   #pip3 install pylint pyflakes cookiecutter
-else
+#else
   # TODO: Revisit this, test OS... not sure to install pylint, etc globally
   sudo apt-get -y install python-pip virtualenv virtualenvwrapper pylint pyflakes cookiecutter
-fi
+#fi
 
-mkdir -p $WORKON_HOME
-mkdir -p $PROJECT_HOME
+# Moved these to .bashrc
+#mkdir -p $WORKON_HOME
+#mkdir -p $PROJECT_HOME
 
 #sudo pip install cookiecutter --upgrade
 
