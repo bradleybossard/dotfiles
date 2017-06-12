@@ -102,8 +102,10 @@ nvm use node
 #brew cask install cuda
 #brew cask info cuda
 
-pip intall virtualenv
-pip intall virtualenvwrapper
+# TODO: Look at best way to install virtualenvwrapper on OSX.  Maybe pip is good enough
+# pip install virtualenv
+# pip install virtualenvwrapper
+# brew install pyenv-virtualenvwrapper \
 
 # Install tag for silversearcher (ag)
 brew unlink tag  # unlink default osx tag
@@ -118,3 +120,4 @@ brew services start postgresql
 createuser -d -a -s -P postgres
 
 psql postgres -c 'CREATE EXTENSION "adminpack";'
+
