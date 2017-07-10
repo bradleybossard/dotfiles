@@ -37,9 +37,9 @@ export PROMPT_COMMAND='history -a'
 export VIRTUALENVWRAPPER_PYTHON=`which python`
 if [[ $OSTYPE == *"darwin"* ]]; then
   export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+  export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
+  source `which virtualenvwrapper.sh`
 fi
-export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
-source `which virtualenvwrapper.sh`
 export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=~/.virtualenvprojects 
 
