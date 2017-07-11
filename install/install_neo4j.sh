@@ -12,3 +12,13 @@ sudo service neo4j start
 # dbms.connectors.default_listen_address=0.0.0.0
 #
 # Access the browser on port :7474
+
+# Instructions for install Awesome Procedures on Cyper
+#
+# cd /var/lib/neo4j/plugins
+# sudo su neo4j
+# # Based on version of neo4j running, get url for plugin release
+# # https://github.com/neo4j-contrib/neo4j-apoc-procedures#version-compatibility-matrix
+# wget <url>
+# chmod 755 <plugin-filename>
+# sudo service neo4j restart
