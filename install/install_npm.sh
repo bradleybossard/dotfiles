@@ -19,6 +19,9 @@ packages+=$generator_packages
 webpack_packages="webpack webpack-cli webpack-dev-server "
 packages+=$webpack_packages
 
+testing_packages="dredd "
+packages+=$testing_packages
+
 misc_packages="caniuse-cmd svgo wintersmith "
 packages+=$misc_packages
 
