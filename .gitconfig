@@ -33,6 +33,7 @@
   unstage = reset HEAD --
   last = log -1 HEAD
   pullsubs = submodule foreach git pull origin master
+  edit = !vim $(git status -s | cut -c4-)
 [credential]
 	helper = store
 [credential "https://github.com"]
