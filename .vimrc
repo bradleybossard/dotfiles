@@ -458,30 +458,30 @@ let g:syntastic_sh_checkers = ['shellcheck']
 "
 " " let Vundle manage Vundle
 " " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 "
-" " My Bundles here:
+" " My Plugins here:
 "
-"Bundle 'git://github.com/miripiruni/CSScomb-for-Vim'
-"Bundle 'klen/python-mode'
-"Bundle 'marijnh/tern_for_vim'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'ciaranm/detectindent'
-Bundle 'easymotion/vim-easymotion'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'ervandew/supertab'
-Bundle 'fatih/vim-go'
-Bundle 'kien/ctrlp.vim'
-Bundle 'lokaltog/vim-powerline'
-Bundle 'mattn/emmet-vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'rizzatti/dash.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'scrooloose/syntastic.git'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
+"Plugin 'git://github.com/miripiruni/CSScomb-for-Vim'
+"Plugin 'klen/python-mode'
+"Plugin 'marijnh/tern_for_vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'ciaranm/detectindent'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ervandew/supertab'
+Plugin 'fatih/vim-go'
+Plugin 'kien/ctrlp.vim'
+Plugin 'lokaltog/vim-powerline'
+Plugin 'mattn/emmet-vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'rizzatti/dash.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 
 filetype plugin on
 filetype indent on

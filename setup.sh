@@ -20,7 +20,7 @@ rm -rf ~/.vim/bundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 #Install Vundle Bundles
-vim +BundleInstall +qall
+vim +PluginInstall +qall
 
 # Install tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
