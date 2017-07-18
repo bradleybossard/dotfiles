@@ -26,9 +26,6 @@
   ci = commit
   ac = commit -a --message
   t = tag -n3
-  cleandry = clean -n
-  cleanreal = clean -f
-  logp = log -p
   logpretty = log --pretty=oneline
   lol = log --oneline --graph --decorate
   incoming = log origin/master ^master
