@@ -481,6 +481,7 @@ Bundle 'ervandew/supertab'
 Bundle 'easymotion/vim-easymotion'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
+Bundle 'editorconfig/editorconfig-vim'
 
 filetype plugin on
 filetype indent on
