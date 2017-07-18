@@ -79,22 +79,6 @@ alias tkall='for session in $(tmux ls | grep : | cut -d. -f1); do tmux kill-sess
 alias tgrep='tmux list-session | grep $0'
 alias tnew='tmux -2 new-session -d -s ${PWD##*/}; tmux attach -dt ${PWD##*/}'
 alias tat='tmux attach -d -t'
-if [ -f /etc/bash_completion.d/tat ]; then
-. /etc/bash_completion.d/tat
-fi
-
-# Create a tmux session for every repos under ~/src
-tnewall() {
-	pushd .
-	cd ~/src
-	for name in $(ls); do
-		cd $name
-		echo $name
-		tmux -2 new-session -d -s $name
-		cd -
-	done;
-	popd
-}
 
 # Show failed login attempts
 alias sshfailedlogins='grep sshd.\*Failed /var/log/auth.log | less'
