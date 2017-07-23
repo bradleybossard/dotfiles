@@ -12,6 +12,7 @@ choco install atom
 choco install audacity
 choco install autohotkey.portable
 choco install blender
+choco install calibre
 choco install cdburnerxp
 choco install clover
 choco install cmder
