@@ -31,6 +31,7 @@
   lol = log --oneline --graph --decorate
   outgoing = log master ^origin/master
   pullsubs = submodule foreach git pull origin master
+  spa = !"git stash; git pull; git stash apply"
 	st = status 
   t = tag -n3
   unstage = reset HEAD --
