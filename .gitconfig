@@ -18,21 +18,21 @@
 	editor = vim
 	excludesfile = ~/.gitignore
 [alias]
-	co = checkout
-  col = checkout @{-1}
-	st = status 
+  ac = commit -a --message
   br = branch
   ci = commit
-  ac = commit -a --message
-  t = tag -n3
+	co = checkout
+  col = checkout @{-1}
+  edit = !vim $(git status -s | cut -c4-)
+  incoming = log origin/master ^master
+  last = log -1 HEAD
   logpretty = log --pretty=oneline
   lol = log --oneline --graph --decorate
-  incoming = log origin/master ^master
   outgoing = log master ^origin/master
-  unstage = reset HEAD --
-  last = log -1 HEAD
   pullsubs = submodule foreach git pull origin master
-  edit = !vim $(git status -s | cut -c4-)
+	st = status 
+  t = tag -n3
+  unstage = reset HEAD --
 [credential]
 	helper = store
 [credential "https://github.com"]
