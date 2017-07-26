@@ -15,6 +15,7 @@ sudo apt-get -y install \
                   ack-grep \
                   bison \
                   bc \
+                  rig \
                   context \
                   cowsay \
                   curl \
