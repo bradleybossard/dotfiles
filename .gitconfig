@@ -7,8 +7,6 @@
 	tool = vimdiff
 [merge]
   tool = /Users/bradleybossard/scripts/diffwrap.sh 
-[difftool "gvimdiff"]
-	path = mvim
 [push]
   default = tracking
 [pull]
@@ -44,3 +42,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[difftool]
+	prompt = false
