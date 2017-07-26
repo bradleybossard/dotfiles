@@ -19,6 +19,7 @@
 	excludesfile = ~/.gitignore
 [alias]
 	co = checkout
+  col = checkout @{-1}
 	st = status 
   br = branch
   ci = commit
