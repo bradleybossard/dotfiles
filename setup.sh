@@ -16,8 +16,9 @@ for file in $(find . -maxdepth 1 -not -type d | grep "./\." | sed 's/.\/././'); 
   ln -s `pwd`/$file ~/$file
 done
 
-rm -rf ~/.vim/bundle
+
 #Install Vundle
+rm -rf ~/.vim/bundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 #Install Vundle Bundles
