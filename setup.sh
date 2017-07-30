@@ -1,4 +1,5 @@
 #!/bin/bash
+set -o errexit  # fail on any non-zero return value
 
 if [[ $OSTYPE == *"linux"* ]]; then
   sudo apt-get update --fix-missing
