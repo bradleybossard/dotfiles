@@ -8,13 +8,8 @@ if [[ $OSTYPE == *"linux"* ]]; then
 fi
 
 # Create symlinks from home dir to files in this repo
-for file in $(find . -maxdepth 1 -not -type d | grep "./\." | sed 's/.\/././'); do
-  # Delete file or link if it exists
-  if [ -e ~/$file ]; then
-    rm ~/$file
-  fi
-
-  ln -s `pwd`/$file ~/$file
+for file in $(ls -a | grep -e "^\.[A-z]"); do
+  ln -fs `pwd`/$file ~/$file
 done
 
 
