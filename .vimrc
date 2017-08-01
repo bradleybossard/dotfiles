@@ -490,6 +490,9 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/syntastic.git'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+
 
 filetype plugin on
 filetype indent on
