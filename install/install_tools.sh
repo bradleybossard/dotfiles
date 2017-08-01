@@ -19,6 +19,7 @@ sudo apt-get -y install \
                   context \
                   cowsay \
                   curl \
+                  exuberant-ctags \
                   fail2ban \
                   flex \
                   git \
