@@ -453,6 +453,13 @@ let g:syntastic_sh_checkers = ['shellcheck']
 "set nocompatible               " be iMproved
 " filetype off                   " required!
 "
+"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tagbar
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>e :TagbarToggle<cr>
+
  set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
 "
@@ -474,6 +481,7 @@ Plugin 'ervandew/supertab'
 Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
 Plugin 'lokaltog/vim-powerline'
+Plugin 'majutsushi/tagbar'
 Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'rizzatti/dash.vim'
