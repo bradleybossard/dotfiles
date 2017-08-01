@@ -23,6 +23,7 @@ vim +PluginInstall +qall
 # Install tmux plugins
 rm -rf ~/.tmux/plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+~/.tmux/plugins/tpm/bin/install_plugins
 
 echo
 echo 'Run command source ~/.bashrc'
