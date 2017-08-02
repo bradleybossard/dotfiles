@@ -32,6 +32,11 @@ HISTFILE="${HOME}/.history/$(date -u +%Y/%m/%d.%H.%M.%S)_${TMUX_SESSION_NAME}_${
 # Save to history files before issuing command
 export PROMPT_COMMAND='history -a'
 
+# Add brew bin dir after system bin dir, Fixes bug with brew/OSX.
+if [[ $OSTYPE == *"darwin"* ]]; then
+  homebrew=/usr/local/bin:/usr/local/sbin
+  export PATH=$homebrew:$PATH
+fi
 
 # python virtualenv and virtualenvwrapper section
 export VIRTUALENVWRAPPER_PYTHON=`which python`
