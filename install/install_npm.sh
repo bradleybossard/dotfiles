@@ -7,7 +7,7 @@ set -euo pipefail
 avn_packages="avn avn-nvm avn-n "   # Automatic version switching for node
 packages+=$avn_packages
 
-build_packages="babelify browserify bower grunt gulp gulp-cli jspm live-server "
+build_packages="babelify browserify bower eslint prettier-eslint-cli grunt gulp gulp-cli jspm live-server "
 build_packages+="node-gyp nodemon prettier st svgo typescript typings watchify "
 build_packages+="yarn "
 packages+=$build_packages
