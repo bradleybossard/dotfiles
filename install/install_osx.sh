@@ -43,6 +43,7 @@ brew install \
   cairo \
   coreutils \
   cowsay \
+  ctags \
   fortune \ 
   freetype \
   gifsicle \
