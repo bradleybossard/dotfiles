@@ -175,6 +175,12 @@ set -o vi
 
 export SVN_EDITOR=vim
 
+if [[ $OSTYPE == *"darwin"* ]]; then
+  # Fixes bug where query was not executed when
+  # exiting vim.  Need to test if it's needed for linux
+  export PSQL_EDITOR="vim -u NONE"
+fi
+
 ###-begin-npm-completion-###
 #
 # npm command completion script
