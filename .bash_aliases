@@ -18,8 +18,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias rebash='source ~/.bashrc'
 alias hisgrep='history | grep $0'
 
-alias gitvim='vim `git diff --name-only`'
-
 # Show active ports
 if [[ $OSTYPE == *"linux"* ]]; then
   alias ports='netstat -tulanp'
