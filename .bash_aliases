@@ -83,6 +83,8 @@ alias sshfailedlogins='grep sshd.\*Failed /var/log/auth.log | less'
 # Show failed connect attempts (like a port scanner, for instance)
 alias sshfailedconnects='grep sshd.\*Did /var/log/auth.log | less'
 
+alias vi='vim'
+
 if [[ $OSTYPE == *"linux"* ]]; then
   alias python='python3'
   alias pip='pip3'
