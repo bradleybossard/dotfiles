@@ -505,6 +505,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-surround'
 "Plugin 'vim-syntastic/syntastic.git'
+Plugin 'w0rp/ale'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 
