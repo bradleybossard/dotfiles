@@ -140,7 +140,7 @@ set foldlevel=1         "this is just what i use
 syntax enable 
 
 try
-    colorscheme desert
+    colorscheme turtles
 catch
 endtry
 
@@ -479,6 +479,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ervandew/supertab'
 Plugin 'fatih/vim-go'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'lokaltog/vim-powerline'
 Plugin 'majutsushi/tagbar'
