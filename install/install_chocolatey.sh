@@ -4,6 +4,8 @@
 
 # Turn off install confirmation
 choco feature enable -n allowGlobalConfirmation
+# Bypass checksum, need to revisit.  Added b/c install were getting stuck on confirmations.
+choco feature enable -n allowEmptyChecksums
 
 choco install 7zip
 choco install androidstudio 
