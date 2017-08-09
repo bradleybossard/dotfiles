@@ -33,6 +33,7 @@
   outgoing = log master ^origin/master
   pullsubs = submodule foreach git pull origin master
   spa = !"git stash; git pull; git stash apply"
+  spp = !"git stash; git pull; git stash pop"
 	st = status 
   t = tag -n3
   unstage = reset HEAD --
