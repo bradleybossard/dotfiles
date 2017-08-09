@@ -35,6 +35,7 @@
   spa = !"git stash; git pull; git stash apply"
   spp = !"git stash; git pull; git stash pop"
 	st = status 
+  sts = status --short --branch
   t = tag -n3
   unstage = reset HEAD --
 [credential]
