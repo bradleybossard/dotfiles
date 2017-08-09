@@ -38,6 +38,12 @@ if [[ $OSTYPE == *"darwin"* ]]; then
   export PATH=$homebrew:$PATH
 fi
 
+if [[ $OSTYPE == *"darwin"* ]]; then
+  # Notably for using aws cli on OSX
+  pip3_installs=~/Library/Python/3.6/bin
+  export PATH=$pip3_installs:$PATH
+fi
+
 # python virtualenv and virtualenvwrapper section
 export VIRTUALENVWRAPPER_PYTHON=`which python`
 if [[ $OSTYPE == *"darwin"* ]]; then
