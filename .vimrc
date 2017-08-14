@@ -441,9 +441,18 @@ command R call RefreshAllBuffers()
 " => Javascript
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use prettier for code formatting
-autocmd FileType javascript set formatprg=prettier\ --stdin
-autocmd BufWritePre *.js :normal gggqG
-autocmd BufWritePre *.js exe "normal! gggqG\<C-o>\<C-o>"
+
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    " Do Mac stuff here
+  else
+    " Only enable this for Linux (work-related)
+    autocmd FileType javascript set formatprg=prettier\ --stdin
+    autocmd BufWritePre *.js :normal gggqG
+    autocmd BufWritePre *.js exe "normal! gggqG\<C-o>\<C-o>"
+  endif
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic 
