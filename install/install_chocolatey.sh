@@ -18,6 +18,7 @@ choco install calibre
 choco install cdburnerxp
 choco install clover
 choco install cmder
+choco install conemu 
 choco install curl
 choco install dolphin
 choco install fritzing
@@ -34,6 +35,7 @@ choco install notepadplusplus
 choco install openscad
 choco install openshot
 choco install picard
+choco install putty 
 choco install python
 choco install rufus
 choco install sendtokindle
@@ -49,5 +51,6 @@ choco install virtualbox
 choco install vlc
 choco install wget
 choco install wireshark
+choco install xencenter 
 choco install xming
 choco install youtube-dl
