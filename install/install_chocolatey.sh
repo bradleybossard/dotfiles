@@ -21,6 +21,7 @@ choco install cmder
 choco install conemu 
 choco install curl
 choco install dolphin
+choco install fiddler4
 choco install fritzing
 choco install git
 choco install googlechrome
