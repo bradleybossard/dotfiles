@@ -4,14 +4,14 @@ set -o nounset
 
 if [[ $OSTYPE == *"linux"* ]]; then
   sudo apt-get update --fix-missing
-  sudo apt-get install --yes vim git tmux
+  sudo apt-get install --yes vim git tmux exuberant-ctags
 fi
 
 # Create symlinks from home dir to files in this repo
-for file in $(ls -a | grep -e "^\.[A-z]"); do
+for file in $(find -mindepth 1 -prune -name '.*' | grep -v .git$); do
+  echo $file
   ln -fs `pwd`/$file ~/$file
 done
-
 
 #Install Vundle
 rm -rf ~/.vim/bundle
