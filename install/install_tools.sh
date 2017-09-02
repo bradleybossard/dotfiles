@@ -48,6 +48,8 @@ sudo apt-get -y install \
                   wget \
                   xmlstarlet
 
+sudo apt-file update
+
 sudo snap install --classic go
 
 go get -u github.com/aykamko/tag/...
