@@ -13,9 +13,10 @@ brew tap caskroom/cask
 # TODO: Search caskroom to find more installable apps
 # https://caskroom.github.io/search
 brew cask install iterm2
-brew cask install spectacle
-brew cask install pgadmin4
 brew cask install namechanger
+brew cask install pgadmin4
+brew cask install spectacle
+
 
 # Untested
 # brew cask install google-chrome
