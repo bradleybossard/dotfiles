@@ -15,6 +15,7 @@ brew tap caskroom/cask
 brew cask install iterm2
 brew cask install spectacle
 brew cask install pgadmin4
+brew cask install namechanger
 
 # Untested
 # brew cask install google-chrome
