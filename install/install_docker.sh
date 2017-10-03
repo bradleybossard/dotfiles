@@ -27,8 +27,8 @@ sudo apt-get install --yes docker-ce
 
 sudo docker run hello-world
 
-sudo usermod -aG docker bradleybossard
-echo "Added user bradleybossard to group docker, must log out to take effect"
+sudo usermod -aG docker $USER
+echo "Added user $USER group docker, must log out to take effect"
 
 exit
 
