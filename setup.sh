@@ -4,7 +4,11 @@ set -o nounset
 
 if [[ $OSTYPE == *"linux"* ]]; then
   sudo apt-get update --fix-missing
-  sudo apt-get install --yes vim git tmux exuberant-ctags
+  sudo apt-get install --yes \
+    exuberant-ctags \
+    git \
+    tmux \
+    vim
 fi
 
 # Create symlinks from home dir to files in this repo
