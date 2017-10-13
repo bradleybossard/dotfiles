@@ -10,9 +10,7 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 
 sudo apt-get update --fix-missing
 
-sudo apt-get -y remove ack
 sudo apt-get -y install \
-                  ack-grep \
                   apt-file \
                   bison \
                   bc \
