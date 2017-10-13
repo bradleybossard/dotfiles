@@ -10,23 +10,16 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 
 sudo apt-get update --fix-missing
 
-sudo apt-get -y install \
-                  apt-file \
-                  bison \
+sudo apt-get --yes install \
                   bc \
-                  rig \
                   context \
                   cowsay \
-                  curl \
                   exuberant-ctags \
                   fail2ban \
-                  flex \
-                  git \
                   graphicsmagick \
                   grc \
                   haskell-platform \
                   hugo \
-                  jq \
                   logwatch \
                   mosh \
                   ncdu \
@@ -35,18 +28,16 @@ sudo apt-get -y install \
                   r-base-core \
                   redis-server \
                   shellcheck \
-                  silversearcher-ag \
-                  tree \
-                  tig \
-                  tmux \
-                  urlview \
                   vifm \
-                  vim \
-                  virtualenv \
-                  wget \
                   xmlstarlet
 
-sudo apt-file update
+#sudo apt-get --yes install \
+
+#  bison \
+#  flex \
+#  rig \                          # random identify generator
+#  urlview \
+#  virtualenv \
 
 sudo snap install --classic go
 

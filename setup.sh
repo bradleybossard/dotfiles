@@ -5,10 +5,18 @@ set -o nounset
 if [[ $OSTYPE == *"linux"* ]]; then
   sudo apt-get update --fix-missing
   sudo apt-get install --yes \
+    apt-file \ 
+    curl \
     exuberant-ctags \
     git \
+    jq \
+    silversearcher-ag \
+    tree \
     tmux \
-    vim
+    tig \
+    vim \
+    wget
+  sudo apt-file update
 fi
 
 # Create symlinks from home dir to files in this repo
