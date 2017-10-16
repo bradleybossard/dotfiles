@@ -442,17 +442,6 @@ command R call RefreshAllBuffers()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use prettier for code formatting
 
-if has("unix")
-  let s:uname = system("uname")
-  if s:uname == "Darwin\n"
-    " Do Mac stuff here
-  else
-    " Only enable this for Linux (work-related)
-    autocmd FileType javascript set formatprg=prettier\ --stdin
-    autocmd BufWritePre *.js :normal gggqG
-    autocmd BufWritePre *.js exe "normal! gggqG\<C-o>\<C-o>"
-  endif
-endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic 
@@ -515,9 +504,23 @@ Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-surround'
 "Plugin 'vim-syntastic/syntastic.git'
 Plugin 'w0rp/ale'
+let g:ale_linters = {}
+let g:ale_linters.javascript = ['eslint']
+let g:ale_fixers = {}
+let g:ale_fixers.javascript = ['prettier']
+let g:ale_javascript_prettier_use_global = 1
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    " Do Mac stuff here
+  else
+    " Only enable autosave on Linux
+    let g:ale_fix_on_save = 1
+  endif
+endif
+
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
-
 
 filetype plugin on
 filetype indent on
