@@ -273,6 +273,9 @@ fi
 # nvm bash completion
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# aws cli tool completion
+complete -C '`which aws_completer`' aws
+
 # added by Anaconda3 4.3.1 installer
 #export PATH="/Users/bradleybossard/anaconda/bin:$PATH"
 
