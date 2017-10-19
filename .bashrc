@@ -258,12 +258,6 @@ fi
 
 export DISPLAY=:0.0
 
-###-tns-completion-start-###
-if [ -f /Users/bradleybossard/.tnsrc ]; then 
-    source /Users/bradleybossard/.tnsrc 
-fi
-###-tns-completion-end-###
-
 # RENDERMAN environment variables
 if [[ $OSTYPE == *"darwin"* ]]; then
   export RMANTREE='/Applications/Pixar/RenderManProServer-21.3'
@@ -271,13 +265,13 @@ if [[ $OSTYPE == *"darwin"* ]]; then
 fi
 
 
-###-tns-completion-start-### NativeScript CLI tool
+# nativescript cli tool completion
 if [ -f /Users/bradleybossard/.tnsrc ]; then 
     source /Users/bradleybossard/.tnsrc 
 fi
-###-tns-completion-end-###
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# nvm bash completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # added by Anaconda3 4.3.1 installer
 #export PATH="/Users/bradleybossard/anaconda/bin:$PATH"
