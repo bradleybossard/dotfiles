@@ -5,7 +5,7 @@ set -o nounset
 if [[ $OSTYPE == *"linux"* ]]; then
   sudo apt-get update --fix-missing
   sudo apt-get install --yes \
-    apt-file \ 
+    apt-file \
     curl \
     exuberant-ctags \
     git \
