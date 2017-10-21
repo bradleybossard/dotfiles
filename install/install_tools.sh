@@ -42,3 +42,6 @@ sudo snap install --classic go
 # tag - instantly jump to your ag matches
 go get -u github.com/aykamko/tag/...
 go install github.com/aykamko/tag
+
+# hub - win at github
+go get github.com/github/hub
