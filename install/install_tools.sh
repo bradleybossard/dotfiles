@@ -14,19 +14,14 @@ sudo apt-get --yes install \
                   bc \
                   context \
                   cowsay \
-                  exuberant-ctags \
                   fail2ban \
                   graphicsmagick \
                   grc \
                   haskell-platform \
                   hugo \
-                  logwatch \
+                  logwatch sendmail \
                   mosh \
                   ncdu \
-                  nginx \
-                  pandoc \
-                  r-base-core \
-                  redis-server \
                   shellcheck \
                   vifm \
                   xmlstarlet
@@ -35,7 +30,10 @@ sudo apt-get --yes install \
 
 #  bison \
 #  flex \
-#  rig \                          # random identify generator
+#  nginx \
+#  pandoc \
+#  redis-server \
+#  rig \          # random identify generator
 #  urlview \
 #  virtualenv \
 
