@@ -17,7 +17,6 @@ sudo apt-get --yes install \
                   fail2ban \
                   graphicsmagick \
                   grc \
-                  haskell-platform \
                   hugo \
                   logwatch sendmail \
                   mosh \
