@@ -50,3 +50,5 @@
 	trustExitCode = true
 [difftool]
 	prompt = false
+[hub]
+	protocol = https
