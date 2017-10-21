@@ -385,8 +385,7 @@ function slackemoji {
 }
 
 # Removes local branches corresponding to deleted remote branches
-gitprunelocal()
-{
+gitprunelocal() {
   REMOTES="$@";
   if [ -z "$REMOTES" ]; then
     REMOTES=$(git remote);
