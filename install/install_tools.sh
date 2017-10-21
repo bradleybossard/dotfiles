@@ -17,8 +17,8 @@ sudo apt-get --yes install \
                   fail2ban \
                   graphicsmagick \
                   grc \
-                  hugo \
-                  logwatch sendmail \
+                  logwatch \
+                  sendmail \
                   mosh \
                   ncdu \
                   shellcheck \
@@ -29,6 +29,7 @@ sudo apt-get --yes install \
 
 #  bison \
 #  flex \
+#  hugo \
 #  nginx \
 #  pandoc \
 #  redis-server \
