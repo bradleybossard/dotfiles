@@ -130,6 +130,12 @@ if [ -f ~/.ssh_aliases ]; then
     . ~/.ssh_aliases
 fi
 
+HUB_COMPLETION=$(find "$HOME"/go | grep bash_completion.sh)
+if [[ ! -z "$HUB_COMPLETION" ]]; then
+  . "$HUB_COMPLETION"
+fi
+
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
