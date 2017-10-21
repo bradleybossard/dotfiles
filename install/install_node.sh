@@ -17,5 +17,12 @@ nvm use node
 nvm debug;
 
 # dependencies for building some node c libraries
-sudo apt-get install -y nodejs pkg-config libcairo2-dev \
-libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
+sudo apt-get install --yes \
+  nodejs \
+  pkg-config \
+  libcairo2-dev \
+  libjpeg8-dev \
+  libpango1.0-dev \
+  libgif-dev \
+  build-essential \
+  g++
