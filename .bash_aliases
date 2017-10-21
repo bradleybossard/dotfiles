@@ -285,6 +285,10 @@ function ngurl {
 ## git
 
 
+if [[ $OSTYPE == *"linux"* ]]; then
+  alias git='hub'
+fi
+
 function gitinitrepo {
 	if [ -z "$1" ]
 		then
