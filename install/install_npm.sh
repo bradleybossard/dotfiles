@@ -22,7 +22,7 @@ packages+=$webpack_packages
 testing_packages="dredd "
 packages+=$testing_packages
 
-misc_packages="caniuse-cmd svgo wintersmith "
+misc_packages="caniuse-cmd svgo tldr wintersmith "
 packages+=$misc_packages
 
 for package in $packages; do
