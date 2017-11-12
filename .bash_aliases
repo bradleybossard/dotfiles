@@ -284,8 +284,7 @@ function ngurl {
 
 ## git
 
-
-if [[ $OSTYPE == *"linux"* ]]; then
+if [ -x "$(command -v hub)" ]; then
   alias git='hub'
 fi
 
