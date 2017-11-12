@@ -130,9 +130,11 @@ if [ -f ~/.ssh_aliases ]; then
     . ~/.ssh_aliases
 fi
 
-HUB_COMPLETION=$(find "$HOME"/go | grep bash_completion.sh)
-if [[ ! -z "$HUB_COMPLETION" ]]; then
-  . "$HUB_COMPLETION"
+if [ -d "$HOME"/go ]; then
+  HUB_COMPLETION=$(find "$HOME"/go | grep bash_completion.sh)
+  if [[ ! -z "$HUB_COMPLETION" ]]; then
+    . "$HUB_COMPLETION"
+  fi
 fi
 
 
