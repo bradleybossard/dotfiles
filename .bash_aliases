@@ -17,6 +17,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias rebash='source ~/.bashrc'
 alias hisgrep='history | grep $0'
+alias psgrep='ps aux | head -1; ps aux | grep $0'
 
 # Show active ports
 if [[ $OSTYPE == *"linux"* ]]; then
