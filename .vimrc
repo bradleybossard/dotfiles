@@ -510,12 +510,14 @@ let g:ale_linters = {}
 let g:ale_linters.javascript = ['eslint']
 let g:ale_fixers = {}
 let g:ale_fixers.javascript = ['prettier']
-let g:ale_javascript_prettier_use_global = 1
+let g:ale_javascript_prettier_use_global = 0
+let g:ale_javascript_prettier_use_local_config = 1
 if has("unix")
   let s:uname = system("uname")
   if s:uname == "Darwin\n"
     " Do Mac stuff here
   else
+    let g:ale_javascript_prettier_use_global = 1
     " Only enable autosave on Linux
     let g:ale_fix_on_save = 1
   endif
