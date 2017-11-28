@@ -4,6 +4,9 @@ set -euo pipefail
 # problematic packages to revist
 # angular-cli
 
+# necessary dependencies for node-plantuml
+sudo apt-get install --yes default-jre graphviz
+
 avn_packages="avn avn-nvm avn-n "   # Automatic version switching for node
 packages+=$avn_packages
 
@@ -22,7 +25,7 @@ packages+=$webpack_packages
 testing_packages="dredd "
 packages+=$testing_packages
 
-misc_packages="caniuse-cmd coinmon svgo tldr wintersmith "
+misc_packages="caniuse-cmd coinmon node-plantuml svgo tldr wintersmith "
 packages+=$misc_packages
 
 for package in $packages; do
