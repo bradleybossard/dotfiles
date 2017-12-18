@@ -111,6 +111,7 @@ then
     alias traceroute='colourify /usr/sbin/traceroute'
 fi
 
+alias dockerc='docker-compose'
 # TIP: To have a ' inside alias, replace it with '"'"'
 # Docker top - Lists all docker containers with top-like stats, mem, cpu, io
 alias dockertop='docker stats $(docker ps --format '"'"'{{.Names}}'"'"')'
