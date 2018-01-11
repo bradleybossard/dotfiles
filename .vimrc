@@ -494,6 +494,7 @@ Plugin 'ervandew/supertab'
 Plugin 'fatih/vim-go'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'kien/ctrlp.vim'
+nnoremap <leader>. :CtrlPTag<cr>
 Plugin 'lokaltog/vim-powerline'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/emmet-vim'
@@ -531,4 +532,3 @@ Plugin 'xolox/vim-misc'
 filetype plugin on
 filetype indent on
 filetype plugin indent on
-"set runtimepath^=~/.vim/bundle/ctrlp.vim
