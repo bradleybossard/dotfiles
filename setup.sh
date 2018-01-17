@@ -20,7 +20,7 @@ if [[ $OSTYPE == *"linux"* ]]; then
 fi
 
 # Create symlinks from home dir to files in this repo
-for file in $(find -mindepth 1 -prune -name '.*' | grep -v .git$); do
+for file in $(find . -mindepth 1 -prune -name '.*' | egrep -v ".git$|.DS_Store$"); do
   echo $file
   ln -fs `pwd`/$file ~/$file
 done
