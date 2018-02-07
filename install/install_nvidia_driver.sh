@@ -1,3 +1,7 @@
+# askubuntu.com answers
+# https://askubuntu.com/a/951892/241826
+# https://askubuntu.com/a/149224/241826
+
 # 1. Download the driver from the nvidia website
 
 # 2. If Nouveau driver needs to be disabled, follow these steps. 
