@@ -2,6 +2,9 @@
 # https://askubuntu.com/a/951892/241826
 # https://askubuntu.com/a/149224/241826
 
+# CUDA install guide
+# http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ixzz4rQODN0jy
+
 # 1. Download the driver from the nvidia website
 
 # 2. If Nouveau driver needs to be disabled, follow these steps. 
