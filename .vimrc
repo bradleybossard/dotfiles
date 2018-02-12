@@ -452,29 +452,6 @@ augroup END
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Syntastic 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:syntastic_debug=3
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-"
-"let g:syntastic_sh_checkers = ['shellcheck']
-"
-"let g:syntastic_javascript_checkers = ['eslint']
-"let g:syntastic_javascript_eslint_exe = 'npm run lint:vim --'
-"let g:syntastic_javascript_eslint_exe = 'npm run lint --'
-
-"set nocompatible               " be iMproved
-" filetype off                   " required!
-"
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tagbar
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>e :TagbarToggle<cr>
@@ -513,7 +490,6 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-surround'
-"Plugin 'vim-syntastic/syntastic.git'
 Plugin 'w0rp/ale'
 let g:ale_linters = {}
 let g:ale_linters.javascript = ['eslint']
