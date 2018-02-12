@@ -439,6 +439,12 @@ endfun
 
 command R call RefreshAllBuffers()
 
+" Auto-reload .vimrc config edits
+augroup myvimrchooks
+    au!
+    autocmd bufwritepost .vimrc source ~/.vimrc
+augroup END
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Javascript
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
