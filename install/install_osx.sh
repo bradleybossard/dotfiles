@@ -48,7 +48,6 @@ brew install \
   ctags \
   fortune \ 
   freetype \
-  fzf \
   gifsicle \
   glew \
   glfw3 \
