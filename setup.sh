@@ -25,8 +25,6 @@ for file in $(find . -mindepth 1 -prune -name '.*' | egrep -v ".git$|.DS_Store$"
   ln -fs `pwd`/$file ~/$file
 done
 
-# Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 #Install Vundle
 rm -rf ~/.vim/bundle
@@ -39,6 +37,12 @@ vim +PluginInstall +qall
 rm -rf ~/.tmux/plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/bin/install_plugins
+
+# Set default shell to zsh
+sh -s $(which zsh) $USER
+# Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 
 echo
 echo 'Run command source ~/.bashrc'
