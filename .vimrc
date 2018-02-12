@@ -460,9 +460,6 @@ Plugin 'gmarik/vundle'
 "
 " " My Plugins here:
 "
-"Plugin 'git://github.com/miripiruni/CSScomb-for-Vim'
-"Plugin 'klen/python-mode'
-"Plugin 'marijnh/tern_for_vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ciaranm/detectindent'
 Plugin 'easymotion/vim-easymotion'
