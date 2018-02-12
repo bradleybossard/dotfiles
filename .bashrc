@@ -290,3 +290,5 @@ complete -C '`which aws_completer`' aws
 
 # avn automatic version switching for node
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
