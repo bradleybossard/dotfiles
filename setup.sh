@@ -25,7 +25,6 @@ for file in $(find . -mindepth 1 -prune -name '.*' | egrep -v ".git$|.DS_Store$"
   ln -fs `pwd`/$file ~/$file
 done
 
-
 #Install Vundle
 rm -rf ~/.vim/bundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
@@ -43,6 +42,9 @@ sh -s $(which zsh) $USER
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# Install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 echo
 echo 'Run command source ~/.bashrc'
