@@ -502,6 +502,7 @@ endif
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
+let g:session_autosave = 'no'
 
 filetype plugin on
 filetype indent on
