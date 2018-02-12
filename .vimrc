@@ -499,9 +499,9 @@ if has("unix")
     " let g:ale_fix_on_save = 1
   endif
 endif
-
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
 
 filetype plugin on
 filetype indent on
