@@ -25,6 +25,9 @@ for file in $(find . -mindepth 1 -prune -name '.*' | egrep -v ".git$|.DS_Store$"
   ln -fs `pwd`/$file ~/$file
 done
 
+# Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 #Install Vundle
 rm -rf ~/.vim/bundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
