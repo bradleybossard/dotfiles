@@ -171,8 +171,8 @@ export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
-# for pipsi, next-gen pip tool
-#export PATH=~/.local/bin:$PATH
+# For apps installed via pip3
+PATH=$PATH:~/.local/bin
 
 # export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 
