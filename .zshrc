@@ -1,5 +1,51 @@
+
+function antigen() {
+
+source $HOME/.antigen.zsh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+#
+# # Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle brew
+antigen bundle command-not-found
+antigen bundle common-aliases
+antigen bundle cp
+antigen bundle dircycle
+antigen bundle dirhistory
+antigen bundle docker-compose 
+antigen bundle docker-machine 
+antigen bundle emoji 
+antigen bundle git
+antigen bundle gitignore
+antigen bundle pip
+antigen bundle tmux
+
+# Update to date gitignore plugin
+# antigen bundle voronkovich/gitignore.plugin.zsh
+# # Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+#
+# # Load the theme.
+antigen theme robbyrussell
+#
+# # Tell Antigen that you're done.
+antigen apply
+}
+
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+
+function ohmyzshell() {
+
+if [[ ! -d $HOME/.oh-my-zsh ]]; then
+  # Install Oh My Zsh
+  #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  # rm $HOME/.zshrc
+  # ln -s $HOME/src/dotfiles/.zshrc $HOME/.zshrc
+fi
 
 # Path to your oh-my-zsh installation.
 # export ZSH=/Users/bradleybossard/.oh-my-zsh
@@ -60,24 +106,36 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  brew
+  command-not-found
+  common-aliases
+  cp
+  dircycle
+  dirhistory
+  docker-compose
+  docker-machine
+  emoji
   git
+  gitignore
+  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
+
+#rm $HOME/.zshrc
+#ln -s $HOME/src/dotfiles/.zshrc $HOME/.zshrc
+
+}
+
+ohmyzshell
+#antigen
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export LANG=en_US.UTF-8
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -93,5 +151,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+source ~/.alias
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
