@@ -503,7 +503,7 @@ Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 let g:session_autosave = 'no'
-
+let g:session_autoload = 'no'
 filetype plugin on
 filetype indent on
 filetype plugin indent on
