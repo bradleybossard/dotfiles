@@ -165,3 +165,25 @@ export EDITOR='vim'
 source ~/.alias
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Add brew bin dir after system bin dir, Fixes bug with brew/OSX.
+if [[ $OSTYPE == *"darwin"* ]]; then
+  homebrew=/usr/local/bin:/usr/local/sbin
+  export PATH=$homebrew:$PATH
+fi
+
+if [[ $OSTYPE == *"darwin"* ]]; then
+  # Notably for using aws cli on OSX
+  pip3_installs=~/Library/Python/3.6/bin
+  export PATH=$pip3_installs:$PATH
+fi
+
+export NVM_DIR="$HOME/.nvm"
+if [ -f $NVM_DIR/nvm.sh ]; then
+  . "$NVM_DIR/nvm.sh"
+fi
+
+# Source ssh aliases
+if [ -f ~/.ssh_aliases ]; then
+    . ~/.ssh_aliases
+fi
