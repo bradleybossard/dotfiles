@@ -1,8 +1,3 @@
-# Install node and a bunch of tools I like globally
-
-# omnibus installer - now using nvm
-#sudo sh -c 'curl -sL https://deb.nodesource.com/setup_7.x | bash -'
-
 # install nvm then latest node
 sudo apt-get install --yes curl
  if [[ $(ls -a $HOME | grep .nvm | wc -c) -eq 0 ]]; then
@@ -12,11 +7,16 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 cp ./nvm-default-packages $NVM_DIR/default-packages
-nvm install node;
-nvm use node
+# nvm install node;
+nvm install v8.9.1;
+# nvm use node
+nvm alias default v8.9.1
 nvm debug;
 
+exit
+
 # dependencies for building some node c libraries
+# make this dependent on os==linux
 sudo apt-get install --yes \
   nodejs \
   pkg-config \
@@ -26,3 +26,4 @@ sudo apt-get install --yes \
   libgif-dev \
   build-essential \
   g++
+
