@@ -37,8 +37,9 @@ brew cask install spectacle
 # brew cask install pencil
 # brew cask install pencil2d-pencil
 # brew cask install processing
+# brew cask install vagrant
+# brew cask install virtualbox
 # brew cask install vlc
-
 
 brew install \
   bash-completion \
