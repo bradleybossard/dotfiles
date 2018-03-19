@@ -75,7 +75,8 @@ function install_fzf () {
 install_basics
 #install_antigen
 install_oh_my_zshell
+create_symlinks
 install_vundle
 install_tmux
 install_fzf
-create_symlinks
+
