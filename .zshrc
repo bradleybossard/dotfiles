@@ -187,3 +187,8 @@ fi
 if [ -f ~/.ssh_aliases ]; then
     . ~/.ssh_aliases
 fi
+
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+
