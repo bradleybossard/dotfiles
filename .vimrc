@@ -500,6 +500,12 @@ if has("unix")
   endif
 endif
 Plugin 'xolox/vim-easytags'
+let g:easytags_languages = {
+\   'javascript': {
+\     'cmd': 'jsctags',
+\       'args': [],
+\   }
+\}
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 let g:session_autosave = 'no'
