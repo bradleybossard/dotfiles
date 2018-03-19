@@ -71,7 +71,6 @@ brew install \
   pow \
   python \
   python3 \
-  the_silver_searcher \
   tig \
   tmux \
   tree \
@@ -92,13 +91,7 @@ brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r \
 brew install libpng --build-from-source
 brew install -v imagemagick --build-from-source
 
-
 brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste
-
-# Use curl install of nvm to match Linux install
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
-nvm install node;
-nvm use node
 
 # Install CUDA https://gist.github.com/Mistobaan/dd32287eeb6859c6668d 
 #brew update
@@ -110,11 +103,6 @@ nvm use node
 # pip install virtualenv
 # pip install virtualenvwrapper
 # brew install pyenv-virtualenvwrapper \
-
-# Install tag for silversearcher (ag)
-brew unlink tag  # unlink default osx tag
-brew tap aykamko/tag-ag
-brew install tag-ag
 
 # PostGres install
 brew install postgresql
