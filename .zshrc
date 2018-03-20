@@ -1,4 +1,3 @@
-
 function antigen() {
 
 source $HOME/.antigen.zsh
@@ -33,10 +32,8 @@ antigen theme robbyrussell
 antigen apply
 }
 
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 
 function ohmyzshell() {
 
@@ -140,10 +137,6 @@ source $ZSH/oh-my-zsh.sh
 ohmyzshell
 #antigen
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 
@@ -153,34 +146,12 @@ export EDITOR='vim'
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+[ -f ~/.path ] && source ~/.path
+
 [ -f ~/.alias ] && source ~/.alias
 
 [ -f ~/.work-alias ] && source ~/.work-alias
 
+ [ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Add brew bin dir after system bin dir, Fixes bug with brew/OSX.
-if [[ $OSTYPE == *"darwin"* ]]; then
-  homebrew=/usr/local/bin:/usr/local/sbin
-  export PATH=$homebrew:$PATH
-fi
-
-if [[ $OSTYPE == *"darwin"* ]]; then
-  # Notably for using aws cli on OSX
-  pip3_installs=~/Library/Python/3.6/bin
-  export PATH=$pip3_installs:$PATH
-fi
-
-export NVM_DIR="$HOME/.nvm"
-if [ -f $NVM_DIR/nvm.sh ]; then
-  . "$NVM_DIR/nvm.sh"
-fi
-
-# Source ssh aliases
-if [ -f ~/.ssh_aliases ]; then
-    . ~/.ssh_aliases
-fi
-
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN

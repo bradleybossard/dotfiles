@@ -1,12 +1,20 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
 # If not running interactively, don't do anything
 case $- in
-    *i*) ;;
-      *) return;;
+  *i*) ;;
+  *) return;;
 esac
+
+[ -f ~/.path ] && source ~/.path
+
+[ -f ~/.alias ] && source ~/.alias
+
+[ -f ~/.work-alias ] && source ~/.work-alias
+
+#TODO: Need some debugging here, trying to override system Python 2.7 with Brew Python 3
+if [[ $OSTYPE == *"darwin"* ]]; then
+  echo 'point'
+  alias python="python3"
+fi
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -32,18 +40,6 @@ HISTFILE="${HOME}/.history/$(date -u +%Y/%m/%d.%H.%M.%S)_${TMUX_SESSION_NAME}_${
 # Save to history files before issuing command
 export PROMPT_COMMAND='history -a'
 
-# Add brew bin dir after system bin dir, Fixes bug with brew/OSX.
-if [[ $OSTYPE == *"darwin"* ]]; then
-  homebrew=/usr/local/bin:/usr/local/sbin
-  export PATH=$homebrew:$PATH
-fi
-
-if [[ $OSTYPE == *"darwin"* ]]; then
-  # Notably for using aws cli on OSX
-  pip3_installs=~/Library/Python/3.6/bin
-  export PATH=$pip3_installs:$PATH
-fi
-
 # python virtualenv and virtualenvwrapper section
 export VIRTUALENVWRAPPER_PYTHON=`which python`
 if [[ $OSTYPE == *"darwin"* ]]; then
@@ -51,6 +47,7 @@ if [[ $OSTYPE == *"darwin"* ]]; then
   export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
   source `which virtualenvwrapper.sh`
 fi
+
 export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=~/.virtualenvprojects 
 
@@ -70,12 +67,12 @@ shopt -s checkwinsize
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
+  debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+  xterm-color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -103,21 +100,16 @@ unset color_prompt force_color_prompt
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  alias ls='ls --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
 fi
 
 # Source aliases
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-# Source ssh aliases 
-if [ -f ~/.ssh_aliases ]; then
-    . ~/.ssh_aliases
+  . ~/.bash_aliases
 fi
 
 if [ -d "$HOME"/go ]; then
@@ -126,7 +118,6 @@ if [ -d "$HOME"/go ]; then
     . "$HUB_COMPLETION"
   fi
 fi
-
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -139,16 +130,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-export NVM_DIR="$HOME/.nvm"
-if [ -f $NVM_DIR/nvm.sh ]; then
-  . "$NVM_DIR/nvm.sh"
-fi
-
-if [ -f "$HOME/.avn/bin/avn.sh" ]; then
-  [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
-fi
-
 if [[ $OSTYPE == *"darwin"* ]]; then
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
@@ -157,33 +138,8 @@ fi
 
 set PS1='$'
 
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
-
-# For apps installed via pip3
-PATH=$PATH:~/.local/bin
-
-# export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
-
-# For swift on ubuntu 16.04
-export PATH=/opt/swift/swift-3.0/usr/bin:$PATH
-
-export PATH=$HOME/bin:$PATH
-
 if [ -e ~/.git-completion ]; then
   source ~/.git-completion
-fi
-
-set -o vi
-
-export SVN_EDITOR=vim
-
-if [[ $OSTYPE == *"darwin"* ]]; then
-  # Fixes bug where query was not executed when
-  # exiting vim.  Need to test if it's needed for linux
-  export PSQL_EDITOR="vim -u NONE"
-  export FCEDIT='vim'
 fi
 
 ###-begin-npm-completion-###
@@ -257,13 +213,6 @@ fi
 
 export DISPLAY=:0.0
 
-# RENDERMAN environment variables
-if [[ $OSTYPE == *"darwin"* ]]; then
-  export RMANTREE='/Applications/Pixar/RenderManProServer-21.3'
-  export PATH=$RMANTREE/bin:$PATH
-fi
-
-
 # nativescript cli tool completion
 if [ -f /Users/bradleybossard/.tnsrc ]; then 
     source /Users/bradleybossard/.tnsrc 
@@ -275,10 +224,10 @@ fi
 # aws cli tool completion
 complete -C '`which aws_completer`' aws
 
-# added by Anaconda3 4.3.1 installer
-#export PATH="/Users/bradleybossard/anaconda/bin:$PATH"
+[ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
+
+# fuzzy finder
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # avn automatic version switching for node
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
