@@ -153,7 +153,9 @@ export EDITOR='vim'
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-source ~/.alias
+[ -f ~/.alias ] && source ~/.alias
+
+[ -f ~/.work-alias ] && source ~/.work-alias
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -182,4 +184,3 @@ fi
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
-
