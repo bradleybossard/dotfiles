@@ -77,7 +77,6 @@ install_basics
 # TODO: Needs debugging to figure out how to install OMZ, then override with my .zshrc
 #install_oh_my_zshell
 create_symlinks
-exit
 install_vundle
 install_tmux
 install_fzf
