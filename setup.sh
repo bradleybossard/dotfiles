@@ -23,7 +23,7 @@ function install_basics () {
 
 # Create symlinks from home dir to files in this repo
 function create_symlinks () {
-  for file in $(find . -mindepth 1 -prune -name '.*' | egrep -v ".git$|.DS_Store$"); do
+  for file in $(find . -mindepth 1 -prune -name '.*' -exec basename {} \; | egrep -v ".git$|.DS_Store$"); do
     echo $file
     ln -fs `pwd`/$file ~/$file
   done
@@ -77,6 +77,7 @@ install_basics
 # TODO: Needs debugging to figure out how to install OMZ, then override with my .zshrc
 #install_oh_my_zshell
 create_symlinks
+exit
 install_vundle
 install_tmux
 install_fzf
