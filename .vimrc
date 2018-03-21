@@ -1,3 +1,7 @@
+" => Cheatsheets
+" 
+" gg=G           Indent the entire buffer
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sections:
 "    -> General
