@@ -274,10 +274,10 @@ function ngurl {
 }
 
 ## git
-
-if [ -x "$(command -v hub)" ]; then
-  alias git='hub'
-fi
+# TODO: aliasing git to hub breaks oh-my-zsh completion
+#if [ -x "$(command -v hub)" ]; then
+#  alias git='hub'
+#fi
 
 function gitinitrepo {
 	if [ -z "$1" ]
