@@ -103,8 +103,11 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  autojump
   aws
   brew
+  colorize
+  colored-man-pages
   command-not-found
   common-aliases
   cp
@@ -116,8 +119,10 @@ plugins=(
   emoji
   git
   gitignore
+  history
   kubectl
   nmap
+  node
   npm
   nvm
   postgres
