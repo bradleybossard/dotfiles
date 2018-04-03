@@ -53,6 +53,7 @@ brew install \
   glew \
   glfw3 \
   go \
+  gron \
   hub \
   icdiff \
   imagemagick \
