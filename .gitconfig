@@ -52,3 +52,5 @@
 	prompt = false
 [hub]
 	protocol = https
+[pager]
+	branch = false
