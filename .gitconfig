@@ -17,6 +17,7 @@
 	autocrlf = input
 	editor = vim
 	excludesfile = ~/.gitignore
+	pager = less -F -X
 [alias]
   ac = commit -a --message
   br = branch
@@ -52,5 +53,3 @@
 	prompt = false
 [hub]
 	protocol = https
-[pager]
-	branch = false
