@@ -69,6 +69,7 @@ brew install \
   openssl \
   p7zip \
   par2 \
+  peco \
   pow \
   python \
   python3 \
@@ -113,4 +114,7 @@ brew services start postgresql
 createuser -d -a -s -P postgres
 
 psql postgres -c 'CREATE EXTENSION "adminpack";'
+
+# Runs App Store update
+sudo softwareupdate -i -a
 
