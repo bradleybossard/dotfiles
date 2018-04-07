@@ -231,3 +231,13 @@ complete -C '`which aws_completer`' aws
 
 # avn automatic version switching for node
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /home/bradleybossard/.nvm/versions/node/v8.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/bradleybossard/.nvm/versions/node/v8.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /home/bradleybossard/.nvm/versions/node/v8.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/bradleybossard/.nvm/versions/node/v8.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/bradleybossard/.sdkman"
+[[ -s "/home/bradleybossard/.sdkman/bin/sdkman-init.sh" ]] && source "/home/bradleybossard/.sdkman/bin/sdkman-init.sh"
