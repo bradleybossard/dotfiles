@@ -6,6 +6,7 @@ alias andrun='./gradlew android:installDebug android:run'
 
 alias hisgrep='history | grep $0'
 alias psgrep='ps aux | head -1; ps aux | grep $0'
+alias rm='rm -rf'
 
 # Show active ports
 if [[ $OSTYPE == *"linux"* ]]; then
