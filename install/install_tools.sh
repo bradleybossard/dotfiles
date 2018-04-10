@@ -11,6 +11,7 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 sudo apt-get update --fix-missing
 
 sudo apt-get --yes install \
+                  autojump \
                   bc \
                   context \
                   cowsay \
