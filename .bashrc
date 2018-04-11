@@ -241,3 +241,5 @@ complete -C '`which aws_completer`' aws
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/bradleybossard/.sdkman"
 [[ -s "/home/bradleybossard/.sdkman/bin/sdkman-init.sh" ]] && source "/home/bradleybossard/.sdkman/bin/sdkman-init.sh"
+
+[ -f/usr/share/autojump/autojump.bash ] && . /usr/share/autojump/autojump.bash

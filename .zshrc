@@ -160,3 +160,5 @@ export EDITOR='vim'
  [ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+[ -f/usr/share/autojump/autojump.zsh ] && . /usr/share/autojump/autojump.zsh
