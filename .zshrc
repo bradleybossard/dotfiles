@@ -165,7 +165,10 @@ setopt appendhistory
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+<<<<<<< HEAD
 # Ctrl-n to open a file in vim using fzf
 bindkey -s '^n' 'vim $(fzf -m)\n'
 
+=======
+>>>>>>> Fixed indentation
 [ -f /usr/share/autojump/autojump.zsh ] && . /usr/share/autojump/autojump.zsh
