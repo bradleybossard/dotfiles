@@ -151,6 +151,10 @@ export EDITOR='vim'
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+setopt noincappendhistory
+setopt nosharehistory
+setopt appendhistory
+
 [ -f ~/.path ] && source ~/.path
 
 [ -f ~/.alias ] && source ~/.alias
@@ -161,4 +165,5 @@ export EDITOR='vim'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-[ -f/usr/share/autojump/autojump.zsh ] && . /usr/share/autojump/autojump.zsh
+
+[ -f /usr/share/autojump/autojump.zsh ] && . /usr/share/autojump/autojump.zsh
