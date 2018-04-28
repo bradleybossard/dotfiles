@@ -46,6 +46,7 @@ function install_tmux () {
 
 # Install fzf
 function install_fzf () {
+  rm -rf ~/.fzf
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   ~/.fzf/install
 }
