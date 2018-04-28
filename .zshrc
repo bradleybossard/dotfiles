@@ -161,7 +161,7 @@ setopt appendhistory
 
 [ -f ~/.work-alias ] && source ~/.work-alias
 
- [ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
+[ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

@@ -397,3 +397,6 @@ gitprunelocal() {
     [[ -n $skip ]] || { echo -e "\033[31m $(git branch -D $i) \033[0m"; }
   done
 }
+
+# Ctrl-n to open a file in vim using fzf
+bind -x '"\C-n": vim $(fzf);'
