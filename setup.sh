@@ -44,39 +44,14 @@ function install_tmux () {
   $HOME/.tmux/plugins/tpm/bin/install_plugins
 }
 
-
-function install_oh_my_zshell () {
-  rm -rf $HOME/.oh-my-zsh
-  # Set default shell to zsh
-  chsh -s $(which zsh) $USER
-  # Install Oh My Zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-}
-
-function install_antigen () {
-  echo point1
-  rm -rf $HOME/.antigen
-  rm -rf $HOME/.antigen.zsh
-  echo point2
-  # Set default shell to zsh
-  chsh -s $(which zsh) $USER
-  echo point3
-  # Install antigen
-  curl -L git.io/antigen > $HOME/.antigen.zsh
-  echo point4
-}
-
 # Install fzf
 function install_fzf () {
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   ~/.fzf/install
 }
 
-
+# TODO: Create prompt to remind to install zsh if not yet installed
 install_basics
-#install_antigen
-# TODO: Needs debugging to figure out how to install OMZ, then override with my .zshrc
-#install_oh_my_zshell
 create_symlinks
 install_vundle
 install_tmux
