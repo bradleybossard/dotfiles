@@ -11,10 +11,8 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 sudo apt-get update --fix-missing
 
 sudo apt-get --yes install \
-                  autojump \
                   bc \
                   context \
-                  cowsay \
                   fail2ban \
                   graphicsmagick \
                   grc \
@@ -22,27 +20,23 @@ sudo apt-get --yes install \
                   sendmail \
                   mosh \
                   ncdu \
-                  shellcheck \
-                  vifm \
-                  xmlstarlet
+                  shellcheck
 
-#sudo apt-get --yes install \
-
-#  bison \
-#  flex \
-#  hugo \
-#  nginx \
-#  pandoc \
-#  redis-server \
-#  rig \          # random identify generator
-#  urlview \
-#  virtualenv \
-
-sudo snap install --classic go
+# bison \
+# cowsay \
+# flex \
+# hugo \
+# nginx \
+# pandoc \
+# redis-server \
+# rig \          # random identify generator
+# urlview \
+# virtualenv \
+# xmlstarlet
+# vifm \
 
 # tag - instantly jump to your ag matches
-go get -u github.com/aykamko/tag/...
-go install github.com/aykamko/tag
+go get github.com/aykamko/tag
 
 # hub - win at github
 go get github.com/github/hub
