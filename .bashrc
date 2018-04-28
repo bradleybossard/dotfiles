@@ -228,6 +228,7 @@ complete -C '`which aws_completer`' aws
 
 # fuzzy finder
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+bind -x '"\C-n": vim $(fzf -m);'
 
 # avn automatic version switching for node
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn

@@ -165,5 +165,7 @@ setopt appendhistory
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Ctrl-n to open a file in vim using fzf
+bindkey -s '^n' 'vim $(fzf -m)\n'
 
 [ -f /usr/share/autojump/autojump.zsh ] && . /usr/share/autojump/autojump.zsh
