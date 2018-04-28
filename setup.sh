@@ -6,6 +6,7 @@ function install_basics () {
   if [[ $OSTYPE == *"linux"* ]]; then
     sudo apt-get update --fix-missing
     sudo apt-get install --yes \
+      autojump \
       apt-file \
       curl \
       exuberant-ctags \
