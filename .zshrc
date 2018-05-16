@@ -126,6 +126,7 @@ plugins=(
   npm
   nvm
   postgres
+  thefuck
   tmux
   vi-mode
   zsh-navigation-tools
