@@ -74,6 +74,7 @@ brew install \
   python \
   python3 \
   tig \
+  thefuck \
   tmux \
   tree \
   urlview \
