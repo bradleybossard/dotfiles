@@ -5,34 +5,37 @@
 # https://www.inversoft.com/guides/2016-guide-to-user-data-security
 # BASH strict mode - http://redsymbol.net/articles/unofficial-bash-strict-mode/
 
-## Youtube Downloader
-sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-sudo chmod a+rx /usr/local/bin/youtube-dl
 
-sudo apt-get update --fix-missing
+if [[ $OSTYPE == *"linux"* ]]; then
+  ## Youtube Downloader
+  sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+  sudo chmod a+rx /usr/local/bin/youtube-dl
 
-sudo apt-get --yes install \
-                  bc \
-                  context \
-                  fail2ban \
-                  graphicsmagick \
-                  grc \
-                  htop \
-                  logwatch \
-                  sendmail \
-                  mosh \
-                  ncdu \
-                  shellcheck
+  sudo apt-get update --fix-missing
 
-# bison \
-# cowsay \
-# flex \
-# hugo \
-# nginx \
-# pandoc \
-# redis-server \
-# rig \          # random identify generator
-# urlview \
-# virtualenv \
-# xmlstarlet
-# vifm \
+  sudo apt-get --yes install \
+                    bc \
+                    context \
+                    fail2ban \
+                    graphicsmagick \
+                    grc \
+                    htop \
+                    logwatch \
+                    sendmail \
+                    mosh \
+                    ncdu \
+                    shellcheck
+
+  # bison \
+  # cowsay \
+  # flex \
+  # hugo \
+  # nginx \
+  # pandoc \
+  # redis-server \
+  # rig \          # random identify generator
+  # urlview \
+  # virtualenv \
+  # xmlstarlet
+  # vifm \
+fi
