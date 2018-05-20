@@ -159,6 +159,15 @@ setopt noincappendhistory
 setopt nosharehistory
 setopt appendhistory
 
+_ag() {
+  if (( CURRENT == 2 )); then
+    # TODO: Update location of ./tags file once I understand how ctags works :)
+    compadd $(cut -f 1 ./tags tmp/tags 2>/dev/null | grep -v '!_TAG')
+  fi
+}
+
+compdef _ag ag
+
 [ -f ~/.path ] && source ~/.path
 
 [ -f ~/.alias ] && source ~/.alias
