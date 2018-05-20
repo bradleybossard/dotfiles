@@ -59,6 +59,8 @@ brew install \
   imagemagick \
   jpeg \
   jq \
+  kubectl \
+  kubectx \
   libevent \
   libpng \
   libtiff \
