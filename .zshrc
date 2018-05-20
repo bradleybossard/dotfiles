@@ -120,10 +120,13 @@ plugins=(
   git
   gitignore
   history
+  kube-ps1
   kubectl
+  ng
   nmap
   node
   npm
+  npx
   nvm
   postgres
   thefuck
