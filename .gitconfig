@@ -32,6 +32,7 @@
   logpretty = log --pretty=oneline
   lol = log --oneline --graph --decorate
   outgoing = log master ^origin/master
+  pom = push --set-upstream origin master
   pullsubs = submodule foreach git pull origin master
   spa = !"git stash; git pull; git stash apply"
   spp = !"git stash; git pull; git stash pop"
