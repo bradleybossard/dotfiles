@@ -19,7 +19,10 @@ if [[ $OSTYPE == *"darwin"* ]]; then
   minikube start --vm-driver hyperkit 
 elif [[ $OSTYPE == *"linux"* ]]; then
   # Install kubectl
-  sudo snap install kubectl --classic
+  # TODO: Installing via snap didn't seem to put kubectl in PATH.  Check again
+  # on fresh install
+  # sudo snap install kubectl --classic
+  curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/local/bin/
 
   # installing kvm2 driver for minikube
   sudo apt-get install --yes libvirt-bin
