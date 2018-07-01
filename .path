@@ -43,6 +43,9 @@ if [[ $OSTYPE == *"darwin"* ]]; then
   export PATH=$RMANTREE/bin:$PATH
 fi
 
+# snap install binary directory
+export PATH=/snap/bin:$PATH
+
 # go
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
