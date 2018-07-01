@@ -10,9 +10,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 cp ./nvm-default-packages "$NVM_DIR/default-packages"
 # nvm install node;
-nvm install v8.9.1;
+nvm install v8.11.3;
 # nvm use node
-nvm alias default v8.9.1
+nvm alias default v8.11.3
 nvm debug;
 
 exit
@@ -31,4 +31,3 @@ if [[ $OSTYPE == *"linux"* ]]; then
     build-essential \
     g++
 fi
-
