@@ -15,6 +15,14 @@ elif [[ $OSTYPE == *"darwin"* ]]; then
   alias ports='lsof -i'
 fi
 
+if [[ $(which ag | wc -c) -ne 0 ]]; then
+  tag() {
+    command tag "$@";
+    source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null
+  }
+  alias ag='tag'
+fi
+
 function killport {
   PORT_NUMBER=$1;
   lsof -i tcp:${PORT_NUMBER} | awk 'NR!=1 {print $2}' | xargs kill;

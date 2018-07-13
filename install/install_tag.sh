@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/bash
 
 # tag - instantly jump to your ag matches
 if [[ $OSTYPE == *"linux"* ]]; then

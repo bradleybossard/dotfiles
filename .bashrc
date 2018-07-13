@@ -200,17 +200,6 @@ elif type compctl &>/dev/null; then
 fi
 ###-end-npm-completion-###
 
-if [[ $(which ag | wc -c) -ne 0 ]]; then
-  # TODO: Not sure of purpose of following if
-  if hash ag 1>/dev/null; then
-    tag() {
-      command tag "$@";
-      source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null
-    }
-    alias ag='tag'
-  fi
-fi
-
 export DISPLAY=:0.0
 
 # nativescript cli tool completion
