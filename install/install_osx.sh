@@ -47,6 +47,7 @@ brew install \
   coreutils \
   cowsay \
   ctags \
+  direnv \
   fortune \ 
   freetype \
   gifsicle \
