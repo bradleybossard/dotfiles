@@ -65,6 +65,12 @@ else
     set wildignore+=.git\*,.hg\*,.svn\*
 endif
 
+" Ignore node_modules directory
+set wildignore+=**/node_modules/** 
+set wildignore+=dist/**
+
+
+
 "Always show current position
 set ruler
 
@@ -171,7 +177,7 @@ set smarttab
 
 " 1 tab == 2 spaces
 set shiftwidth=2
-set tabstop=2
+set tabstop=2 shiftwidth=2 expandtab
 
 " Linebreak on 500 characters
 set lbr
