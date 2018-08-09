@@ -122,6 +122,7 @@ plugins=(
   history
   kube-ps1
   kubectl
+  minikube
   ng
   nmap
   node
