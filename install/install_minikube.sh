@@ -18,18 +18,12 @@ if [[ $OSTYPE == *"darwin"* ]]; then
   # Starts minikube using hyperkit
   minikube start --vm-driver hyperkit 
 elif [[ $OSTYPE == *"linux"* ]]; then
-  # Install kubectl
-  # TODO: Installing via snap didn't seem to put kubectl in PATH.  Check again
-  # on fresh install
-  # sudo snap install kubectl --classic
-  curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/local/bin/
-
   # installing kvm2 driver for minikube
   sudo apt-get install --yes libvirt-bin
   curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2 && chmod +x docker-machine-driver-kvm2 && sudo mv docker-machine-driver-kvm2 /usr/local/bin/
+
   # install minikube
-  # TODO(bradleybossard): Add logic to determine and install latest version automatically 
-  curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.27.0/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+  curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 
   # Starts minikube using hyperkit
   minikube start --vm-driver kvm2
