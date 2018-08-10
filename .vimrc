@@ -94,7 +94,7 @@ set smartcase
 set hlsearch
 
 " Make shady characters obvious
-set listchars=tab:>~,nbsp:_,trail:.
+set listchars=tab:··,nbsp:_,trail:.
 set list
 
 " Makes search act like search in modern browsers
