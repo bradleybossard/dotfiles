@@ -131,6 +131,7 @@ plugins=(
   nvm
   postgres
   tmux
+  vagrant
   vi-mode
   zsh-navigation-tools
   zsh_reload
