@@ -2,22 +2,36 @@ set -o vi
 
 export SVN_EDITOR=vim
 
-# android
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
-
 # anaconda
 if [[ $OSTYPE == *"darwin"* ]]; then
   export PATH="$HOME/anaconda3/bin:$PATH"
 fi
 
+# android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+
+# brew
+if [[ $OSTYPE == *"darwin"* ]]; then
+  homebrew=/usr/local/bin:/usr/local/sbin
+  export PATH=$homebrew:$PATH
+fi
+
 # flutter
 export PATH=$PATH:$HOME/flutter/bin
 
-# For swift on ubuntu 16.04
-export PATH=/opt/swift/swift-3.0/usr/bin:$PATH
+# go
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
 
-export PATH=$HOME/bin:$PATH
+# pip3, notably aws-cli
+if [[ $OSTYPE == *"darwin"* ]]; then
+  pip3_installs=~/Library/Python/3.6/bin
+elif [[ $OSTYPE == *"linux"* ]]; then
+  pip3_installs=~/.local/bin
+fi
+export PATH=$pip3_installs:$PATH
 
 # psql
 if [[ $OSTYPE == *"darwin"* ]]; then
@@ -27,21 +41,6 @@ if [[ $OSTYPE == *"darwin"* ]]; then
   export FCEDIT='vim'
 fi
 
-# brew
-if [[ $OSTYPE == *"darwin"* ]]; then
-  homebrew=/usr/local/bin:/usr/local/sbin
-  export PATH=$homebrew:$PATH
-fi
-
-# pip3, notably aws-cli
-if [[ $OSTYPE == *"darwin"* ]]; then
-  pip3_installs=~/Library/Python/3.6/bin
-  export PATH=$pip3_installs:$PATH
-elif [[ $OSTYPE == *"linux"* ]]; then
-  pip3_installs=~/.local/bin
-  export PATH=$pip3_installs:$PATH
-fi
-
 # renderman
 if [[ $OSTYPE == *"darwin"* ]]; then
   export RMANTREE='/Applications/Pixar/RenderManProServer-21.3'
@@ -49,9 +48,14 @@ if [[ $OSTYPE == *"darwin"* ]]; then
 fi
 
 # snap install binary directory
-export PATH=/snap/bin:$PATH
+if [[ $OSTYPE == *"linux"* ]]; then
+  export PATH=/snap/bin:$PATH
+fi
 
-# go
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
+# swift
+if [[ $OSTYPE == *"linux"* ]]; then
+  export PATH=/opt/swift/swift-3.0/usr/bin:$PATH
+fi
+
+# user binaries
+export PATH=$HOME/bin:$PATH
