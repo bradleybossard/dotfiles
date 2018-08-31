@@ -137,6 +137,8 @@ plugins=(
   zsh_reload
 )
 
+plugins+=(zsh-better-npm-completion)
+
 source $ZSH/oh-my-zsh.sh
 
 #rm $HOME/.zshrc
