@@ -133,7 +133,6 @@ plugins=(
   tmux
   vagrant
   vi-mode
-  zsh-autosuggestions
   zsh-navigation-tools
   zsh_reload
   zsh-syntax-highlighting
