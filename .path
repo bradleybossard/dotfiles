@@ -47,6 +47,9 @@ if [[ $OSTYPE == *"darwin"* ]]; then
   export PATH=$RMANTREE/bin:$PATH
 fi
 
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # snap install binary directory
 if [[ $OSTYPE == *"linux"* ]]; then
   export PATH=/snap/bin:$PATH
@@ -59,3 +62,4 @@ fi
 
 # user binaries
 export PATH=$HOME/bin:$PATH
+
