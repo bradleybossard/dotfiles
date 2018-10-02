@@ -94,8 +94,12 @@ set smartcase
 set hlsearch
 
 " Make shady characters obvious
-set listchars=tab:··,nbsp:_,trail:.
+" Comment the following line out, requires newer version of VIM
+" set listchars=tab:··,nbsp:_,trail:.
+set listchars=trail:.
 set list
+" TODO: vim-go shows tabs annoyingly as ^I
+" set nolist   to turn off until I figure out why.
 
 " Makes search act like search in modern browsers
 set incsearch 
