@@ -84,10 +84,10 @@ alias sshfailedconnects='grep sshd.\*Did /var/log/auth.log | less'
 
 alias vi='vim'
 
-if [[ $OSTYPE == *"linux"* ]]; then
-  alias python='python3'
-  alias pip='pip3'
-fi
+#if [[ $OSTYPE == *"linux"* ]]; then
+#  alias python='python3'
+#  alias pip='pip3'
+#fi
 
 # Python simple HTTP server
 alias pyhttp='python -m SimpleHTTPServer'

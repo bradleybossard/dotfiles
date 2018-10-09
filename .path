@@ -33,6 +33,12 @@ elif [[ $OSTYPE == *"linux"* ]]; then
 fi
 export PATH=$pip3_installs:$PATH
 
+# pyenv
+# export PATH="/home/bradleybossard/.pyenv/bin:$PATH"
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 # psql
 if [[ $OSTYPE == *"darwin"* ]]; then
   # Fixes bug where query was not executed when
