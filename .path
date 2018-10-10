@@ -34,10 +34,11 @@ fi
 export PATH=$pip3_installs:$PATH
 
 # pyenv
-# export PATH="/home/bradleybossard/.pyenv/bin:$PATH"
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+if [ -x "$HOME/.pyenv" ]; then
+  export PATH="$HOME/.pyenv/bin:$PATH"
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
 
 # psql
 if [[ $OSTYPE == *"darwin"* ]]; then
@@ -54,7 +55,9 @@ if [[ $OSTYPE == *"darwin"* ]]; then
 fi
 
 # rust
-export PATH="$HOME/.cargo/bin:$PATH"
+if [ -x "$HOME/.cargo" ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
 
 # snap install binary directory
 if [[ $OSTYPE == *"linux"* ]]; then
@@ -67,5 +70,7 @@ if [[ $OSTYPE == *"linux"* ]]; then
 fi
 
 # user binaries
-export PATH=$HOME/bin:$PATH
+if [ -x "$HOME/bin" ]; then
+  export PATH=$HOME/bin:$PATH
+fi
 
