@@ -5,8 +5,8 @@
 # platform = linux | mac | windows
 # arch = 32bit | 64bit
 
-
-version=v2.3.0
+# TODO: Figure out how to get latest tag
+version=v3.0.9
 platform=linux
 arch=64bit
 pushd .
