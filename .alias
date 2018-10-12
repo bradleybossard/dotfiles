@@ -8,6 +8,9 @@ alias hisgrep='history | grep $0'
 alias psgrep='ps aux | head -1; ps aux | grep $0'
 alias rm='rm -rf'
 
+
+alias initreadme='echo "# $(basename $PWD)" > README.md'
+
 # Show active ports
 if [[ $OSTYPE == *"linux"* ]]; then
   alias ports='netstat -tulanp'
@@ -405,3 +408,4 @@ gitprunelocal() {
     [[ -n $skip ]] || { echo -e "\033[31m $(git branch -D $i) \033[0m"; }
   done
 }
+
