@@ -12,14 +12,29 @@ brew update
 brew tap caskroom/cask
 # TODO: Search caskroom to find more installable apps
 # https://caskroom.github.io/search
+
+# install brew essentials
+brew install \
+  ctags \
+  direnv \
+  go \
+  gron \
+  tmux \
+  tree \
+  vim --override-system-vi
+
+# install brew casks essentials
+brew cask install google-chrome
 brew cask install iterm2
-brew cask install namechanger
-brew cask install pgadmin4
 brew cask install spectacle
 
+exit
+
+brew cask install namechanger
+brew cask install pgadmin4
 
 # Untested
-# brew cask install google-chrome
+
 # brew cask install docker-toolbox
 # brew cask install anaconda
 # brew cask install android-file-transfer
@@ -46,7 +61,6 @@ brew install \
   cairo \
   coreutils \
   cowsay \
-  ctags \
   direnv \
   fortune \ 
   freetype \
@@ -54,12 +68,10 @@ brew install \
   glew \
   glfw3 \
   go \
-  gron \
   hub \
   icdiff \
   imagemagick \
   jpeg \
-  jq \
   kubectl \
   kubectx \
   libevent \
