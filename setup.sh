@@ -53,11 +53,16 @@ function install_fzf () {
 
 # TODO: Create prompt to remind to install zsh if not yet installed
 
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting
-git clone https://github.com/lukechilds/zsh-better-npm-completion ~/.oh-my-zsh/custom/plugins/zsh-better-npm-completion
+# Install zsh custom plugins
+function install_zsh_custom () {
+  ZSH_CUSTOM=$HOME/custom/plugins
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting
+  git clone https://github.com/lukechilds/zsh-better-npm-completion ${ZSH_CUSTOM}/plugins/zsh-better-npm-completion
+}
 
 install_basics
 create_symlinks
 install_vundle
 install_tmux
+ install_zsh_custom 
 install_fzf
