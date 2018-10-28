@@ -17,6 +17,11 @@ if [[ $OSTYPE == *"darwin"* ]]; then
   export PATH=$homebrew:$PATH
 fi
 
+# conda
+if [[ $OSTYPE == *"darwin"* ]]; then
+  export PATH=/usr/local/anaconda3/bin:"$PATH"
+fi
+
 # flutter
 export PATH=$PATH:$HOME/flutter/bin
 
