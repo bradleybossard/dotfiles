@@ -31,19 +31,19 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
 # pip3, notably aws-cli
-if [[ $OSTYPE == *"darwin"* ]]; then
-  pip3_installs=~/Library/Python/3.6/bin
-elif [[ $OSTYPE == *"linux"* ]]; then
-  pip3_installs=~/.local/bin
-fi
-export PATH=$pip3_installs:$PATH
+#if [[ $OSTYPE == *"darwin"* ]]; then
+#  pip3_installs=~/Library/Python/3.6/bin
+#elif [[ $OSTYPE == *"linux"* ]]; then
+#  pip3_installs=~/.local/bin
+#fi
+#export PATH=$pip3_installs:$PATH
 
 # pyenv
-if [ -x "$HOME/.pyenv" ]; then
-  export PATH="$HOME/.pyenv/bin:$PATH"
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
-fi
+#if [ -x "$HOME/.pyenv" ]; then
+#  export PATH="$HOME/.pyenv/bin:$PATH"
+#  eval "$(pyenv init -)"
+#  eval "$(pyenv virtualenv-init -)"
+#fi
 
 # psql
 if [[ $OSTYPE == *"darwin"* ]]; then
