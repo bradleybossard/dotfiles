@@ -55,6 +55,8 @@ brew cask install pgadmin4
 # brew cask install vagrant
 # brew cask install virtualbox
 # brew cask install vlc
+# brew cask install aerial
+# brew cask install smallpdf
 
 brew install \
   bash-completion \
