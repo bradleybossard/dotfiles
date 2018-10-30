@@ -172,13 +172,14 @@ _ag() {
 
 compdef _ag ag
 
-ENVFILES='$HOME/.path \
-           $HOME/.alias \
-           $HOME/.work-alias \
-           $HOME/.nvm/.nvm.sh \
-           $HOME/.fzf.zsh \
-           /usr/share/autojump/autojump.zsh \
-           /opt/ros/melodic/setup.zsh'
+ENVFILES=(
+  $HOME/.path
+  $HOME/.alias
+  $HOME/.work-alias
+  $HOME/.nvm/.nvm.sh
+  $HOME/.fzf.zsh
+  /usr/share/autojump/autojump.zsh
+  /opt/ros/melodic/setup.zsh)
 
 for FILE in $ENVFILES; do
   [ -f $FILE ] && source $FILE
@@ -187,5 +188,3 @@ done;
 
 # Ctrl-n to open a file in vim using fzf
 bindkey -s '^n' 'vim $(fzf -m)\n'
-
-
