@@ -53,9 +53,14 @@ brew cask install pgadmin4
 # brew cask install pencil2d-pencil
 # brew cask install processing
 # brew cask install vagrant
+# To install virtualbox, you must first attempt to install and fail
 # brew cask install virtualbox
+# After the install fails, go System Preferences -> Security & Privacy,
+# then enable the app install from Oracle
+# brew cask reinstall --force virtualbox --verbose --debug
 # brew cask install vlc
 # brew cask install aerial
+
 # brew cask install smallpdf
 
 brew install \
