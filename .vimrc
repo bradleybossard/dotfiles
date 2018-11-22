@@ -431,3 +431,4 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 let g:session_autosave = 'no'
 let g:session_autoload = 'no'
+" Plugin 'zxqfl/tabnine-vim' # Nice autocomplete, cost money.  Look for other options
