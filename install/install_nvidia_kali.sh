@@ -10,5 +10,8 @@ reboot
 # Install nvidia packages
 apt install -y ocl-icd-libopencl1 nvidia-driver nvidia-cuda-toolkit
 
+# Reboot
+reboot
+
 # Verify install
 nvidia-smi
