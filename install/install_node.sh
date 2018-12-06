@@ -2,7 +2,8 @@
 set -euo pipefail
 # install nvm then latest node
 if [ $(ls -a "$HOME" | grep .nvm | wc -c) -eq 0 ]; then
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+  LATEST_VERSION=$(curl https://api.github.com/repos/creationix/nvm/releases/latest | jq '.name' | sed 's/"//g')
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/$LATEST_VERSION/install.sh | bash
 fi
 
 export NVM_DIR="$HOME/.nvm"
