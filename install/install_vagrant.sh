@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo apt-get install --yes vagrant
 
 # For Ubuntu 18.04, install vagrant from .deb for v2.0.3, otherwise vagrant-mutate plugin has install issue
