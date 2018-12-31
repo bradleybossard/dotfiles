@@ -188,3 +188,12 @@ done;
 
 # Ctrl-n to open a file in vim using fzf
 bindkey -s '^n' 'vim $(fzf -m)\n'
+
+# source ROS env if it's been installed
+# TODO: Figure out a way to do this that doesn't depend on ROS distro name
+ROS_ZSH_SETUP="/opt/ros/melodic/setup.zsh"
+# if [ -x "/opt/ros/melodic/setup.zsh" ]; then
+if [ -x "$ROS_ZSH_SETUP" ]; then
+  source $ROS_ZSH_SETUP
+fi
+
