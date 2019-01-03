@@ -1,5 +1,6 @@
 .ssh_aliases
 .DS_Store
+.npmrc
 npm-debug.log
 tags
 ./tags
