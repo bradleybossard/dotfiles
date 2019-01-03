@@ -65,6 +65,15 @@ if [[ $OSTYPE == *"darwin"* ]]; then
 fi
 
 # ruby 
+#
+if [[ $OSTYPE == *"darwin"* ]]; then
+  # Check if ruby was installed via homebrew
+  RUBY_PATH='/usr/local/opt/ruby/bin'
+  GEM_PATH='/usr/local/lib/ruby/gems/2.5.0/bin'
+  if [ -x $RUBY_PATH ]; then
+    PATH=$RUBY_PATH:$GEM_PATH:$PATH
+  fi
+fi
 #if [ -x "$HOME/.gem" ]; then
 #  export GEM_HOME="$HOME/.gem"
   # export GEM_HOME=~/.gems
