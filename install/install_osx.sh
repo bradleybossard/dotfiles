@@ -30,6 +30,8 @@ brew cask install spectacle
 
 exit
 
+brew cask install alacritty
+brew cask install ultimaker-cura
 brew cask install namechanger
 brew cask install pgadmin4
 
