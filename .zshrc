@@ -119,6 +119,7 @@ plugins=(
   emoji
   git
   gitignore
+  golang
   history
   kube-ps1
   kubectl
