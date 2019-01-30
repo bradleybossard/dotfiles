@@ -24,6 +24,7 @@ if [[ $OSTYPE == *"linux"* ]]; then
                     sendmail \
                     mosh \
                     ncdu \
+                    ncftp \
                     nnn \
                     shellcheck
 
