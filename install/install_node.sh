@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+# set -euo pipefail
 # install nvm then latest node
 if [ $(ls -a "$HOME" | grep .nvm | wc -c) -eq 0 ]; then
   LATEST_VERSION=$(curl https://api.github.com/repos/creationix/nvm/releases/latest | jq '.name' | sed 's/"//g')
