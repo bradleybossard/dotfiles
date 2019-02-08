@@ -198,3 +198,5 @@ if [ -x "$ROS_ZSH_SETUP" ]; then
   source $ROS_ZSH_SETUP
 fi
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
