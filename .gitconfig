@@ -33,6 +33,7 @@
   lol = log --oneline --graph --decorate
   outgoing = log master ^origin/master
   pom = push --set-upstream origin master
+  pob = !git push --set-upstream origin $(git branch | grep \\* | cut -d ' ' -f2)
   pullsubs = submodule foreach git pull origin master
   spa = !"git stash; git pull; git stash apply"
   spp = !"git stash; git pull; git stash pop"
