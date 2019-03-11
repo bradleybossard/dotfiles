@@ -21,6 +21,7 @@ if [[ $OSTYPE == *"linux"* ]]; then
                     grc \
                     htop \
                     logwatch \
+                    lynx \
                     sendmail \
                     mosh \
                     ncdu \
