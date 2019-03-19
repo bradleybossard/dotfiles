@@ -19,6 +19,7 @@
 	excludesfile = ~/.gitignore
 	pager = less -F -X
 [alias]
+  a = add -A
   ac = commit -a --message
   br = branch
   ci = commit
