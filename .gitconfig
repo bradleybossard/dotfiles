@@ -23,9 +23,10 @@
   ac = commit -a --message
   br = branch
   ci = commit
-	co = checkout
+  co = checkout
   cob = checkout -b
   col = checkout @{-1}
+  com = checkout master
   diffc = diff --cached
   edit = !vim $(git status -s | cut -c4-)
   incoming = log origin/master ^master
