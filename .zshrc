@@ -118,6 +118,7 @@ plugins=(
   docker-machine
   emoji
   git
+  github
   gitignore
   golang
   history
@@ -139,13 +140,17 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-plugins+=(zsh-better-npm-completion)
+plugins+=(
+  zsh-better-npm-completion
+)
 
 source $ZSH/oh-my-zsh.sh
 
-#rm $HOME/.zshrc
-#ln -s $HOME/src/dotfiles/.zshrc $HOME/.zshrc
-
+if [[ $OSTYPE == *"darwin"* ]]; then
+	fpath=(/usr/local/share/zsh-completions $fpath)
+	rm -f "$HOME/.zcompdump*"
+	compinit
+fi
 }
 
 ohmyzshell
@@ -197,6 +202,5 @@ ROS_ZSH_SETUP="/opt/ros/melodic/setup.zsh"
 if [ -x "$ROS_ZSH_SETUP" ]; then
   source $ROS_ZSH_SETUP
 fi
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
