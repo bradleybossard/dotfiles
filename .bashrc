@@ -108,8 +108,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Source aliases
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
+if [ -f ~/.alias ]; then
+  . ~/.alias
 fi
 
 if [ -d "$HOME"/go ]; then
@@ -232,4 +232,4 @@ bind -x '"\C-n": vim $(fzf -m);'
 export SDKMAN_DIR="/home/bradleybossard/.sdkman"
 [[ -s "/home/bradleybossard/.sdkman/bin/sdkman-init.sh" ]] && source "/home/bradleybossard/.sdkman/bin/sdkman-init.sh"
 
-[ -f/usr/share/autojump/autojump.bash ] && . /usr/share/autojump/autojump.bash
+[ -f /usr/share/autojump/autojump.bash ] && . /usr/share/autojump/autojump.bash
