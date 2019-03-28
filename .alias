@@ -79,7 +79,7 @@ alias tkall='for session in $(tmux ls | grep : | cut -d. -f1); do tmux kill-sess
 alias tgrep='tmux list-session | grep $0'
 alias tnew='tmux -2 new-session -d -s ${PWD##*/}; tmux attach -dt ${PWD##*/}'
 alias tat='tmux attach -d -t'
-alias tcolors='for i in {0..255}; do printf "\x1b[38;5;${i}mcolor%-5i\x1b[0m" $i ; if ! (( ($i + 1 ) % 8 )); then echo ; fi ; done'
+alias tcolours='for i in {0..255}; do printf "\x1b[38;5;${i}mcolour%-5i\x1b[0m" $i ; if ! (( ($i + 1 ) % 8 )); then echo ; fi ; done'
 
 # Show failed login attempts
 alias sshfailedlogins='grep sshd.\*Failed /var/log/auth.log | less'
