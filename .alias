@@ -1,5 +1,11 @@
+# some more ls aliases
+alias ll='ls -alFG'
+alias lsd='ls -ld */'  # List just directories
+alias la='ls -A'
+alias l='ls -lF --group-directories-first'
 alias mkdir='mkdir -vp'
 alias cp='cp -v'
+alias vi='vim'
 
 # Android compilation commands
 alias andrun='./gradlew android:installDebug android:run'
@@ -86,7 +92,7 @@ alias sshfailedlogins='grep sshd.\*Failed /var/log/auth.log | less'
 # Show failed connect attempts (like a port scanner, for instance)
 alias sshfailedconnects='grep sshd.\*Did /var/log/auth.log | less'
 
-alias vi='vim'
+
 
 # Ubuntu 18.04 no longer has 'python' installed, only 'python3'
 # TODO: Possibly make this check a little more stringent for Ubuntu > 18.04 only
@@ -271,27 +277,6 @@ function ngurl {
   printf "\nhttp://bradleybossard.com/%s\n\n" $dirname
 }
 
-## git
-# TODO: aliasing git to hub breaks oh-my-zsh completion
-#if [ -x "$(command -v hub)" ]; then
-#  alias git='hub'
-#fi
-
-function gitinitrepo {
-	if [ -z "$1" ]
-		then
-			echo "Usage: $0 <path/to/git/repo>  i.e. https://github.com/username/reponame.git"
-			return
-	fi
-
-	git init
-	git add -A
-	git commit -m "Initial commit"
-	git remote add origin $1
-	git pull origin master
-	git push --set-upstream origin master
-}
-
 # Set up git subtree for Hugo publishing to Github Pages
 function hugoinitpublish {
   theme=$(ls themes | head -1)
@@ -395,3 +380,7 @@ gitprunelocal() {
   done
 }
 
+if [[ $OSTYPE == *"darwin"* ]]; then
+  # The closest substitute for lsusb on OSX
+  alias lsusb='ioreg -p IOUSB -l -w 0'
+fi
