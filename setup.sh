@@ -12,7 +12,6 @@ function install_basics () {
       exuberant-ctags \
       git \
       jq \
-      silversearcher-ag \
       tree \
       tmux \
       tig \
@@ -55,14 +54,14 @@ function install_fzf () {
 
 # Install zsh custom plugins
 function install_zsh_custom () {
-  ZSH_CUSTOM=$HOME/custom/plugins
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting
-  git clone https://github.com/lukechilds/zsh-better-npm-completion ${ZSH_CUSTOM}/plugins/zsh-better-npm-completion
+  ZSH_CUSTOM=$HOME/.oh-my-zsh/custom/plugins
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}/zsh-syntax-highlighting
+  git clone https://github.com/lukechilds/zsh-better-npm-completion ${ZSH_CUSTOM}/zsh-better-npm-completion
 }
 
 install_basics
 create_symlinks
 install_vundle
 install_tmux
- install_zsh_custom 
+install_zsh_custom 
 install_fzf

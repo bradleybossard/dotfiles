@@ -137,10 +137,10 @@ plugins=(
   vi-mode
   zsh-navigation-tools
   zsh_reload
-  zsh-syntax-highlighting
 )
 
 plugins+=(
+  zsh-syntax-highlighting
   zsh-better-npm-completion
 )
 
