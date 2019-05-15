@@ -1,5 +1,9 @@
 #!/bin/bash
 # set -euo pipefail
+
+sudo snap install node --channel=12/stable --classic
+exit
+
 # install nvm then latest node
 
 # TODO: Issue with fresh Ubuntu... Seems NVM_DIR is already in environment (not sure where/how it's injected)
@@ -29,3 +33,4 @@ nvm install --lts
 # nvm use node
 #nvm alias default v8.11.3
 #nvm debug;
+
