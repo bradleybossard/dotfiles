@@ -6,7 +6,8 @@ set -euo pipefail
 
 # needed for javascript ctags in vim
 # TODO: Move this somewhere where vim install happens
-npm install -g git+https://github.com/ramitos/jsctags.git
+sudo npm install -g git+https://github.com/ramitos/jsctags.git
+exit
 
 # necessary dependencies for node-plantuml
 sudo apt-get install --yes default-jre graphviz
