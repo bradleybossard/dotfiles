@@ -2,11 +2,7 @@
 
 curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
 
-sudo groupadd docker
-
-sudo gpasswd -a pi docker
-
-sudo apt-get install -y python python-pip
+sudo apt-get install --yes python python-pip python-setuptools python-dev libffi-dev
 
 sudo pip install docker-compose
 
