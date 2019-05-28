@@ -178,11 +178,11 @@ _ag() {
 
 compdef _ag ag
 
+# $HOME/.nvm/.nvm.sh
 ENVFILES=(
   $HOME/.path
   $HOME/.alias
   $HOME/.work-alias
-  $HOME/.nvm/.nvm.sh
   $HOME/.fzf.zsh
   /usr/share/autojump/autojump.zsh
   /opt/ros/melodic/setup.zsh)
