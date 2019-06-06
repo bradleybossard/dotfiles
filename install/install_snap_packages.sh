@@ -5,3 +5,5 @@ sudo snap install wormhole
 sudo snap install kata-containers --classic
 sudo snap install sickgear
 sudo snap install ultimate-media-downloader
+
+sudo snap install syncthing
