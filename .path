@@ -55,6 +55,11 @@ export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
+# conda
+if [[ $OSTYPE == *"darwin"* ]]; then
+  export PATH=/usr/bin:"$PATH"
+fi
+
 # pip3, notably aws-cli
 #if [[ $OSTYPE == *"darwin"* ]]; then
 #  pip3_installs=~/Library/Python/3.6/bin
