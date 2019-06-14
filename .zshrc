@@ -139,7 +139,9 @@ plugins=(
   zsh_reload
 )
 
+# Custom plugins
 plugins+=(
+  conda
   zsh-syntax-highlighting
   zsh-better-npm-completion
 )
