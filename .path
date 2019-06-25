@@ -3,13 +3,8 @@ set -o vi
 export SVN_EDITOR=vim
 
 # anaconda
-#if [[ $OSTYPE == *"darwin"* ]]; then
-#  export PATH="$HOME/anaconda3/bin:$PATH"
-#fi
-
-# anaconda
 if [[ $OSTYPE == *"darwin"* ]]; then
-  export PATH=/usr/local/anaconda3/bin:"$PATH"
+  export PATH="/usr/local/anaconda3/bin:$PATH"
 fi
 
 if [[ $OSTYPE == *"linux"* ]]; then
@@ -54,11 +49,6 @@ export PATH=$PATH:$HOME/flutter/bin
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
-
-# conda
-if [[ $OSTYPE == *"darwin"* ]]; then
-  export PATH=/usr/bin:"$PATH"
-fi
 
 # pip3, notably aws-cli
 #if [[ $OSTYPE == *"darwin"* ]]; then
