@@ -50,6 +50,12 @@ export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
+# OPS config
+if [[ $OSTYPE == *"linux"* ]]; then
+  export OPS_DIR="$HOME/.ops"
+  export PATH="$HOME/.ops/bin:$PATH"
+fi
+
 # pip3, notably aws-cli
 #if [[ $OSTYPE == *"darwin"* ]]; then
 #  pip3_installs=~/Library/Python/3.6/bin
