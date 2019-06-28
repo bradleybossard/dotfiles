@@ -106,16 +106,10 @@ alias pyhttp='python -m SimpleHTTPServer'
 
 alias dockerc='docker-compose'
 # TIP: To have a ' inside alias, replace it with '"'"'
-# Docker top - Lists all docker containers with top-like stats, mem, cpu, io
-alias dockertop='docker stats $(docker ps --format '"'"'{{.Names}}'"'"')'
 # Stop and remove all running containers
-alias dockerstop='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)'
+alias dockerremovecontainers='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)'
 # Short ps listing without container IDS, etc
 alias dockerpsshort='docker ps --format "table {{.Names}}:\t{{.Image}}\t{{.Ports}}"'
-# Delete all stopped containers
-alias dockerrmstopped='docker rm -v `docker ps -a -q -f status=exited`'
-# Cleanup dangling containers and stuff not in use.
-alias dockercleanup='sh docker-cleanup.sh'
 # Like top for containers
 alias ctop='docker run -ti -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest'
 
