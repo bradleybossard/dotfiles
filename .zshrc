@@ -129,7 +129,7 @@ plugins=(
   nmap
   node
   npm
-  npx
+
   nvm
   postgres
   tmux
@@ -139,19 +139,24 @@ plugins=(
   zsh_reload
 )
 
+# Removing plugin, caused zsh startup to hang
+# npx
+
 # Custom plugins
 plugins+=(
-  conda
   zsh-syntax-highlighting
   zsh-better-npm-completion
 )
 
+# Need to figure out how to properly install this
+# conda
+
 source $ZSH/oh-my-zsh.sh
 
 if [[ $OSTYPE == *"darwin"* ]]; then
-	fpath=(/usr/local/share/zsh-completions $fpath)
-	rm -f "$HOME/.zcompdump*"
-	compinit
+  fpath=(/usr/local/share/zsh-completions $fpath)
+  rm -f "$HOME/.zcompdump*"
+  compinit
 fi
 }
 

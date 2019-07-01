@@ -55,6 +55,7 @@ function install_fzf () {
 # Install zsh custom plugins
 function install_zsh_custom () {
   ZSH_CUSTOM=$HOME/.oh-my-zsh/custom/plugins
+  rm -rf ${ZSH_CUSTOM}/*
   git clone  https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}/zsh-syntax-highlighting
   git clone  https://github.com/lukechilds/zsh-better-npm-completion ${ZSH_CUSTOM}/zsh-better-npm-completion
   # TODO: There is a startup error in this script
