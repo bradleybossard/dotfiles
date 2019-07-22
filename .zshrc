@@ -147,6 +147,7 @@ plugins+=(
   zsh-syntax-highlighting
   zsh-better-npm-completion
 )
+# conda
 
 # Need to figure out how to properly install this
 # conda
