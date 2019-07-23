@@ -2,11 +2,6 @@ set -o vi
 
 export SVN_EDITOR=vim
 
-# anaconda
-if [[ $OSTYPE == *"darwin"* ]]; then
-  export PATH="/usr/local/anaconda3/bin:$PATH"
-fi
-
 if [[ $OSTYPE == *"linux"* ]]; then
 # added by Anaconda3 5.3.1 installer
 # >>> conda init >>>
@@ -36,6 +31,11 @@ if [[ $OSTYPE == *"darwin"* ]]; then
   export PATH=$homebrew:$PATH
 fi
 
+# anaconda
+## NOTE: Path needs to be added after brew to use conda python
+if [[ $OSTYPE == *"darwin"* ]]; then
+  export PATH="/usr/local/anaconda3/bin:$PATH"
+fi
 
 # fastlane
 #if [[ $OSTYPE == *"darwin"* ]]; then
