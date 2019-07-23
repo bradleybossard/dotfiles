@@ -93,14 +93,6 @@ alias sshfailedlogins='grep sshd.\*Failed /var/log/auth.log | less'
 alias sshfailedconnects='grep sshd.\*Did /var/log/auth.log | less'
 
 
-
-# Ubuntu 18.04 no longer has 'python' installed, only 'python3'
-# TODO: Possibly make this check a little more stringent for Ubuntu > 18.04 only
-#if [[ $OSTYPE == *"linux"* ]]; then
-#  alias python='python3'
-#  alias pip='pip3'
-#fi
-
 # Python simple HTTP server
 alias pyhttp='python -m SimpleHTTPServer'
 
