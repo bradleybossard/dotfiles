@@ -92,6 +92,7 @@ alias sshfailedlogins='grep sshd.\*Failed /var/log/auth.log | less'
 # Show failed connect attempts (like a port scanner, for instance)
 alias sshfailedconnects='grep sshd.\*Did /var/log/auth.log | less'
 
+alias condapwd='conda activate $(basename $PWD)'
 
 # Python simple HTTP server
 alias pyhttp='python -m SimpleHTTPServer'
