@@ -52,22 +52,8 @@ function install_fzf () {
 
 # TODO: Create prompt to remind to install zsh if not yet installed
 
-# Install zsh custom plugins
-function install_zsh_custom () {
-  ZSH_CUSTOM=$HOME/.oh-my-zsh/custom/plugins
-  rm -rf ${ZSH_CUSTOM}/*
-  git clone  https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}/zsh-syntax-highlighting
-  git clone  https://github.com/lukechilds/zsh-better-npm-completion ${ZSH_CUSTOM}/zsh-better-npm-completion
-  # TODO: There is a startup error in this script
-  git clone  https://github.com/esc/conda-zsh-completion.git ${ZSH_CUSTOM}/conda
-  pushd ${ZSH_CUSTOM}/conda
-  cp _conda conda.plugin.zsh
-  popd
-}
-
 install_basics
 create_symlinks
 install_vundle
 install_tmux
-install_zsh_custom 
 install_fzf
