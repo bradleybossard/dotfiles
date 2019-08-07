@@ -106,6 +106,7 @@ plugins=(
   autojump
   aws
   brew
+  cargo
   colorize
   colored-man-pages
   command-not-found
@@ -129,15 +130,18 @@ plugins=(
   nmap
   node
   npm
-
   nvm
   postgres
+  ripgrep
+  rust
   tmux
   vagrant
   vi-mode
   zsh-navigation-tools
   zsh_reload
 )
+
+autoload -U compinit && compinit
 
 # Removing plugin, caused zsh startup to hang
 # npx
