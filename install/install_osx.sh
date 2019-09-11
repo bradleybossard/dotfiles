@@ -2,6 +2,9 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+# Ideas for further OSX scripting configuration
+# https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+
 # disable "natural" scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
