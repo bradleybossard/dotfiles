@@ -11,3 +11,8 @@ git clone  https://github.com/esc/conda-zsh-completion.git ${ZSH_CUSTOM}/conda
 pushd ${ZSH_CUSTOM}/conda
 cp _conda conda.plugin.zsh
 popd
+
+# Needed to fix compaudit violations on OSX
+if [[ $OSTYPE == *"darwin"* ]]; then
+  compaudit | xargs chmod g-w
+fi
