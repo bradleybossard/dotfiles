@@ -5,6 +5,10 @@ IFS=$'\n\t'
 # disable "natural" scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
+# enable screen lock in bottom-left
+defaults write com.apple.dock wvous-br-corner -int 5
+defaults write com.apple.dock wvous-br-modifier -int 0
+
 # install brew
 if [[ $(which brew | wc -c) -eq 0 ]]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
