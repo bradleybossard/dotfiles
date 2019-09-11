@@ -2,6 +2,9 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+# disable "natural" scrolling
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
 # install brew
 if [[ $(which brew | wc -c) -eq 0 ]]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -16,7 +19,8 @@ brew tap caskroom/cask
 # install brew essentials
 brew install \
   ctags \
-  direnv \
+  hub \
+  git \
   go \
   gron \
   tmux \
@@ -24,13 +28,13 @@ brew install \
   vim --override-system-vi
 
 # install brew casks essentials
-brew cask install google-chrome
 brew cask install iterm2
 brew cask install spectacle
 
 exit
 
 brew cask install alacritty
+brew cask install google-chrome
 brew cask install ultimaker-cura
 brew cask install namechanger
 brew cask install pgadmin4
@@ -77,8 +81,7 @@ brew install \
   gifsicle \
   glew \
   glfw3 \
-  go \
-  hub \
+
   icdiff \
   imagemagick \
   jpeg \
