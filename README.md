@@ -1,12 +1,6 @@
-bradleybossard dotfiles
-=
+# dotfiles
 
-TODO
--
-* Absorb tips & practices from http://dotfiles.github.io/
-* Some good practices here http://www.danielmiessler.com/blog/enhancements-to-shell-and-vim-productivity
+### Links
+[mathiasbynens/dotfiles: .files, including ~/.macos — sensible hacker defaults for macOS](https://github.com/mathiasbynens/dotfiles)
 
-zsh
--
-* use zshell, switch shell to it http://superuser.com/questions/231735/how-do-i-change-my-default-shell-from-bash-to-zsh
-* https://github.com/robbyrussell/oh-my-zsh
+[GitHub does dotfiles - dotfiles.github.io](http://dotfiles.github.io/)
