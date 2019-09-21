@@ -25,11 +25,9 @@ elif [[ $OSTYPE == *"darwin"* ]]; then
 fi
 
 if [[ $(which ag | wc -c) -ne 0 ]]; then
-  tag() {
-    command tag "$@";
-    source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null
-  }
-  alias ag='tag'
+  export TAG_SEARCH_PROG=rg  # replace with rg for ripgrep
+  tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null }
+  alias rg=tag  # replace with rg for ripgrep
 fi
 
 function killport {

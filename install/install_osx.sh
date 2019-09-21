@@ -30,9 +30,12 @@ brew install \
   git \
   go \
   gron \
+  jq \
   tmux \
   tree \
-  vim --override-system-vi
+  urlview \
+  vim --override-system-vi \
+  wget
 
 # install brew casks essentials
 brew cask install iterm2
@@ -88,7 +91,6 @@ brew install \
   gifsicle \
   glew \
   glfw3 \
-
   icdiff \
   imagemagick \
   jpeg \
