@@ -1,6 +1,7 @@
 " => Cheatsheets
 " 
 " gg=G           Indent the entire buffer
+" set nolist   to turn off until I figure out why.
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sections:
@@ -68,8 +69,6 @@ endif
 " Ignore node_modules directory
 set wildignore+=**/node_modules/** 
 set wildignore+=dist/**
-
-
 
 "Always show current position
 set ruler
@@ -160,7 +159,6 @@ set encoding=utf8
 "set ffs=unix,dos,mac
 set ff=unix
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -168,7 +166,6 @@ set ff=unix
 set nobackup
 set nowb
 set noswapfile
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
