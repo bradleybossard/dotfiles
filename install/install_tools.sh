@@ -16,6 +16,7 @@ if [[ $OSTYPE == *"linux"* ]]; then
   sudo apt-get --yes install \
                     bc \
                     context \
+                    direnv \
                     fail2ban \
                     graphicsmagick \
                     grc \

@@ -217,6 +217,10 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+if type "direnv" > /dev/null; then
+  eval "$(direnv hook $SHELL)"
+fi
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
