@@ -20,6 +20,7 @@ if [[ $OSTYPE == *"linux"* ]]; then
                     graphicsmagick \
                     grc \
                     htop \
+                    inotify-tools \
                     logwatch \
                     lynx \
                     sendmail \
