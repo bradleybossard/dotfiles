@@ -72,6 +72,7 @@ brew cask install pgadmin4
 # brew cask install pencil2d-pencil
 # brew cask install processing
 # brew cask install smallpdf
+# brew cask install unity
 # brew cask install vagrant
 # brew cask install vlc
 
