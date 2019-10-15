@@ -51,7 +51,8 @@ brew cask install pgadmin4
 
 # Untested
 
-# brew cask install docker-toolbox
+
+# brew cask install aerial
 # brew cask install anaconda
 # brew cask install android-file-transfer
 # brew cask install android-studio
@@ -60,6 +61,7 @@ brew cask install pgadmin4
 # brew cask install blender
 # brew cask install boxer
 # brew cask install charles
+# brew cask install docker-toolbox
 # brew cask install genymotion
 # brew cask install google-earth
 # brew cask install inkscape
@@ -69,16 +71,18 @@ brew cask install pgadmin4
 # brew cask install pencil
 # brew cask install pencil2d-pencil
 # brew cask install processing
+# brew cask install smallpdf
 # brew cask install vagrant
+# brew cask install vlc
+
+# NOTE: Not sure these are valid instructions anymore
 # To install virtualbox, you must first attempt to install and fail
 # brew cask install virtualbox
 # After the install fails, go System Preferences -> Security & Privacy,
 # then enable the app install from Oracle
 # brew cask reinstall --force virtualbox --verbose --debug
-# brew cask install vlc
-# brew cask install aerial
 
-# brew cask install smallpdf
+
 
 brew install \
   bash-completion \
