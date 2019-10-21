@@ -53,6 +53,11 @@ if [[ $OSTYPE == "linux-gnueabihf" ]]; then
   export PATH=/usr/local/go/bin:$PATH
 fi
 
+# node/npm - for globally installed npm packages with needing sudo
+NPM_PACKAGES="${HOME}/.npm-packages"
+export PATH="$PATH:$NPM_PACKAGES/bin"
+export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+
 # OPS config
 if [[ $OSTYPE == *"linux"* ]]; then
   export OPS_DIR="$HOME/.ops"
