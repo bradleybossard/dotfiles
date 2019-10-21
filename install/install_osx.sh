@@ -12,6 +12,10 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 defaults write com.apple.dock wvous-br-corner -int 5
 defaults write com.apple.dock wvous-br-modifier -int 0
 
+# Sets "Allow apps downloaded from:" to "Anywhere"
+# Needed for VirtualBox, possibly others
+sudo spctl --master-disable
+
 # install brew
 if [[ $(which brew | wc -c) -eq 0 ]]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
