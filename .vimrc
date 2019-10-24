@@ -394,6 +394,8 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ervandew/supertab'
 Plugin 'fatih/vim-go'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'jremmen/vim-ripgrep'
+Plugin 'junegunn/fzf.vim'
 Plugin 'kien/ctrlp.vim'
 nnoremap <leader>. :CtrlPTag<cr>
 Plugin 'lokaltog/vim-powerline'
