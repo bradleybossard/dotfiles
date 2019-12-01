@@ -52,6 +52,7 @@ brew cask install google-chrome
 brew cask install ultimaker-cura
 brew cask install namechanger
 brew cask install pgadmin4
+brew cask install visual-studio-code
 
 # Untested
 
@@ -164,4 +165,5 @@ psql postgres -c 'CREATE EXTENSION "adminpack";'
 
 # Runs App Store update
 sudo softwareupdate -i -a
+
 
