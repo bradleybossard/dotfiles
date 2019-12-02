@@ -1,5 +1,7 @@
-# to run, . install_exercism.sh
+sudo snap install exercism
+exit
 
+# to run, . install_exercism.sh
 # From the install page
 # https://github.com/exercism/cli/releases/tag/v2.3.0
 # platform = linux | mac | windows
