@@ -1,4 +1,8 @@
 sudo snap install exercism
+echo Your user token can be found here
+echo https://exercism.io/my/settings
+echo To configure the CLI to use your token, use
+echo exercism configure --token=YOUR_TOKEN
 exit
 
 # to run, . install_exercism.sh
