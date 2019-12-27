@@ -18,6 +18,7 @@ function install_basics () {
       vim \
       wget
     sudo apt-file update
+    sudo snap install ripgrep --classic
   fi
 }
 
