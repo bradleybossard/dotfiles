@@ -32,6 +32,8 @@ brew install \
   go \
   gron \
   jq \
+  ripgrep \
+  tig \
   tmux \
   tree \
   urlview \
@@ -42,6 +44,7 @@ brew install \
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install spectacle
+brew cask install vlc
 
 exit
 
@@ -76,7 +79,7 @@ brew cask install visual-studio-code
 # brew cask install smallpdf
 # brew cask install unity
 # brew cask install vagrant
-# brew cask install vlc
+
 
 # NOTE: Not sure these are valid instructions anymore
 # To install virtualbox, you must first attempt to install and fail
@@ -84,8 +87,6 @@ brew cask install visual-studio-code
 # After the install fails, go System Preferences -> Security & Privacy,
 # then enable the app install from Oracle
 # brew cask reinstall --force virtualbox --verbose --debug
-
-
 
 brew install \
   bash-completion \
@@ -119,10 +120,7 @@ brew install \
   python3 \
   tig \
   thefuck \
-  tmux \
-  tree \
   urlview \
-  vim --override-system-vi \
   vifm \
   watch \
   wget
