@@ -25,6 +25,7 @@ brew update
 
 # install brew essentials
 brew install \
+  autojump \
   ctags \
   hub \
   git \
@@ -46,6 +47,7 @@ exit
 
 brew cask install alacritty
 brew cask install ultimaker-cura
+brew cask install multipass
 brew cask install namechanger
 brew cask install pgadmin4
 brew cask install visual-studio-code
