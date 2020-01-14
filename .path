@@ -73,11 +73,11 @@ fi
 #export PATH=$pip3_installs:$PATH
 
 # pyenv
-#if [ -x "$HOME/.pyenv" ]; then
-#  export PATH="$HOME/.pyenv/bin:$PATH"
-#  eval "$(pyenv init -)"
+if [ -x "$HOME/.pyenv" ]; then
+  export PATH="$HOME/.pyenv/bin:$PATH"
+  eval "$(pyenv init -)"
 #  eval "$(pyenv virtualenv-init -)"
-#fi
+fi
 
 # psql
 if [[ $OSTYPE == *"darwin"* ]]; then
