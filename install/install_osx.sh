@@ -72,12 +72,14 @@ brew cask install visual-studio-code
 # brew cask install google-earth
 # brew cask install inkscape
 # brew cask install krita
+# brew cask install lmms
 # brew cask install opentoonz
 # brew cask install licecap
 # brew cask install pencil
 # brew cask install pencil2d-pencil
 # brew cask install processing
 # brew cask install smallpdf
+# brew cask install sourcetrail
 # brew cask install unity
 # brew cask install vagrant
 
