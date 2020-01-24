@@ -98,7 +98,7 @@ alias condapwd='conda activate $(basename $PWD)'
 # Python simple HTTP server
 alias pyhttp='python -m SimpleHTTPServer'
 
-alias dockerc='docker-compose'
+alias dc='docker-compose'
 # TIP: To have a ' inside alias, replace it with '"'"'
 # Stop and remove all running containers
 alias dockerremovecontainers='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)'
