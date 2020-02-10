@@ -213,8 +213,6 @@ fi
 # aws cli tool completion
 complete -C '`which aws_completer`' aws
 
-[ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
-
 # fuzzy finder
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 bind -x '"\C-n": vim $(fzf -m);'
