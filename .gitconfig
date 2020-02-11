@@ -14,10 +14,10 @@
 [branch]
   autosetuprebase = always
 [core]
-	autocrlf = input
-	editor = vim
-	excludesfile = ~/.gitignore
-	pager = less -F -X
+  autocrlf = input
+  editor = vim
+  excludesfile = ~/.gitignore
+  pager = less -F -X
 [alias]
   a = add -A
   ac = commit -a --message
@@ -39,21 +39,21 @@
   pullsubs = submodule foreach git pull origin master
   spa = !"git stash; git pull; git stash apply"
   spp = !"git stash; git pull; git stash pop"
-	st = status 
+  st = status 
   sts = status --short --branch
   t = tag -n3
   unstage = reset HEAD --
 [credential]
-	helper = store
+  helper = store
 [credential "https://github.com"]
-    username = bradleybossard
+  username = bradleybossard
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [difftool]
-	prompt = false
+  prompt = false
 [hub]
-	protocol = https
+  protocol = https
