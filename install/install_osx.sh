@@ -83,6 +83,7 @@ brew cask install visual-studio-code
 # brew cask install unity
 # brew cask install vagrant
 
+# brew install github/gh/gh  # github cli
 
 # NOTE: Not sure these are valid instructions anymore
 # To install virtualbox, you must first attempt to install and fail
