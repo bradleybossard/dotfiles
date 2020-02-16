@@ -83,6 +83,10 @@ brew cask install visual-studio-code
 # brew cask install unity
 # brew cask install vagrant
 
+# brew cask install freecad
+# Need the follow to bypass OSX Catalina can't install untrusted app
+# sudo xattr -d com.apple.quarantine /Applications/FreeCAD.app
+
 # brew install github/gh/gh  # github cli
 
 # NOTE: Not sure these are valid instructions anymore
