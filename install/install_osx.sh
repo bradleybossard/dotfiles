@@ -49,6 +49,7 @@ brew cask install vlc
 exit
 
 brew cask install alacritty
+brew cask install authy
 brew cask install ultimaker-cura
 brew cask install multipass
 brew cask install namechanger
