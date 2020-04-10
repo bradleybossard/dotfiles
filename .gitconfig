@@ -32,7 +32,7 @@
   editbranch = !vim $(git diff --name-only  master)
   incoming = log origin/master ^master
   last = log -1 HEAD
-  logpretty = log --pretty=oneline
+  logpretty = log -10 --pretty=oneline
   lol = log --oneline --graph --decorate
   outgoing = log master ^origin/master
   pom = push --set-upstream origin master
