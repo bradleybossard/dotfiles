@@ -1,3 +1,6 @@
 snap install microk8s --classic
 
-snap alias microk8s.kubectl kubectl
+sudo usermod -a -G microk8s bradley
+sudo chown -f -R bradley ~/.kube
+
+# snap alias microk8s.kubectl kubectl

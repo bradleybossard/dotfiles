@@ -1,5 +1,5 @@
 " => Cheatsheets
-" 
+"
 " gg=G           Indent the entire buffer
 " set nolist   to turn off until I figure out why.
 
@@ -39,7 +39,7 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" :W sudo saves the file 
+" :W sudo saves the file
 " (useful for handling the permission-denied error)
 command! W w !sudo tee % > /dev/null
 
@@ -67,7 +67,7 @@ else
 endif
 
 " Ignore node_modules directory
-set wildignore+=**/node_modules/** 
+set wildignore+=**/node_modules/**
 set wildignore+=dist/**
 
 "Always show current position
@@ -86,7 +86,7 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
@@ -101,16 +101,16 @@ set list
 " set nolist   to turn off until I figure out why.
 
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
 
 " For regular expressions turn magic on
 set magic
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -135,7 +135,7 @@ call matchadd('ColorColumn', '\%81v', 100)
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-syntax enable 
+syntax enable
 
 try
   colorscheme turtles
@@ -221,8 +221,8 @@ map <leader>ba :1,1000 bd!<cr>
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove 
-map <leader>t<leader> :tabnext 
+map <leader>tm :tabmove
+map <leader>t<leader> :tabnext
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
@@ -231,7 +231,7 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
   set switchbuf=useopen,usetab,newtab
   set stal=2
@@ -334,7 +334,7 @@ function! CmdLine(str)
   exe "menu Foo.Bar :" . a:str
   emenu Foo.Bar
   unmenu Foo
-endfunction 
+endfunction
 
 function! VisualSelection(direction, extra_filter) range
   let l:saved_reg = @"
@@ -365,8 +365,8 @@ function! HasPaste()
   return ''
 endfunction
 
-"set relativenumber 
-set number  
+"set relativenumber
+set number
 
 " Auto-reload .vimrc config edits
 augroup myvimrchooks
@@ -383,7 +383,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 "
 " " let Vundle manage Vundle
-" " required! 
+" " required!
 Plugin 'gmarik/vundle'
 
 " My Plugins here:
@@ -396,12 +396,13 @@ Plugin 'fatih/vim-go'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jremmen/vim-ripgrep'
 Plugin 'junegunn/fzf.vim'
-Plugin 'kien/ctrlp.vim'
-nnoremap <leader>. :CtrlPTag<cr>
-Plugin 'lokaltog/vim-powerline'
+set rtp+=~/.fzf
+"Plugin 'kien/ctrlp.vim'
+"nnoremap <leader>. :CtrlPTag<cr>
+"Plugin 'lokaltog/vim-powerline'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/emmet-vim'
-Plugin 'mileszs/ack.vim'
+"Plugin 'mileszs/ack.vim'
 " Use silver searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
 Plugin 'rizzatti/dash.vim'
@@ -411,14 +412,24 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-surround'
 Plugin 'w0rp/ale'
-let g:ale_linters = {}
-let g:ale_linters.javascript = ['eslint']
-let g:ale_linters.typescript= ['eslint']
-let g:ale_fixers = {}
-let g:ale_fixers.javascript = ['prettier']
-let g:ale_fixers.typescript = ['prettier']
-let g:ale_javascript_prettier_use_global = 0
-let g:ale_javascript_prettier_use_local_config = 1
+"let g:ale_linters = {}
+"let g:ale_linters.javascript = ['eslint']
+"let g:ale_linters.typescript= ['eslint']
+"let g:ale_fixers = {}
+"let g:ale_fixers.javascript = ['prettier']
+"let g:ale_fixers.typescript = ['prettier']
+"let g:ale_javascript_prettier_use_global = 0
+"let g:ale_javascript_prettier_use_local_config = 1
+"let g:ale_typescript_prettier_use_global = 1
+"let g:ale_typescript_prettier_use_local_config = 0
+"let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+      \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \   'javascript': ['prettier', 'eslint'],
+      \   'typescript': ['prettier', 'eslint'],
+      \   'ruby': ['prettier'],
+      \   'rust': ['rustfmt'],
+      \}
 let g:ale_fix_on_save = 1
 Plugin 'xolox/vim-easytags'
 let g:easytags_languages = {
@@ -432,3 +443,4 @@ Plugin 'xolox/vim-session'
 let g:session_autosave = 'no'
 let g:session_autoload = 'no'
 " Plugin 'zxqfl/tabnine-vim' # Nice autocomplete, cost money.  Look for other options
+Plugin 'davidhalter/jedi-vim'
