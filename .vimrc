@@ -218,11 +218,15 @@ map <C-l> <C-W>l
 map <leader>ba :1,1000 bd!<cr>
 
 " Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
+"map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
+map <leader>tr :tabr<cr>
+map <leader>tl :tabl<cr>
+map <leader>tn :tabn<cr>
+map <leader>tp :tabp<cr>
 map <leader>tm :tabmove
-map <leader>t<leader> :tabnext
+" map <leader>t<leader> :tabnext
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
