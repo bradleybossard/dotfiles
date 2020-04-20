@@ -399,16 +399,18 @@ Plugin 'ervandew/supertab'
 Plugin 'fatih/vim-go'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jremmen/vim-ripgrep'
-Plugin 'junegunn/fzf.vim'
 set rtp+=~/.fzf
+
+
+Plugin 'junegunn/fzf.vim'
+nnoremap <silent> <C-p> :fzf<CR>
+"Plugin 'kien/ctrlp.vim'
+"nnoremap <leader>. :CtrlPTag<cr>
 "Plugin 'kien/ctrlp.vim'
 "nnoremap <leader>. :CtrlPTag<cr>
 "Plugin 'lokaltog/vim-powerline'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/emmet-vim'
-"Plugin 'mileszs/ack.vim'
-" Use silver searcher
-let g:ackprg = 'ag --nogroup --nocolor --column'
 Plugin 'rizzatti/dash.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree.git'
@@ -435,13 +437,13 @@ let g:ale_fixers = {
       \   'rust': ['rustfmt'],
       \}
 let g:ale_fix_on_save = 1
-Plugin 'xolox/vim-easytags'
-let g:easytags_languages = {
-\   'javascript': {
-\     'cmd': 'jsctags',
-\       'args': [],
-\   }
-\}
+"Plugin 'xolox/vim-easytags'
+"let g:easytags_languages = {
+"\   'javascript': {
+"\     'cmd': 'jsctags',
+"\       'args': [],
+"\   }
+"\}
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 let g:session_autosave = 'no'
