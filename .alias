@@ -13,7 +13,7 @@ alias andrun='./gradlew android:installDebug android:run'
 alias hisgrep='history | grep $0'
 alias psgrep='ps aux | head -1; ps aux | grep $0'
 alias rm='rm -rf'
-
+alias pppath="tr ':\' '\n' <<< '$PATH'"  # pretty print path
 
 alias initreadme='echo "# $(basename $PWD)" > README.md'
 
@@ -169,7 +169,7 @@ function dockerrun {
   # Increment port number
   maxport=$(echo $maxport + 1 | bc)
   # Get current directory name
-  dirname=${PWD##*/} 
+  dirname=${PWD##*/}
   # Check if there are atleast 2 arguments
 	#if [ $# -lt 2 ]
 	if [ $# -lt 1 ]
@@ -186,7 +186,7 @@ function dockerrun {
 
 # Shortcut for starting bash shell based on current directory name
 function dockerbash {
-  dirname=${PWD##*/} 
+  dirname=${PWD##*/}
   cmd="docker exec -it $dirname bash"
   echo $cmd
   $cmd
@@ -194,7 +194,7 @@ function dockerbash {
 
 # Shortcut to build a Docker image and named the same as current directory
 function dockerbuild {
-  dirname=${PWD##*/} 
+  dirname=${PWD##*/}
   cmd="docker build -t $dirname ."
   echo $cmd
   $cmd
@@ -218,13 +218,13 @@ alias ngrestart='sudo service nginx restart'
 
 # Replace the placeholder with route to current directory
 function ngroute {
-  dirname=${PWD##*/} 
-  file='/etc/nginx/sites-available/default' 
+  dirname=${PWD##*/}
+  file='/etc/nginx/sites-available/default'
   route="  location /$dirname {\n    alias ${PWD};\n    autoindex on;\n  }\n\n"
-  if grep -q location\ /$dirname $file 
+  if grep -q location\ /$dirname $file
   then
     echo "Route already exists, exiting"
-    return 
+    return
   fi
   comment='### INSERT NEW ROUTE HERE'  # Placeholder in nginx config
   sudo bash -c "sed -i 's|$comment|$route$comment|' $file"
@@ -240,7 +240,7 @@ function ngproxy {
 		  return
 	fi
 
-  dirname=${PWD##*/} 
+  dirname=${PWD##*/}
   port=$1
   available="/etc/nginx/sites-available/$dirname"
   enabled="/etc/nginx/sites-enabled/$dirname"
@@ -380,4 +380,3 @@ fi
 #  source <(microk8s.kubectl completion zsh | sed "s/complete -o default -F __start_kubectl kubectl/complete -o default -F __start_kubectl microk8s.kubectl/g" | sed "s/complete -o default -o nospace -F __start_kubectl kubectl/complete -o default -o nospace -F __start_kubectl microk8s.kubectl/g");
 #  alias mkubectl=microk8s.kubectl
 #fi
-
