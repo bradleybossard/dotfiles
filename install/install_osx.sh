@@ -53,6 +53,8 @@ brew cask install authy
 brew cask install ultimaker-cura
 brew cask install multipass
 brew cask install namechanger
+brew cask install openscad
+sudo xattr -d com.apple.quarantine /Applications/OpenSCAD.app
 brew cask install pgadmin4
 brew cask install visual-studio-code
 
