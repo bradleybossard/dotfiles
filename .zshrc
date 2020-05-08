@@ -12,9 +12,9 @@ antigen bundle common-aliases
 antigen bundle cp
 antigen bundle dircycle
 antigen bundle dirhistory
-antigen bundle docker-compose 
-antigen bundle docker-machine 
-antigen bundle emoji 
+antigen bundle docker-compose
+antigen bundle docker-machine
+antigen bundle emoji
 antigen bundle git
 antigen bundle gitignore
 antigen bundle pip
@@ -140,6 +140,13 @@ plugins=(
   zsh-navigation-tools
   zsh_reload
 )
+
+# Update the command line to include timestamp of when commands start
+RPROMPT='[%D{%L:%M:%S %p}]'
+TMOUT=1
+TRAPALRM() {
+    zle reset-prompt
+}
 
 autoload -U compinit && compinit
 
