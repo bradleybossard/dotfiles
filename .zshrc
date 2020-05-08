@@ -153,11 +153,15 @@ autoload -U compinit && compinit
 # Removing plugin, caused zsh startup to hang
 # npx
 
+# this link has some info for history archiving, might be useful
+# https://blog.codefor.cash/2020/04/19/so-long-and-thanks-for-all-the-zsh/
+
 # Custom plugins
 plugins+=(
   zsh-syntax-highlighting
   zsh-better-npm-completion
 )
+
 # conda
 
 # Need to figure out how to properly install this
