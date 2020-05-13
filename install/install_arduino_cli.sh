@@ -3,3 +3,4 @@
   tar -zxf arduino-cli_latest_Linux_64bit.tar.gz
   sudo cp arduino-cli /usr/bin
   cd -
+  arduino-cli core update-index
