@@ -1,19 +1,15 @@
+#!/bin/bash
 pushd .
 cd /tmp
 
-sudo dpkg --add-architecture amd64
-sudo apt-get update
-
-
 VERSION=$(curl https://api.github.com/repos/cli/cli/releases/latest | jq '.name' | sed 's/"//g')
 echo $VERSION
-exit
+VERSION_NO_V=$(echo $VERSION | tr -d v)
 
+FILENAME="gh_${VERSION_NO_V}_linux_amd64.deb"
+DOWNLOAD_URL="https://github.com/cli/cli/releases/download/$VERSION/$FILENAME"
+echo $DOWNLOAD_URL
+sudo curl -L $DOWNLOAD_URL -o $FILENAME
 
-sudo curl -L https://github.com/docker/compose/releases/download/$VERSION/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-
-
-
-
-# sudo apt install git && sudo dpkg -i gh_*_linux_amd64.deb
+sudo dpkg -i $FILENAME
 popd
