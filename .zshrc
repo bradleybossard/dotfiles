@@ -167,7 +167,7 @@ plugins+=(
 # Need to figure out how to properly install this
 # conda
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 if [[ $OSTYPE == *"darwin"* ]]; then
   fpath=(/usr/local/share/zsh-completions $fpath)
@@ -176,7 +176,7 @@ if [[ $OSTYPE == *"darwin"* ]]; then
 fi
 }
 
-ohmyzshell
+#ohmyzshell
 #antigen
 
 export LANG=en_US.UTF-8
@@ -234,14 +234,14 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/bradleybossard/.pyenv/versions/miniconda-latest/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/bradleybossard/.pyenv/versions/miniconda-latest/etc/profile.d/conda.sh" ]; then
+        . "/home/bradleybossard/.pyenv/versions/miniconda-latest/etc/profile.d/conda.sh"
     else
-        export PATH="/usr/local/anaconda3/bin:$PATH"
+        export PATH="/home/bradleybossard/.pyenv/versions/miniconda-latest/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -250,14 +250,14 @@ unset __conda_setup
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/bradleybossard/miniconda2/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/bradleybossard/.pyenv/versions/miniconda-latest/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/bradleybossard/miniconda2/etc/profile.d/conda.sh" ]; then
-        . "/home/bradleybossard/miniconda2/etc/profile.d/conda.sh"
+    if [ -f "/home/bradleybossard/.pyenv/versions/miniconda-latest/etc/profile.d/conda.sh" ]; then
+        . "/home/bradleybossard/.pyenv/versions/miniconda-latest/etc/profile.d/conda.sh"
     else
-        export PATH="/home/bradleybossard/miniconda2/bin:$PATH"
+        export PATH="/home/bradleybossard/.pyenv/versions/miniconda-latest/bin:$PATH"
     fi
 fi
 unset __conda_setup
