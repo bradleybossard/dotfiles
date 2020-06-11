@@ -17,7 +17,8 @@ function install_basics () {
       tmux \
       tig \
       vim \
-      wget
+      wget \
+      zsh
     sudo apt-file update
   fi
 }
