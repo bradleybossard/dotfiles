@@ -12,13 +12,13 @@ function install_basics () {
       exuberant-ctags \
       git \
       jq \
+      ripgrep \
       tree \
       tmux \
       tig \
       vim \
       wget
     sudo apt-file update
-    sudo snap install ripgrep --classic
   fi
 }
 
