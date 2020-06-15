@@ -78,13 +78,13 @@ fi
 
 # pyenv
 # TODO: This should check for the existance of $HOME/.pyenv
-#if [[ $(which pyenv | wc -c) -eq 0 ]]; then
+if [[ $(which pyenv | wc -c) -eq 0 ]]; then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
   export PYENV_VIRTUALENV_DISABLE_PROMPT=1
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
-#fi
+fi
 
 # psql
 if [[ $OSTYPE == *"darwin"* ]]; then
