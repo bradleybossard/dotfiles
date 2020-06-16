@@ -38,12 +38,13 @@ zplug "plugins/docker-machine",   from:oh-my-zsh
 zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/github",   from:oh-my-zsh
 zplug "plugins/gitignore",   from:oh-my-zsh
+# just adds aliases, claims to add completion but doesn't seem to work to me
+zplug "plugins/golang",   from:oh-my-zsh
 
-  #golang
-  #history
-  #kube-ps1
-  #kubectl
-  #minikube
+zplug "plugins/kube-ps1",   from:oh-my-zsh
+zplug "plugins/kubectl",   from:oh-my-zsh
+zplug "plugins/minikube",   from:oh-my-zsh
+
   #ng
   #nmap
   #node

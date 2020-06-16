@@ -126,6 +126,7 @@ set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
+nnoremap <space> za
 
 highlight ColorColumn ctermbg=magenta
 " set colorcolumn=81
@@ -395,7 +396,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ciaranm/detectindent'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'ervandew/supertab'
+" Plugin 'ervandew/supertab'
 Plugin 'fatih/vim-go'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jremmen/vim-ripgrep'
@@ -449,4 +450,8 @@ Plugin 'xolox/vim-session'
 let g:session_autosave = 'no'
 let g:session_autoload = 'no'
 " Plugin 'zxqfl/tabnine-vim' # Nice autocomplete, cost money.  Look for other options
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
+Plugin 'ycm-core/YouCompleteMe'
+let g:ycm_autoclose_preview_window_after_completion=1
+command! YcmCompleter call plug#load('YouCompleteMe') | call youcompleteme#Enable() | YcmCompleter
+map <leader>g YcmCompleter GoTo<CR>
