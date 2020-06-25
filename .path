@@ -135,3 +135,8 @@ fi
 if [ -x "$HOME/bin" ]; then
   export PATH=$HOME/bin:$PATH
 fi
+
+if [[ $OSTYPE == *"darwin"* ]]; then
+  export ZPLUG_HOME=/usr/local/opt/zplug
+  source $ZPLUG_HOME/init.zsh
+fi
