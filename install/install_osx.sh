@@ -105,7 +105,7 @@ brew install \
   coreutils \
   cowsay \
   direnv \
-  fortune \ 
+  fortune \
   freetype \
   gifsicle \
   glew \
@@ -136,6 +136,9 @@ brew install \
   watch \
   wget
 
+# install eternal terminal
+brew install MisterTea/et/et
+
 brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r \
                     --with-libass --with-libbluray --with-libcaca --with-speex \
                     --with-libquvi --with-libvidstab --with-libvo-aacenc \
@@ -143,13 +146,13 @@ brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r \
                     --with-openjpeg --with-openssl --with-opus --with-rtmpdump \
                     --with-schroedinger --with-theora --with-tools --with-x265
 
-# For installing imagemagick 
+# For installing imagemagick
 brew install libpng --build-from-source
 brew install -v imagemagick --build-from-source
 
 brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste
 
-# Install CUDA https://gist.github.com/Mistobaan/dd32287eeb6859c6668d 
+# Install CUDA https://gist.github.com/Mistobaan/dd32287eeb6859c6668d
 #brew update
 #brew install coreutils swig
 #brew cask install cuda
@@ -171,5 +174,3 @@ psql postgres -c 'CREATE EXTENSION "adminpack";'
 
 # Runs App Store update
 sudo softwareupdate -i -a
-
-
