@@ -1,6 +1,19 @@
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 
+ENVFILES=(
+  $HOME/.path
+  $HOME/.alias
+  $HOME/.work-alias
+  $HOME/.fzf.zsh
+  /usr/share/autojump/autojump.zsh
+  /opt/ros/melodic/setup.zsh)
+
+for FILE in $ENVFILES; do
+  [ -f $FILE ] && source $FILE
+done;
+
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -77,19 +90,6 @@ _ag() {
 }
 
 compdef _ag ag
-
-# $HOME/.nvm/.nvm.sh
-ENVFILES=(
-  $HOME/.path
-  $HOME/.alias
-  $HOME/.work-alias
-  $HOME/.fzf.zsh
-  /usr/share/autojump/autojump.zsh
-  /opt/ros/melodic/setup.zsh)
-
-for FILE in $ENVFILES; do
-  [ -f $FILE ] && source $FILE
-done;
 
 
 # Ctrl-n to open a file in vim using fzf
