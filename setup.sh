@@ -52,8 +52,20 @@ function install_fzf () {
   ~/.fzf/install --key-bindings --completion --no-update-rc
 }
 
+function install_zsh () {
+  # install zsh and change default shell to zsh
+  sudo apt-get install --yes curl zsh
+  chsh -s $(which zsh) $USER
+
+  # install zplug
+  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+
+  echo 'reminder: logout and log back into use zsh as default'
+}
+
 install_basics
 create_symlinks
 install_vundle
 install_tmux
 install_fzf
+install_zsh
