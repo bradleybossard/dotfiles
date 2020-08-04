@@ -17,6 +17,8 @@ alias pppath="tr ':\' '\n' <<< '$PATH'"  # pretty print path
 
 alias initreadme='echo "# $(basename $PWD)" > README.md'
 
+alias replacespaaces='for file in *; do mv -n "$file" `echo $file | tr " " "-"` ; done'
+
 # Show active ports
 if [[ $OSTYPE == *"linux"* ]]; then
   alias ports='netstat -tulanp'
