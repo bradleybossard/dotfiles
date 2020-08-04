@@ -30,6 +30,23 @@ zplug "zsh-users/zsh-history-substring-search"
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
+
+# Load plugins
+source ~/.zplug/init.zsh
+zplug "woefe/wbase.zsh"
+zplug "woefe/git-prompt.zsh", use:"{git-prompt.zsh,examples/wprompt.zsh}"
+# zplug romkatv/powerlevel10k, as:theme, depth:1
+# zplug "junegunn/fzf", use:"shell/*.zsh"
+# zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*linux*amd64*"
+# zplug "sharkdp/fd", from:gh-r, as:command, rename-to:fd, use:"*x86_64-unknown-linux-gnu.tar.gz"
+# zplug "zsh-users/zsh-completions"
+# zplug "zsh-users/zsh-autosuggestions"
+# zplug "zsh-users/zsh-syntax-highlighting", defer:2
+# zplug "zsh-users/zsh-history-substring-search", defer:3
+# zplug load
+
+
+
 # Unsure why this one is not working
 zplug "plugins/aws",   from:oh-my-zsh
 
@@ -38,25 +55,25 @@ zplug "plugins/brew",   from:oh-my-zsh
 # this plugin requires
 # go get -u github.com/alecthomas/chroma/cmd/chroma
 
-zplug "plugins/colored-man-pages",   from:oh-my-zsh
-zplug "plugins/cargo",   from:oh-my-zsh
-zplug "plugins/command-not-found",   from:oh-my-zsh
-zplug "plugins/common-aliases",   from:oh-my-zsh
-# alias for cpv, which is rsync... not sure this plugin helpful
-zplug "plugins/cp",   from:oh-my-zsh
-zplug "plugins/docker",   from:oh-my-zsh
-zplug "plugins/docker-compose",   from:oh-my-zsh
-zplug "plugins/docker-machine",   from:oh-my-zsh
+#zplug "plugins/colored-man-pages",   from:oh-my-zsh
+#zplug "plugins/cargo",   from:oh-my-zsh
+#zplug "plugins/command-not-found",   from:oh-my-zsh
+#zplug "plugins/common-aliases",   from:oh-my-zsh
+## alias for cpv, which is rsync... not sure this plugin helpful
+#zplug "plugins/cp",   from:oh-my-zsh
+#zplug "plugins/docker",   from:oh-my-zsh
+#zplug "plugins/docker-compose",   from:oh-my-zsh
+#zplug "plugins/docker-machine",   from:oh-my-zsh
 
-zplug "plugins/git",   from:oh-my-zsh
-zplug "plugins/github",   from:oh-my-zsh
-zplug "plugins/gitignore",   from:oh-my-zsh
-# just adds aliases, claims to add completion but doesn't seem to work to me
-zplug "plugins/golang",   from:oh-my-zsh
+#zplug "plugins/git",   from:oh-my-zsh
+#zplug "plugins/github",   from:oh-my-zsh
+#zplug "plugins/gitignore",   from:oh-my-zsh
+## just adds aliases, claims to add completion but doesn't seem to work to me
+#zplug "plugins/golang",   from:oh-my-zsh
 
-zplug "plugins/kube-ps1",   from:oh-my-zsh
-zplug "plugins/kubectl",   from:oh-my-zsh
-zplug "plugins/minikube",   from:oh-my-zsh
+#zplug "plugins/kube-ps1",   from:oh-my-zsh
+#zplug "plugins/kubectl",   from:oh-my-zsh
+#zplug "plugins/minikube",   from:oh-my-zsh
 
   #ng
   #nmap
