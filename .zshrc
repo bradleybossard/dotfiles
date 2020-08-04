@@ -4,6 +4,8 @@
 #if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
 #  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 #fi
+#
+# https://apptension.com/blog/2018/08/30/shell-configuration-hack-your-zsh/
 
 export LANG=en_US.UTF-8
 export EDITOR='vim'
