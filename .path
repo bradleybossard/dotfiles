@@ -137,3 +137,6 @@ if [[ $OSTYPE == *"darwin"* ]]; then
   export ZPLUG_HOME=/usr/local/opt/zplug
   source $ZPLUG_HOME/init.zsh
 fi
+
+# pipx
+export PATH="$PATH:$HOME/.local/bin"
