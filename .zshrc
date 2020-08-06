@@ -46,6 +46,7 @@ zplug "woefe/wbase.zsh"
 zplug "woefe/git-prompt.zsh", use:"{git-prompt.zsh,examples/wprompt.zsh}"
 
 zplug "plugins/common-aliases",   from:oh-my-zsh
+zplug "plugins/vi-mode",   from:oh-my-zsh
 
 # zplug romkatv/powerlevel10k, as:theme, depth:1
 # zplug "junegunn/fzf", use:"shell/*.zsh"
