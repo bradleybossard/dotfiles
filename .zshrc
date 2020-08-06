@@ -104,6 +104,16 @@ zplug "plugins/brew",   from:oh-my-zsh
   #zsh-navigation-tools
   #zsh_reload
 
+## suffix aliases
+# Markdown files
+alias -s md=code
+
+# JSON files
+alias -s json=code
+
+# bulk association
+alias -s {cs,ts,html}=code
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
