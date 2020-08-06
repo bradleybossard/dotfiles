@@ -33,7 +33,9 @@ setopt noincappendhistory
 setopt nosharehistory
 setopt appendhistory
 
-source ~/.zplug/init.zsh
+if [[ $OSTYPE == *"linux"* ]]; then
+  source ~/.zplug/init.zsh
+fi
 
 zplug "zsh-users/zsh-history-substring-search"
 bindkey -M vicmd 'k' history-substring-search-up
@@ -41,7 +43,6 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 
 # Load plugins
-source ~/.zplug/init.zsh
 zplug "woefe/wbase.zsh"
 zplug "woefe/git-prompt.zsh", use:"{git-prompt.zsh,examples/wprompt.zsh}"
 
@@ -52,8 +53,8 @@ zplug "plugins/vi-mode",   from:oh-my-zsh
 # zplug "junegunn/fzf", use:"shell/*.zsh"
 # zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*linux*amd64*"
 # zplug "sharkdp/fd", from:gh-r, as:command, rename-to:fd, use:"*x86_64-unknown-linux-gnu.tar.gz"
-# zplug "zsh-users/zsh-completions"
-# zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-autosuggestions"
 # zplug "zsh-users/zsh-syntax-highlighting", defer:2
 # zplug "zsh-users/zsh-history-substring-search", defer:3
 # zplug load
@@ -61,9 +62,8 @@ zplug "plugins/vi-mode",   from:oh-my-zsh
 
 
 # Unsure why this one is not working
-zplug "plugins/aws",   from:oh-my-zsh
-
-zplug "plugins/brew",   from:oh-my-zsh
+# zplug "plugins/aws",   from:oh-my-zsh
+# zplug "plugins/brew",   from:oh-my-zsh
 # zplug "plugins/colorize",   from:oh-my-zsh
 # this plugin requires
 # go get -u github.com/alecthomas/chroma/cmd/chroma
