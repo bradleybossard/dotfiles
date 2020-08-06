@@ -44,6 +44,9 @@ bindkey -M vicmd 'j' history-substring-search-down
 source ~/.zplug/init.zsh
 zplug "woefe/wbase.zsh"
 zplug "woefe/git-prompt.zsh", use:"{git-prompt.zsh,examples/wprompt.zsh}"
+
+zplug "plugins/common-aliases",   from:oh-my-zsh
+
 # zplug romkatv/powerlevel10k, as:theme, depth:1
 # zplug "junegunn/fzf", use:"shell/*.zsh"
 # zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*linux*amd64*"
@@ -67,7 +70,7 @@ zplug "plugins/brew",   from:oh-my-zsh
 #zplug "plugins/colored-man-pages",   from:oh-my-zsh
 #zplug "plugins/cargo",   from:oh-my-zsh
 #zplug "plugins/command-not-found",   from:oh-my-zsh
-#zplug "plugins/common-aliases",   from:oh-my-zsh
+
 ## alias for cpv, which is rsync... not sure this plugin helpful
 #zplug "plugins/cp",   from:oh-my-zsh
 #zplug "plugins/docker",   from:oh-my-zsh
@@ -84,6 +87,8 @@ zplug "plugins/brew",   from:oh-my-zsh
 #zplug "plugins/kubectl",   from:oh-my-zsh
 #zplug "plugins/minikube",   from:oh-my-zsh
 
+
+
   #ng
   #nmap
   #node
@@ -94,7 +99,7 @@ zplug "plugins/brew",   from:oh-my-zsh
   #rust
   #tmux
   #vagrant
-  #vi-mode
+
   #zsh-navigation-tools
   #zsh_reload
 
