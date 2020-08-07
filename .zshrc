@@ -44,7 +44,8 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 # Load plugins
 zplug "woefe/wbase.zsh"
-zplug "woefe/git-prompt.zsh", use:"{git-prompt.zsh,examples/wprompt.zsh}"
+# zplug "woefe/git-prompt.zsh", use:"{git-prompt.zsh,examples/wprompt.zsh}"
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 zplug "plugins/common-aliases",   from:oh-my-zsh
 zplug "plugins/vi-mode",   from:oh-my-zsh
