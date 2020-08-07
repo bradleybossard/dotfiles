@@ -57,6 +57,8 @@ zplug "plugins/vi-mode",   from:oh-my-zsh
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+zplug 'wfxr/forgit'
 # zplug "zsh-users/zsh-history-substring-search", defer:3
 # zplug load
 
