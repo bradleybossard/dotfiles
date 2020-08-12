@@ -17,7 +17,7 @@ fi
 
 wget -O  - https://github.com/cheat/cheat/releases/download/$VERSION/cheat-$ARCH.gz | gunzip -c > cheat
 chmod 755 cheat
-mv cheat $USER_BIN_DIR
+sudo mv cheat $USER_BIN_DIR
 popd
 mkdir -p ~/.config/cheat
 mv cheat_conf.yml ~/.config/cheat/conf.yml
