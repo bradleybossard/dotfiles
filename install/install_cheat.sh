@@ -11,8 +11,15 @@ if [[ $OSTYPE == *"darwin"* ]]; then
 fi
 
 if [[ $OSTYPE == *"linux"* ]]; then
-  ARCH=linux-amd64
+  LINUX_ARCH=`dpkg --print-architecture`
   USER_BIN_DIR=/usr/local/bin/
+
+  if [[ $LINUX_ARCH == "amd64" ]]; then
+    ARCH=linux-amd64
+  fi
+  if [[ $LINUX_ARCH == "armhf" ]]; then
+    ARCH=linux-arm7
+  fi
 fi
 
 wget -O  - https://github.com/cheat/cheat/releases/download/$VERSION/cheat-$ARCH.gz | gunzip -c > cheat
