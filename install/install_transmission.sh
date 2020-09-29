@@ -1,4 +1,4 @@
-sudo add-apt-repository ppa:transmissionbt/ppa
+sudo add-apt-repository --yes ppa:transmissionbt/ppa
 sudo apt-get update
 sudo apt-get install --yes transmission-gtk transmission-cli transmission-common transmission-daemon
 
