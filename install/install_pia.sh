@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 pushd .
 cd /tmp
 wget https://www.privateinternetaccess.com/installer/pia-nm.sh
