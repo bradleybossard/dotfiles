@@ -1,19 +1,26 @@
 #!/bin/bash
-sudo apt-get install --yes vagrant
 
-# For Ubuntu 18.04, install vagrant from .deb for v2.0.3, otherwise vagrant-mutate plugin has install issue
-#wget -c https://releases.hashicorp.com/vagrant/2.0.3/vagrant_2.0.3_x86_64.deb
-#sudo dpkg -i vagrant_2.0.3_x86_64.deb
+# add hashicorp apt repository
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository --yes "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 
+# install vagrant
+sudo apt-get update --fix-missing
+sudo apt-get install --yes virtualbox vagrant
+
+exit
+
+
+# For installing and running vagrant with libvirt
 sudo apt-get install libvirt-dev
+newgrp libvirt
 
-vagrant plugin install vagrant-libvirt
-
-# Old plugin, don't think it's maintained or needed.
-# vagrant plugin install vagrant-mutate
+vagrant plugin install --yes vagrant-libvirt
 
 # Cannot use a standard box for libvirt
-vagrant init generic/ubuntu1604
+vagrant init generic/ubuntu2004
+
+# export VAGRANT_DEFAULT_PROVIDER=libvirt
 
 # Must specify libvirt as provider
 vagrant up --provider=libvirt
