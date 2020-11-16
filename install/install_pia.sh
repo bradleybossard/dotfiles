@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 pushd .
 cd /tmp
 sudo apt-get install --yes openvpn network-manager-openvpn network-manager-openvpn-gnome
