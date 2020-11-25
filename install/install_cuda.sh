@@ -1,5 +1,15 @@
 #!/bin/bash
 
+
+# For PopOS with Nvidia driver pre-installed
+# CUDA
+# sudo apt install --yes system76-cuda-latest
+# CuDNN
+# sudo apt install --yes system76-cudnn-10.2
+
+
+
+
 if [[ $OSTYPE == *"linux"* ]]; then
   # TODO: Revisit these instructions, this url is no longer live
   # Update version to latest
@@ -31,7 +41,7 @@ fi
 
 
 if [[ $OSTYPE == *"darwin"* ]]; then
-# Install CUDA https://gist.github.com/Mistobaan/dd32287eeb6859c6668d 
+# Install CUDA https://gist.github.com/Mistobaan/dd32287eeb6859c6668d
   brew update
   brew install coreutils swig
   brew cask install cuda
