@@ -1,6 +1,17 @@
 #!/bin/bash
 
 
+# install cuda ppa
+# sudo wget -O /etc/apt/preferences.d/cuda-repository-pin-600 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
+# sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+# sudo add-apt-repository --yes "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
+
+exit
+
+sudo apt install --yes cuda
+
+
+
 # https://support.system76.com/articles/cuda/
 # For PopOS with Nvidia driver pre-installed
 # CUDA
