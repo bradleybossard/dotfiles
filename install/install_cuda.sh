@@ -1,6 +1,7 @@
 #!/bin/bash
 
 
+# https://support.system76.com/articles/cuda/
 # For PopOS with Nvidia driver pre-installed
 # CUDA
 # sudo apt install --yes system76-cuda-latest
