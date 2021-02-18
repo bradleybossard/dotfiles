@@ -9,6 +9,7 @@
 
 export LANG=en_US.UTF-8
 export EDITOR='vim'
+export AWS_VAULT_BACKEND=file
 
 ENVFILES=(
   $HOME/.path
