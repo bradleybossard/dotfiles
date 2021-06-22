@@ -32,6 +32,7 @@ choco install instanteyedropper
 choco install irfanview
 choco install krita
 choco install licecap
+choco install musescore
 choco install nodejs
 choco install notepadplusplus
 choco install openscad
@@ -41,6 +42,7 @@ choco install putty
 choco install python
 choco install rufus
 choco install sendtokindle
+choco install sketchup
 choco install soulseek
 choco install steam
 choco install sysinternals
@@ -51,6 +53,7 @@ choco install unity
 choco install vagrant
 choco install virtualbox
 choco install vlc
+choco install vscode
 choco install wget
 choco install wireshark
 choco install xencenter 
