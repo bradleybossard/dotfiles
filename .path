@@ -75,6 +75,9 @@ fi
 #fi
 #export PATH=$pip3_installs:$PATH
 
+# poetry
+export PATH="$HOME/.poetry/bin:$PATH"
+
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
