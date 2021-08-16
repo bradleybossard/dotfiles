@@ -45,10 +45,6 @@
   sts = status --short --branch
   t = tag -n3
   unstage = reset HEAD --
-[credential]
-  helper = store
-[credential "https://github.com"]
-  username = bradleybossard
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   path =
