@@ -32,11 +32,11 @@ function create_symlinks () {
 }
 
 #Install Vundle and Bundles
-function install_vundle () {
-  rm -rf ~/.vim/bundle
-  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-  vim +PluginInstall +qall
-}
+#function install_vundle () {
+#  rm -rf ~/.vim/bundle
+#  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+#  vim +PluginInstall +qall
+#}
 
 # Install tmux plugins
 function install_tmux () {
@@ -65,7 +65,7 @@ function install_zsh () {
 
 install_basics
 create_symlinks
-install_vundle
+#install_vundle
 install_tmux
 install_fzf
 install_zsh
