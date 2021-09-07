@@ -204,3 +204,9 @@ if [[ $OSTYPE == *"darwin"* ]]; then
   # The closest substitute for lsusb on OSX
   alias lsusb='ioreg -p IOUSB -l -w 0'
 fi
+
+function tmux-resurrect-reset-last() {
+  pushd .
+  cd ~/.tmux/resurrect && ln -f -s $(/bin/ls -t tmux_resurrect_*.txt | head -n 1) last && /bin/ls -l last
+  popd
+}
