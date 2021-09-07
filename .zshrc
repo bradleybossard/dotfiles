@@ -34,6 +34,8 @@ setopt noincappendhistory
 setopt nosharehistory
 setopt appendhistory
 
+setopt PUSHDSILENT
+
 if [[ $OSTYPE == *"linux"* ]]; then
   source ~/.zplug/init.zsh
 fi
