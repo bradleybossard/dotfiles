@@ -1,8 +1,3 @@
-# some more ls aliases
-# alias ll='ls -alFG'
-#alias lsd='ls -ld */'  # List just directories
-# alias la='ls -A'
-#alias l='ls -lF --group-directories-first'
 alias mkdir='mkdir -vp'
 alias cp='cp -v'
 alias vi='vim'
@@ -66,17 +61,6 @@ function gurl {
   printf '\nhttp://%s.%s.io/%s\n\n' $git_username $git_service $git_reponame
 }
 
-alias initbasicweb='cp ~/src/basic-web-project/*.{html,js,css} .'
-
-# TODO: Update this function for zshell
-# tmux session name autocomplete
-#_tat() {
-#	TMUX_SESSIONS=$(tmux ls -F '#S' | xargs)
-#	local cur=${COMP_WORDS[COMP_CWORD]}
-#	COMPREPLY=( $(compgen -W "$TMUX_SESSIONS" -- $cur) )
-#}
-#complete -F _tat tat
-
 # tmux aliases
 alias tls='tmux list-session'
 alias tsw='tmux switch -t '
@@ -113,92 +97,6 @@ alias dockersecurity='docker run -it --net host --pid host --cap-add audit_contr
     -v /usr/lib/systemd:/usr/lib/systemd \
     -v /etc:/etc --label docker_bench_security \
     docker/docker-bench-security'
-
-
-# List docker containers matching a regex expression
-function dockergrep {
-  for i in $(docker ps -a | grep "$1" | tr -s ' ' | cut -f2 -d" "); do
-    echo $i;
-  done
-}
-
-# List urls/ports environment variables for containers that have them.
-# Useful when running containers with jwilder/nginx-proxy
-function dockerurls {
-  RED='\033[0;31m'
-  YELLOW='\033[1;33m'
-  NC='\033[0m' # No Color
-
-  containers=$(docker ps --format '{{.Names}}');
-  for container in $containers; do
-    count=$(docker inspect $container | grep \.com\" | wc -l);
-    if [ $count -ne 0 ]; then
-      printf "${YELLOW}${container}${NC}\n"
-      # Grep urls and filter out LETS_ENCRYPT_EMAIL lines
-      docker inspect $container | grep \.com\" | grep -v EMAIL | tr -s ' ';
-      docker inspect $container | grep -i hostport | tr -s ' ' | head -1;
-    fi
-  done
-}
-
-# This function iterates over existing containers and determines the max
-# value of exposed port numbers
-function dockermaxopenport {
-  # Array for collecting exposed port numbers
-  ports=()
-  containers=$(docker ps --format '{{.Names}}');
-  # Create array of port numbers
-  for container in $containers; do
-    ports+=$(echo "$(docker port $container | cut -d: -f2) ")
-  done
-  # Find max and return max
-  max=0
-  for n in ${ports[@]} ; do
-      ((n > max)) && max=$n
-  done
-  echo $max
-}
-
-# Shortcut for workflow I often use.
-# docker run -it --rm -v $PWD:/src -p port:8000 --name <same-as-current-dir> <container-path>
-# This function automatically starts the container on the next highest port of the current
-# running containers, mounts the current directory and names it the same as the current directory.
-function dockerrun {
-  # Get highest number port of running containers
-  maxport=$(dockermaxopenport)
-  # Increment port number
-  maxport=$(echo $maxport + 1 | bc)
-  # Get current directory name
-  dirname=${PWD##*/}
-  # Check if there are atleast 2 arguments
-	#if [ $# -lt 2 ]
-	if [ $# -lt 1 ]
-		then
-			echo "Usage: dockerrun <container-path>"
-			echo "  ex. dockerrun ubuntu/ubuntu"
-		  return
-	fi
-  # Launch container
-  cmd="docker run -it --rm -v $PWD:/src -p $maxport:8080 --name $dirname $1"
-  echo $cmd
-  $cmd
-}
-
-# Shortcut for starting bash shell based on current directory name
-function dockerbash {
-  dirname=${PWD##*/}
-  cmd="docker exec -it $dirname bash"
-  echo $cmd
-  $cmd
-}
-
-# Shortcut to build a Docker image and named the same as current directory
-function dockerbuild {
-  dirname=${PWD##*/}
-  cmd="docker build -t $dirname ."
-  echo $cmd
-  $cmd
-}
 
 # This alias can be used inside a container to get it's name
 alias dockername='cat /proc/self/cgroup | grep "docker" | sed "s/^.*\///" | tail -n1'
@@ -265,72 +163,6 @@ function ngurl {
   printf "\nhttp://bradleybossard.com/%s\n\n" $dirname
 }
 
-# Set up git subtree for Hugo publishing to Github Pages
-function hugoinitpublish {
-  theme=$(ls themes | head -1)
-
-  if [ -z "$theme" ]
-    then
-      echo "No theme detected"
-      return
-  fi
-
-  giturl=`git remote get-url --push origin`
-
-  # Create a new orphand branch (no commit history) named gh-pages
-  git checkout --orphan gh-pages
-
-  # Unstage all files
-  git rm --cached $(git ls-files)
-
-  # Grab one file from the master branch so we can make a commit
-  git checkout master README.md
-
-  # Add and commit that file
-  git add .
-  git commit -m "Initial commit on gh-pages branch"
-
-  # Push to remote gh-pages branch
-  git push origin gh-pages
-
-  # Return to master branch
-  git checkout master
-
-  # Remove the public folder to make room for the gh-pages subtree
-  rm -rf public
-
-  # Add the gh-pages branch of the repository. It will look like a folder named public
-  git subtree add --prefix=public $giturl gh-pages --squash
-
-  # Pull down the file we just committed. This helps avoid merge conflicts
-  git subtree pull --prefix=public $giturl gh-pages
-
-  # Run hugo. Generated site will be placed in public directory (or omit -t ThemeName if you're not using a theme)
-
-  hugo -t $theme
-
-  # Add everything
-  git add -A
-
-  # Commit and push to master
-  git commit -m "Updating site" && git push origin master
-
-  # Push the public subtree to the gh-pages branch
-  git subtree push --prefix=public $giturl gh-pages
-}
-
-function hugobuild {
-  theme=$(ls themes | head -1)
-  hugo -t=$theme
-}
-
-function hugopublish {
-  giturl=`git remote get-url --push origin`
-  git subtree push --prefix=public $giturl gh-pages
-}
-
-alias hugoundraftall='for file in $(ls content/post/*.md); do hugo undraft $file; done;'
-
 function slackemoji {
   # Fetch
   wget $1
@@ -372,11 +204,3 @@ if [[ $OSTYPE == *"darwin"* ]]; then
   # The closest substitute for lsusb on OSX
   alias lsusb='ioreg -p IOUSB -l -w 0'
 fi
-
-
-#source <(mk completion bash | sed "s/kubectl/mk/g")
-
-#if [[ $(which microk8s | wc -c) -ne 0 ]]; then
-#  source <(microk8s.kubectl completion zsh | sed "s/complete -o default -F __start_kubectl kubectl/complete -o default -F __start_kubectl microk8s.kubectl/g" | sed "s/complete -o default -o nospace -F __start_kubectl kubectl/complete -o default -o nospace -F __start_kubectl microk8s.kubectl/g");
-#  alias mkubectl=microk8s.kubectl
-#fi
