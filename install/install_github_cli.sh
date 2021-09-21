@@ -1,14 +1,22 @@
 #!/bin/bash
+
+# Generic example of how to download and install a latest release from Github
 pushd .
 cd /tmp
 
-VERSION=$(curl https://api.github.com/repos/cli/cli/releases/latest | jq '.name' | sed 's/"//g')
-echo $VERSION
-VERSION_NO_V=$(echo $VERSION | tr -d v)
+ORG=cli
+REPO=cli
+RELEASES_URL="https://api.github.com/repos/$ORG/$REPO/releases/latest"
 
-FILENAME="gh_${VERSION_NO_V}_linux_amd64.deb"
-DOWNLOAD_URL="https://github.com/cli/cli/releases/download/$VERSION/$FILENAME"
+echo $RELEASES_URL
+DOWNLOAD_URL=`curl -s $RELEASES_URL \
+  | grep browser_download_url \
+  | grep linux_amd64\.deb \
+  | cut -d '"' -f 4`
 echo $DOWNLOAD_URL
+
+FILENAME=`basename $DOWNLOAD_URL`
+
 sudo curl -L $DOWNLOAD_URL -o $FILENAME
 
 sudo dpkg -i $FILENAME
