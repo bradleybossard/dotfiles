@@ -13,14 +13,14 @@
 # Add the following lines
 # blacklist nouveau
 # options nouveau modeset=0
-sudo sh -c 'echo blacklist nouveau > /etc/modprobe.d/blacklist-nouveau.conf'
-sudo sh -c 'echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nouveau.conf'
+# sudo sh -c 'echo blacklist nouveau > /etc/modprobe.d/blacklist-nouveau.conf'
+# sudo sh -c 'echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nouveau.conf'
 
 # Regenerate the kernel initramfs
-sudo update-initramfs -u
+# sudo update-initramfs -u
 
 # Reboot the machine
-sudo reboot
+# sudo reboot
 
 # NOTE: On 2018-05-17, while install the NVIDIA driver on Ubuntu 18.04, the follow step 3.
 # was not needed.  Simply running the NVIDIA install shell script under X was able to
