@@ -37,6 +37,12 @@ if [[ $OSTYPE == *"darwin"* ]]; then
   export PATH="/usr/local/anaconda3/bin:$PATH"
 fi
 
+# cuda
+if [[ $OSTYPE == *"linux"* ]]; then
+  export PATH=/usr/local/cuda-11.4/bin${PATH:+:${PATH}}
+  export LD_LIBRARY_PATH=/usr/local/cuda-11.4/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+fi
+
 # fastlane
 #if [[ $OSTYPE == *"darwin"* ]]; then
 #  export PATH="$HOME/.fastlane/bin:$PATH"
