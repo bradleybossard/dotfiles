@@ -39,6 +39,9 @@ fi
 
 # cuda
 if [[ $OSTYPE == *"linux"* ]]; then
+  # TODO: Detect if /usr/local/cuda-XXX is installed, compute the path programmatically,
+  # and only add if it exists
+
   export PATH=/usr/local/cuda-11.4/bin${PATH:+:${PATH}}
   export LD_LIBRARY_PATH=/usr/local/cuda-11.4/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 fi
