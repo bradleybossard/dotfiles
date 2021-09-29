@@ -1,54 +1,37 @@
 #!/bin/bash
 
-
-# install cuda ppa
-# sudo wget -O /etc/apt/preferences.d/cuda-repository-pin-600 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
-# sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
-# sudo add-apt-repository --yes "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
-
-exit
-
-sudo apt install --yes cuda
-
-
-
-# https://support.system76.com/articles/cuda/
-# For PopOS with Nvidia driver pre-installed
-# CUDA
-# sudo apt install --yes system76-cuda-latest
-# CuDNN
-# sudo apt install --yes system76-cudnn-10.2
-
-
-
-
 if [[ $OSTYPE == *"linux"* ]]; then
-  # TODO: Revisit these instructions, this url is no longer live
-  # Update version to latest
-  CUDA_VERSION=10.0
-  # CUDA_FILE=cuda_9.1.85_387.26_linux
-  CUDA_FILE=cuda_10.0.130_410.48_linux
-  # wget https://developer.nvidia.com/compute/cuda/9.1/Prod/local_installers/$CUDA_FILE
-  # wget https://developer.nvidia.com/compute/cuda/9.1/Prod/local_installers/$CUDA_FILE
+  # For Ubuntu 20.04
+
+  # Following instructions for installing NVIDIA drivers here
+  # https://www.nvidia.com/Download/index.aspx
+
+  # CUDA Toolkit installation guide
+  # https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
+
   pushd .
-  cd ~/Downloads
-  wget https://developer.nvidia.com/compute/cuda/$CUDA_VERSION/Prod/local_installers/$CUDA_FILE
-  chmod +x $CUDA_FILE
-  sudo ./$CUDA_FILE
-  # TODO: Try the command below to test full NVIDIA driver / CUDA install
-  # sudo $CUDA_FILE --silent --driver --toolkit --samples
-  # TODO: Haven't tried command below, but don't think the
-  # flags are correct for the CUDA installer
-  #sudo $CUDA_FILE \
-  # --ui=none \
-  # --no-questions \
-  # --accept-license \
-  # --disable-nouveau \
-  # --no-cc-version-check \
-  # --dkms
+  cd /tmp
+
+  wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+  sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+  wget https://developer.download.nvidia.com/compute/cuda/11.4.2/local_installers/cuda-repo-ubuntu2004-11-4-local_11.4.2-470.57.02-1_amd64.deb
+  sudo dpkg -i cuda-repo-ubuntu2004-11-4-local_11.4.2-470.57.02-1_amd64.deb
+  sudo apt-key add /var/cuda-repo-ubuntu2004-11-4-local/7fa2af80.pub
+  sudo apt-get update
+  sudo apt-get -y install cuda
+  popd
+
+  # Note: env vars like the following need to be add to PATH and LD_LIBRARY
+  # this has been done in the .path file, but may need to be updated based on install version of CUDA
+  # export PATH=/usr/local/cuda-11.4/bin${PATH:+:${PATH}}
+  # export LD_LIBRARY_PATH=/usr/local/cuda-11.4/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
   nvcc --version  # To test CUDA compiler was installed correctly.
-  popd
+
+  # prints states of Nvidia drivers / CUDA
+  # may require reboot after driver install
+  nvidia-smi
+
 fi
 
 
