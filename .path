@@ -54,6 +54,8 @@ fi
 # flutter
 export PATH=$PATH:$HOME/flutter/bin
 
+export GEOSERVER_HOME=/usr/share/geoserver
+
 # go
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
