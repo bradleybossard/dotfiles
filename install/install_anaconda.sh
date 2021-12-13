@@ -1,16 +1,15 @@
 #!/bin/bash
+
+# check the following repo listing for latest version
+# https://repo.anaconda.com/archive/
+
+FILENAME=Anaconda3-2021.11-Linux-x86_64.sh
 cd /tmp
-wget https://repo.anaconda.com/archive/Anaconda3-5.3.1-Linux-x86_64.sh
-bash Anaconda3-5.3.1-Linux-x86_64.sh
+# wget https://repo.anaconda.com/archive/Anaconda3-5.3.1-Linux-x86_64.sh
+wget https://repo.anaconda.com/archive/$FILENAME
+# bash Anaconda3-5.3.1-Linux-x86_64.sh
+bash $FILENAME
 conda update conda
 conda update anaconda
 cd -
 echo "Run > conda init"
-exit
-
-## TODO: Experiment with Miniconda
-cd /tmp
-curl -O https://repo.anaconda.com/miniconda/Miniconda2-4.6.14-Linux-x86_64.sh
-bash Miniconda2-4.6.14-Linux-x86_64.sh
-# TODO: Add appropriate conda update equivalents as above
-cd -
