@@ -14,6 +14,10 @@ alias initreadme='echo "# $(basename $PWD)" > README.md'
 
 alias replacespaaces='for file in *; do mv -n "$file" `echo $file | tr " " "-"` ; done'
 
+alias google-chrome-1='google-chrome --user-data-dir=$HOME/.config/google-chrome-1 &'
+alias google-chrome-2='google-chrome --user-data-dir=$HOME/.config/google-chrome-2 &'
+alias google-chrome-3='google-chrome --user-data-dir=$HOME/.config/google-chrome-3 &'
+
 # Show active ports
 if [[ $OSTYPE == *"linux"* ]]; then
   alias ports='netstat -tulanp'
