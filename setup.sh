@@ -16,11 +16,13 @@ function install_basics () {
       tree \
       tmux \
       tig \
-      vim \
       wget \
       zsh
     sudo apt-file update
   fi
+
+  # Removing in favor of neovim
+  # vim
 }
 
 # Create symlinks from home dir to files in this repo
