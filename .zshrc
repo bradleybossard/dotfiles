@@ -23,6 +23,8 @@ for FILE in $ENVFILES; do
   [ -f $FILE ] && source $FILE
 done;
 
+# zsh globs in scp
+alias scp='noglob scp'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
