@@ -27,6 +27,7 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/plat
 
 # brew
 if [[ $OSTYPE == *"darwin"* ]]; then
+
   homebrew=/usr/local/bin:/usr/local/sbin
   export PATH=$homebrew:$PATH
 fi
@@ -35,6 +36,13 @@ fi
 ## NOTE: Path needs to be added after brew to use conda python
 if [[ $OSTYPE == *"darwin"* ]]; then
   export PATH="/usr/local/anaconda3/bin:$PATH"
+fi
+
+# brew for linux
+if [[ $OSTYPE == *"linux"* ]]; then
+  if [[ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  fi
 fi
 
 # cuda
