@@ -48,45 +48,45 @@ brew cask install vlc
 
 exit
 
-brew cask install alacritty
-brew cask install authy
-brew cask install ultimaker-cura
-brew cask install multipass
-brew cask install namechanger
-brew cask install openscad
+brew install cask alacritty
+brew install cask authy
+brew install cask ultimaker-cura
+brew install cask multipass
+brew install cask namechanger
+brew install cask openscad
 sudo xattr -d com.apple.quarantine /Applications/OpenSCAD.app
-brew cask install pgadmin4
-brew cask install visual-studio-code
+brew install cask pgadmin4
+brew install cask visual-studio-code
 
 # Untested
 
-# brew cask install aerial
-# brew cask install anaconda
-# brew cask install android-file-transfer
-# brew cask install android-studio
-# brew cask install atom
-# brew cask install balenaetcher   ## etcher
-# brew cask install blackhole
-# brew cask install blender
-# brew cask install boxer
-# brew cask install charles
-# brew cask install docker-toolbox
-# brew cask install genymotion
-# brew cask install google-earth
-# brew cask install inkscape
-# brew cask install krita
-# brew cask install lmms
-# brew cask install opentoonz
-# brew cask install licecap
-# brew cask install pencil
-# brew cask install pencil2d-pencil
-# brew cask install processing
-# brew cask install smallpdf
-# brew cask install sourcetrail
-# brew cask install unity
-# brew cask install vagrant
+# brew install cask aerial
+# brew install cask anaconda
+# brew install cask android-file-transfer
+# brew install cask android-studio
+# brew install cask atom
+# brew install cask balenaetcher   ## etcher
+# brew install cask blackhole
+# brew install cask blender
+# brew install cask boxer
+# brew install cask charles
+# brew install cask docker-toolbox
+# brew install cask genymotion
+# brew install cask google-earth
+# brew install cask inkscape
+# brew install cask krita
+# brew install cask lmms
+# brew install cask opentoonz
+# brew install cask licecap
+# brew install cask pencil
+# brew install cask pencil2d-pencil
+# brew install cask processing
+# brew install cask smallpdf
+# brew install cask sourcetrail
+# brew install cask unity
+# brew install cask vagrant
 
-# brew cask install freecad
+# brew install cask freecad
 # Need the follow to bypass OSX Catalina can't install untrusted app
 # sudo xattr -d com.apple.quarantine /Applications/FreeCAD.app
 
@@ -94,7 +94,7 @@ brew cask install visual-studio-code
 
 # NOTE: Not sure these are valid instructions anymore
 # To install virtualbox, you must first attempt to install and fail
-# brew cask install virtualbox
+# brew install cask virtualbox
 # After the install fails, go System Preferences -> Security & Privacy,
 # then enable the app install from Oracle
 # brew cask reinstall --force virtualbox --verbose --debug
