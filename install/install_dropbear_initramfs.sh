@@ -24,6 +24,7 @@ sudo update-grub
 
 exit
 
+
 # to unlock
 # ssh -p2222 -i <path_to_private_key> hostname "echo -ne \"password\" > /lib/cryptsetup/passfifo"
 ssh -p2222 -i <path_to_private_key> root@hostname
