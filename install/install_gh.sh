@@ -5,6 +5,9 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update
 sudo apt install gh
 
+# help to install releases from gh
+gh extension install redraw/gh-install
+
 # to update
 # sudo apt update
 # sudo apt install gh
