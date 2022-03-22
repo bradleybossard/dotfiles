@@ -1,3 +1,4 @@
+alias ll='ls -l'
 alias mkdir='mkdir -vp'
 alias cp='cp -v'
 alias vi='vim'
@@ -14,9 +15,18 @@ alias initreadme='echo "# $(basename $PWD)" > README.md'
 
 alias replacespaaces='for file in *; do mv -n "$file" `echo $file | tr " " "-"` ; done'
 
+alias brave-personal-1='brave-browser --user-data-dir=$HOME/.config/brave-personal-1 &'
+alias brave-work-1='brave-browser --user-data-dir=$HOME/.config/brave-work-1 &'
+
 alias google-chrome-1='google-chrome --user-data-dir=$HOME/.config/google-chrome-1 &'
 alias google-chrome-2='google-chrome --user-data-dir=$HOME/.config/google-chrome-2 &'
 alias google-chrome-3='google-chrome --user-data-dir=$HOME/.config/google-chrome-3 &'
+
+
+if [[ $OSTYPE == *"linux"* ]]; then
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+fi
 
 # Show active ports
 if [[ $OSTYPE == *"linux"* ]]; then
