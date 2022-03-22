@@ -53,6 +53,7 @@ zplug "woefe/wbase.zsh"
 zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 zplug "plugins/common-aliases",   from:oh-my-zsh
+zplug "plugins/gh",   from:oh-my-zsh
 zplug "plugins/vi-mode",   from:oh-my-zsh
 
 # zplug romkatv/powerlevel10k, as:theme, depth:1
