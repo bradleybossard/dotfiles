@@ -232,4 +232,4 @@ function reset_urb() {
 		echo "${i##*/}" > "${i%/*}/unbind"
 		echo "${i##*/}" > "${i%/*}/bind"
 	done
-fi
+}
