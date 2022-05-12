@@ -16,4 +16,6 @@ exit
 
 # Pixel Wheels
 flatpak install --noninteractive flathub com.agateau.PixelWheels
-flatpak run com.agateau.PixelWheels
+
+# enve
+flatpak install flathub io.github.maurycyliebner.enve
