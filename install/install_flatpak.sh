@@ -14,8 +14,7 @@ exit
 # System needs to be restarted, use confirm y/n here
 # sudo reboot
 
-# Pixel Wheels
 flatpak install --noninteractive flathub com.agateau.PixelWheels
-
-# enve
-flatpak install flathub io.github.maurycyliebner.enve
+flatpak install --noninteractive flathub io.github.maurycyliebner.enve
+flatpak install --noninteractive flathub org.tuxfamily.StuntRally
+flatpak install --noninteractive flathub com.github.KRTirtho.Spotube
