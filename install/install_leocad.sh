@@ -1,0 +1,1 @@
+gh install leozide/leocad
