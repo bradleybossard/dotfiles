@@ -161,6 +161,9 @@ fi
 # pipx
 export PATH="$PATH:$HOME/.local/bin"
 
+# texlive
+export PATH="$PATH:/usr/local/texlive/2022/bin/x86_64-linux"
+
 # wasmtime
 export WASMTIME_HOME="$HOME/.wasmtime"
 export PATH="$WASMTIME_HOME/bin:$PATH"
