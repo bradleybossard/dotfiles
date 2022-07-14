@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ $(/usr/bin/id -u) -ne 0 ]]; then
-  echo "Not running as root"
+  echo "Not running as root, use 'sudo -s' to become root"
   exit
 fi
 
