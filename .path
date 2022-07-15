@@ -94,6 +94,11 @@ fi
 #fi
 #export PATH=$pip3_installs:$PATH
 
+# if ! command -v "podman" >/dev/null; then
+if command -v "podman" >/dev/null; then
+  export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock
+fi
+
 # poetry
 export PATH="$HOME/.poetry/bin:$PATH"
 
