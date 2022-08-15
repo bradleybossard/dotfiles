@@ -66,7 +66,7 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 zplug 'wfxr/forgit'
 
-zplug "mattberther/zsh-pyenv"
+# zplug "mattberther/zsh-pyenv"
 # zplug "zsh-users/zsh-history-substring-search", defer:3
 # zplug load
 
