@@ -25,9 +25,13 @@ fi
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 
+# asdf
+if [ -x "$HOME/.asdf" ]; then
+. $HOME/.asdf/asdf.sh
+fi
+
 # brew
 if [[ $OSTYPE == *"darwin"* ]]; then
-
   homebrew=/usr/local/bin:/usr/local/sbin
   export PATH=$homebrew:$PATH
 fi
