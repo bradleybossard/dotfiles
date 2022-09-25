@@ -84,20 +84,6 @@ alias dockersecurity='docker run -it --net host --pid host --cap-add audit_contr
 # This alias can be used inside a container to get it's name
 alias dockername='cat /proc/self/cgroup | grep "docker" | sed "s/^.*\///" | tail -n1'
 
-function slackemoji {
-  # Fetch
-  wget $1
-  filename=`basename $1`
-  ext="${filename##*.}"
-  filename_noext="${filename%.*}"
-  resized_name=$filename_noext-resized.${ext}
-  width=`identify -format %[fx:w] $filename`
-  height=`identify -format %[fx:h] $filename`
-  max=$(( $width > $height ? $width : $height ))
-  convert $filename -gravity center -extent ${max}x${max} -resize 120x120 $resized_name
-  rm $filename
-}
-
 # Removes local branches corresponding to deleted remote branches
 gitprunelocal() {
   REMOTES="$@";
