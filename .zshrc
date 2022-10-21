@@ -60,11 +60,14 @@ zplug "plugins/vi-mode",   from:oh-my-zsh
 # zplug "junegunn/fzf", use:"shell/*.zsh"
 # zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*linux*amd64*"
 # zplug "sharkdp/fd", from:gh-r, as:command, rename-to:fd, use:"*x86_64-unknown-linux-gnu.tar.gz"
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
-zplug 'wfxr/forgit'
+#zplug "zsh-users/zsh-completions"
+# zplug "zsh-users/zsh-autosuggestions"
+# zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+# zplug 'wfxr/forgit'
+
+# zplug "mattberther/zsh-pyenv"
 
 # zplug "mattberther/zsh-pyenv"
 # zplug "zsh-users/zsh-history-substring-search", defer:3
@@ -162,21 +165,7 @@ if type "direnv" > /dev/null; then
   eval "$(direnv hook $SHELL)"
 fi
 
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/bradleybossard/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/bradleybossard/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/bradleybossard/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/bradleybossard/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
