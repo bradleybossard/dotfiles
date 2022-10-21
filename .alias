@@ -18,6 +18,8 @@ alias replacespaaces='for file in *; do mv -n "$file" `echo $file | tr " " "-"` 
 alias brave-personal-1='brave-browser --user-data-dir=$HOME/.config/brave-personal-1 &'
 alias brave-work-1='brave-browser --user-data-dir=$HOME/.config/brave-work-1 &'
 
+alias lg='lazygit'
+
 if [[ $OSTYPE == *"linux"* ]]; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
