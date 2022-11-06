@@ -28,4 +28,6 @@ flatpak install --noninteractive flathub org.audacityteam.Audacity
 flatpak install --noninteractive flathub ca.littlesvr.asunder
 flatpak install --noninteractive flathub com.rafaelmardojai.Blanket
 flatpak install --noninteractive flathub org.gnome.Cheese
-
+flatpak install --noninteractive flathub org.flameshot.Flameshot
+flatpak install --noninteractive flathub io.github.muse_sequencer.Muse
+flatpak install --noninteractive flathub org.musescore.MuseScore
