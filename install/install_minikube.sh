@@ -18,6 +18,12 @@ if [[ $OSTYPE == *"darwin"* ]]; then
   # Starts minikube using hyperkit
   minikube start --vm-driver hyperkit 
 elif [[ $OSTYPE == *"linux"* ]]; then
+
+  curl -L https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb -o /tmp/minikube_latest_amd64.deb
+  sudo dpkg -i /tmp/minikube_latest_amd64.deb
+  # sudo dpkg -i minikube_latest_amd64.deb
+
+exit
   # installing kvm2 driver for minikube
   sudo apt-get install --yes libvirt-bin
   curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2 && chmod +x docker-machine-driver-kvm2 && sudo mv docker-machine-driver-kvm2 /usr/local/bin/
