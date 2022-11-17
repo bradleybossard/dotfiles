@@ -32,6 +32,16 @@ flatpak install --noninteractive flathub org.audacityteam.Audacity
 flatpak install --noninteractive flathub ca.littlesvr.asunder
 flatpak install --noninteractive flathub com.rafaelmardojai.Blanket
 flatpak install --noninteractive flathub org.gnome.Cheese
+
 flatpak install --noninteractive flathub org.flameshot.Flameshot
 flatpak install --noninteractive flathub io.github.muse_sequencer.Muse
 flatpak install --noninteractive flathub org.musescore.MuseScore
+flatpak install --noninteractive flathub org.godotengine.Godot
+flatpak install --noninteractive flathub com.orama_interactive.Pixelorama
+flatpak install --noninteractive flathub re.rizin.cutter
+flatpak install --noninteractive flathub dev.storyapps.starc
+
+flatpak install --noninteractive flathub com.rawtherapee.RawTherapee
+flatpak install --noninteractive flathub com.rafaelmardojai.Blanket
+flatpak install --noninteractive flathub org.cvfosammmm.Setzer
+flatpak install --noninteractive flathub com.adilhanney.saber
