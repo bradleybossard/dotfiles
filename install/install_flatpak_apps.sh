@@ -45,3 +45,10 @@ flatpak install --noninteractive flathub com.rawtherapee.RawTherapee
 flatpak install --noninteractive flathub com.rafaelmardojai.Blanket
 flatpak install --noninteractive flathub org.cvfosammmm.Setzer
 flatpak install --noninteractive flathub com.adilhanney.saber
+
+flatpak install --noninteractive flathub org.kde.okular
+flatpak install --noninteractive flathub io.github.xaos_project.XaoS
+
+flatpak install --noninteractive flathub org.sqlitebrowser.sqlitebrowser
+flatpak install --noninteractive flathub io.dbeaver.DBeaverCommunity
+flatpak install --noninteractive flathub io.github.hydrusnetwork.hydrus
