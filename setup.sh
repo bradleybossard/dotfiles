@@ -12,6 +12,8 @@ function install_basics () {
       exuberant-ctags \
       git \
       jq \
+      ncdu \
+      rename \
       ripgrep \
       tree \
       tmux \
