@@ -52,3 +52,29 @@ flatpak install --noninteractive flathub io.github.xaos_project.XaoS
 flatpak install --noninteractive flathub org.sqlitebrowser.sqlitebrowser
 flatpak install --noninteractive flathub io.dbeaver.DBeaverCommunity
 flatpak install --noninteractive flathub io.github.hydrusnetwork.hydrus
+
+flatpak install --noninteractive flathub org.geogebra.GeoGebra
+
+# Office apps
+flatpak install --noninteractive flathub com.slack.Slack
+flatpak install --noninteractive flathub us.zoom.Zoom
+
+
+flatpak install --noninteractive flathub com.enjoyingfoss.feeel
+
+flatpak install --noninteractive flathub com.boxy_svg.BoxySVG
+
+flatpak install --noninteractive flathub fr.natron.Natron
+flatpak install --noninteractive flathub io.github.RodZill4.Material-Maker
+
+# Games
+flatpak install --noninteractive flathub net.gaijin.WarThunder
+
+# 3D Modeling
+flatpak install --noninteractive flathub com.wings3d.WINGS
+
+# Image editing
+flatpak install --noninteractive flathub com.xnview.XnRetro
+
+# fractals
+flatpak install --noninteractive flathub com.github.buddhi1980.mandelbulber2
