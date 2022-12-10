@@ -4,47 +4,69 @@
 # vs code flatpak has permissions issues with the terminal
 # flatpak install --noninteractive flathub com.visualstudio.code
 
+exit
+
+# run windows software
+flatpak install --noninteractive flathub com.usebottles.bottles
+
+# midi player
+flatpak install --noninteractive flathub net.sourceforge.dmidiplayer
+
+# pipewire effects
+flatpak install --noninteractive flathub com.github.wwmm.easyeffects
+
+# metronome
+flatpak install --noninteractive flathub net.sourceforge.kmetronome
+
+# midi monitor
+flatpak install --noninteractive flathub net.sourceforge.kmidimon
+
+#audiobooks
+flatpak install --noninteractive flathub com.github.geigi.cozy
+
+#emulators
+flatpak install --noninteractive flathub app.xemu.xemu
+
+# music players
+flatpak install --noninteractive flathub com.github.KRTirtho.Spotube
+flatpak install --noninteractive flathub io.github.cmus.cmus
+flatpak install --noninteractive flathub com.github.alainm23.byte
+
+# games
+flatpak install --noninteractive flathub com.agateau.PixelWheels
+flatpak install --noninteractive flathub org.tuxfamily.StuntRally
+
+# electronics
+flatpak install --noninteractive flathub org.kicad.KiCad
+
 # desktop publishing
 flatpak install --noninteractive flathub org.texstudio.TeXstudio
 flatpak install --noninteractive flathub org.kde.okular
 flatpak install --noninteractive flathub org.cvfosammmm.Setzer
 
-
-
-flatpak install --noninteractive flathub org.kicad.KiCad
-flatpak install --noninteractive flathub io.github.OpenToonz
-
-
-exit
-
-flatpak install --noninteractive flathub com.usebottles.bottles
-flatpak install --noninteractive flathub com.agateau.PixelWheels
-flatpak install --noninteractive flathub io.github.maurycyliebner.enve
-flatpak install --noninteractive flathub org.tuxfamily.StuntRally
-flatpak install --noninteractive flathub com.github.KRTirtho.Spotube
-flatpak install --noninteractive flathub app.xemu.xemu
-flatpak install --noninteractive flathub org.synfig.SynfigStudio
-
-flatpak install --noninteractive flathub net.sourceforge.dmidiplayer
-flatpak install --noninteractive flathub com.github.wwmm.easyeffects
-flatpak install --noninteractive flathub net.sourceforge.kmidimon
-flatpak install --noninteractive flathub net.sourceforge.kmetronome
-flatpak install --noninteractive flathub com.github.geigi.cozy
-flatpak install --noninteractive flathub com.github.artemanufrij.playmyvideos
-flatpak install --noninteractive flathub io.github.cmus.cmus
-flatpak install --noninteractive flathub com.github.alainm23.byte
-flatpak install --noninteractive flathub sa.sy.bluerecorder
-flatpak install --noninteractive flathub com.bitwig.BitwigStudio
+# audio editing
 flatpak install --noninteractive flathub org.audacityteam.Audacity
+
+# cd ripping
 flatpak install --noninteractive flathub ca.littlesvr.asunder
-flatpak install --noninteractive flathub com.rafaelmardojai.Blanket
+
+# photo booth
 flatpak install --noninteractive flathub org.gnome.Cheese
 
+# screenshot and recording
 flatpak install --noninteractive flathub org.flameshot.Flameshot
-flatpak install --noninteractive flathub io.github.muse_sequencer.Muse
-flatpak install --noninteractive flathub org.musescore.MuseScore
+flatpak install --noninteractive flathub sa.sy.bluerecorder
+
+# game creation
 flatpak install --noninteractive flathub org.godotengine.Godot
 flatpak install --noninteractive flathub com.orama_interactive.Pixelorama
+
+# music composition
+flatpak install --noninteractive flathub org.musescore.MuseScore
+
+# music creation
+# flatpak install --noninteractive flathub com.bitwig.BitwigStudio
+flatpak install --noninteractive flathub io.github.muse_sequencer.Muse
 
 # reverse engineering
 flatpak install --noninteractive flathub re.rizin.cutter
@@ -79,6 +101,11 @@ flatpak install --noninteractive flathub us.zoom.Zoom
 
 # exercise
 flatpak install --noninteractive flathub com.enjoyingfoss.feeel
+
+# animation
+flatpak install --noninteractive flathub io.github.maurycyliebner.enve
+flatpak install --noninteractive flathub org.synfig.SynfigStudio
+flatpak install --noninteractive flathub io.github.OpenToonz
 
 # svg editors
 flatpak install --noninteractive flathub org.inkscape.Inkscape
