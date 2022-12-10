@@ -1,13 +1,20 @@
 # sudo flatpak install --system --assumeyes flathub com.visualstudio.code
 # sudo flatpak install --system --assumeyes flathub org.zealdocs.Zeal
 
+# vs code flatpak has permissions issues with the terminal
+# flatpak install --noninteractive flathub com.visualstudio.code
 
-flatpak install --noninteractive flathub com.visualstudio.code
-flatpak install --noninteractive flathub org.freecadweb.FreeCAD
-flatpak install --noninteractive flathub org.inkscape.Inkscape
+# desktop publishing
+flatpak install --noninteractive flathub org.texstudio.TeXstudio
+flatpak install --noninteractive flathub org.kde.okular
+flatpak install --noninteractive flathub org.cvfosammmm.Setzer
+
+
+
 flatpak install --noninteractive flathub org.kicad.KiCad
 flatpak install --noninteractive flathub io.github.OpenToonz
-flatpak install --noninteractive flathub org.texstudio.TeXstudio
+
+
 exit
 
 flatpak install --noninteractive flathub com.usebottles.bottles
@@ -38,33 +45,51 @@ flatpak install --noninteractive flathub io.github.muse_sequencer.Muse
 flatpak install --noninteractive flathub org.musescore.MuseScore
 flatpak install --noninteractive flathub org.godotengine.Godot
 flatpak install --noninteractive flathub com.orama_interactive.Pixelorama
-flatpak install --noninteractive flathub re.rizin.cutter
-flatpak install --noninteractive flathub dev.storyapps.starc
 
+# reverse engineering
+flatpak install --noninteractive flathub re.rizin.cutter
+
+# photo editing
 flatpak install --noninteractive flathub com.rawtherapee.RawTherapee
+
+# background sound
 flatpak install --noninteractive flathub com.rafaelmardojai.Blanket
-flatpak install --noninteractive flathub org.cvfosammmm.Setzer
+
 flatpak install --noninteractive flathub com.adilhanney.saber
 
-flatpak install --noninteractive flathub org.kde.okular
-flatpak install --noninteractive flathub io.github.xaos_project.XaoS
+# note taking
+flatpak install flathub md.obsidian.Obsidian
 
+# database
 flatpak install --noninteractive flathub org.sqlitebrowser.sqlitebrowser
 flatpak install --noninteractive flathub io.dbeaver.DBeaverCommunity
+
 flatpak install --noninteractive flathub io.github.hydrusnetwork.hydrus
 
+# math
 flatpak install --noninteractive flathub org.geogebra.GeoGebra
+
+# fractals
+flatpak install --noninteractive flathub io.github.xaos_project.XaoS
+flatpak install --noninteractive flathub com.github.buddhi1980.mandelbulber2
 
 # Office apps
 flatpak install --noninteractive flathub com.slack.Slack
 flatpak install --noninteractive flathub us.zoom.Zoom
 
-
+# exercise
 flatpak install --noninteractive flathub com.enjoyingfoss.feeel
 
+# svg editors
+flatpak install --noninteractive flathub org.inkscape.Inkscape
 flatpak install --noninteractive flathub com.boxy_svg.BoxySVG
 
+# video editing
 flatpak install --noninteractive flathub fr.natron.Natron
+
+#3d modeling
+flatpak install --noninteractive flathub org.blender.Blender
+flatpak install --noninteractive flathub org.freecadweb.FreeCAD
 flatpak install --noninteractive flathub io.github.RodZill4.Material-Maker
 
 # Games
@@ -76,5 +101,5 @@ flatpak install --noninteractive flathub com.wings3d.WINGS
 # Image editing
 flatpak install --noninteractive flathub com.xnview.XnRetro
 
-# fractals
-flatpak install --noninteractive flathub com.github.buddhi1980.mandelbulber2
+# torrent
+flatpak install --noninteractive flathub de.haeckerfelix.Fragments
