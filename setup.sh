@@ -13,12 +13,14 @@ function install_basics () {
       git \
       jq \
       ncdu \
+      neovim \
       rename \
       ripgrep \
       tree \
       tmux \
       tig \
       wget \
+      xclip \
       zsh
     sudo apt-file update
   fi
