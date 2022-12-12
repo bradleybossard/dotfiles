@@ -5,6 +5,9 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update
 sudo apt install gh
 
+mkdir -p ~/.zfunc
+gh completion -s zsh > ~/.zfunc/_gh
+
 # help to install releases from gh
 gh extension install redraw/gh-install
 
