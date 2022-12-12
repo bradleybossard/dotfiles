@@ -1,10 +1,13 @@
 [user]
-	name = Bradley Bossard
-	email = bradleybossard@gmail.com
+  name = Bradley Bossard
+  email = bradleybossard@gmail.com
+[includeIf "gitdir:~/work/"]
+  # create the following file and override the [user] section
+  path = ~/work/.gitconfig
 [color]
-	ui = true
+  ui = true
 [diff]
-	tool = vimdiff
+  tool = vimdiff
 [merge]
   tool = /Users/bradleybossard/scripts/diffwrap.sh
 [push]
