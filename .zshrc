@@ -48,13 +48,13 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 
 # Load plugins
-zplug "woefe/wbase.zsh"
+# zplug "woefe/wbase.zsh"
 # zplug "woefe/git-prompt.zsh", use:"{git-prompt.zsh,examples/wprompt.zsh}"
 zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 zplug "plugins/common-aliases",   from:oh-my-zsh
-zplug "plugins/gh",   from:oh-my-zsh
-zplug "plugins/vi-mode",   from:oh-my-zsh
+# zplug "plugins/gh",   from:oh-my-zsh
+# zplug "plugins/vi-mode",   from:oh-my-zsh
 
 # zplug romkatv/powerlevel10k, as:theme, depth:1
 # zplug "junegunn/fzf", use:"shell/*.zsh"
@@ -66,14 +66,7 @@ zplug "plugins/vi-mode",   from:oh-my-zsh
 # zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # zplug 'wfxr/forgit'
-
-# zplug "mattberther/zsh-pyenv"
-
-# zplug "mattberther/zsh-pyenv"
 # zplug "zsh-users/zsh-history-substring-search", defer:3
-# zplug load
-
-
 
 # Unsure why this one is not working
 # zplug "plugins/aws",   from:oh-my-zsh
@@ -110,6 +103,7 @@ zplug "plugins/vi-mode",   from:oh-my-zsh
   #npm
   #nvm
   #postgres
+# zplug "plugins/poetry",   from:oh-my-zsh
   #ripgrep
   #rust
   #tmux
@@ -117,6 +111,10 @@ zplug "plugins/vi-mode",   from:oh-my-zsh
 
   #zsh-navigation-tools
   #zsh_reload
+  #
+
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
 
 ## suffix aliases
 # Markdown files
@@ -164,6 +162,10 @@ fi
 if type "direnv" > /dev/null; then
   eval "$(direnv hook $SHELL)"
 fi
+
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+complete -C '/usr/local/bin/aws_completer' aws
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
