@@ -38,7 +38,7 @@ if [[ $(which ag | wc -c) -ne 0 ]]; then
     command tag "$@";
     source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null
   }
-  alias rg='tag'  # replace with rg for ripgrep
+#  alias rg='tag'  # replace with rg for ripgrep
 fi
 
 function killport {
