@@ -33,6 +33,7 @@
   diffc = diff --cached
   edit = !vim $(git status -s | cut -c4-)
   editbranch = !vim $(git diff --name-only  master)
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   incoming = log origin/master ^master
   last = log -1 HEAD
   logpretty = log -10 --pretty=oneline
