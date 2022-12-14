@@ -1,4 +1,4 @@
-!/bin/bash
+#!/usr/bin/env bash
 gh install jesseduffield/lazygit
 
 # sudo add-apt-repository --yes ppa:lazygit-team/release
