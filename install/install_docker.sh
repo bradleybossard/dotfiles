@@ -32,9 +32,9 @@ sudo add-apt-repository --yes \
 sudo apt-get update
 sudo apt-get install --yes docker-ce docker-ce-cli containerd.io
 
+newgrp docker
 sudo addgroup --system docker
 sudo adduser $USER docker
-newgrp docker
 sudo docker run hello-world
 
 # configure docker to run on boot
