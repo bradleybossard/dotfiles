@@ -13,7 +13,8 @@ sudo curl -L https://github.com/docker/compose/releases/download/$VERSION/docker
 sudo chmod +x /usr/local/bin/docker-compose
 
 # this is needed when using podman instead of docker
-systemctl --user start podman.socket
+# systemctl --user start podman.socket
+
 
 popd
 
