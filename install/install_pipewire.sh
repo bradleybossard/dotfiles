@@ -14,3 +14,7 @@ systemctl --user --now enable pipewire pipewire-pulse
 
 
 pactl info
+
+# The following two commands may be needed if Ubuntu Settings => Sounds only shows dummy device
+# sudo touch /usr/share/pipewire/media-session.d/with-pulseaudio 
+# systemctl restart --user pipewire pipewire-media-session pipewire-pulse
