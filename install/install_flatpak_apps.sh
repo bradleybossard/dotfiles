@@ -12,6 +12,9 @@ flatpak install --noninteractive flathub com.usebottles.bottles
 # midi player
 flatpak install --noninteractive flathub net.sourceforge.dmidiplayer
 
+# pipewire patchbay
+flatpak install --noninteractive flathub org.pipewire.Helvum
+
 # pipewire effects
 flatpak install --noninteractive flathub com.github.wwmm.easyeffects
 
@@ -46,6 +49,9 @@ flatpak install --noninteractive flathub org.cvfosammmm.Setzer
 
 # audio editing
 flatpak install --noninteractive flathub org.audacityteam.Audacity
+flatpak install --noninteractive flathub org.ardour.Ardour
+flatpak install --noninteractive flathub org.kde.kdenlive
+flatpak install --noninteractive flathub com.rosegardenmusic.rosegarden
 
 # cd ripping
 flatpak install --noninteractive flathub ca.littlesvr.asunder
@@ -80,7 +86,7 @@ flatpak install --noninteractive flathub com.rafaelmardojai.Blanket
 flatpak install --noninteractive flathub com.adilhanney.saber
 
 # note taking
-flatpak install flathub md.obsidian.Obsidian
+flatpak install --noninteractive flathub md.obsidian.Obsidian
 
 # database
 flatpak install --noninteractive flathub org.sqlitebrowser.sqlitebrowser
@@ -118,6 +124,7 @@ flatpak install --noninteractive flathub fr.natron.Natron
 flatpak install --noninteractive flathub org.blender.Blender
 flatpak install --noninteractive flathub org.freecadweb.FreeCAD
 flatpak install --noninteractive flathub io.github.RodZill4.Material-Maker
+flatpak install --noninteractive flathub org.librecad.librecad
 
 # Games
 flatpak install --noninteractive flathub net.gaijin.WarThunder
@@ -130,3 +137,4 @@ flatpak install --noninteractive flathub com.xnview.XnRetro
 
 # torrent
 flatpak install --noninteractive flathub de.haeckerfelix.Fragments
+
