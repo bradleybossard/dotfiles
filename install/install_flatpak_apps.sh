@@ -34,6 +34,7 @@ flatpak install --noninteractive flathub app.xemu.xemu
 flatpak install --noninteractive flathub com.github.KRTirtho.Spotube
 flatpak install --noninteractive flathub io.github.cmus.cmus
 flatpak install --noninteractive flathub com.github.alainm23.byte
+flatpak install --noninteractive flathub de.haeckerfelix.Shortwave
 
 # games
 flatpak install --noninteractive flathub com.agateau.PixelWheels
@@ -119,6 +120,10 @@ flatpak install --noninteractive flathub com.boxy_svg.BoxySVG
 
 # video editing
 flatpak install --noninteractive flathub fr.natron.Natron
+flatpak install --noninteractive flathub org.openshot.OpenShot
+
+# art programs
+flatpak install --noninteractive flathub org.kde.krita
 
 #3d modeling
 flatpak install --noninteractive flathub org.blender.Blender
