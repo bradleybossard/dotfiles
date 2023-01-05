@@ -134,6 +134,9 @@ flatpak install --noninteractive flathub org.librecad.librecad
 # Games
 flatpak install --noninteractive flathub net.gaijin.WarThunder
 
+# Game Launchers
+flatpak install --noninteractive flathub com.heroicgameslauncher.hgl
+
 # 3D Modeling
 flatpak install --noninteractive flathub com.wings3d.WINGS
 
