@@ -36,11 +36,15 @@ flatpak install --noninteractive flathub io.github.cmus.cmus
 flatpak install --noninteractive flathub com.github.alainm23.byte
 flatpak install --noninteractive flathub de.haeckerfelix.Shortwave
 
+# mp3 tagging
+flatpak install --noninteractive flathub org.musicbrainz.Picard
+
 # games
 flatpak install --noninteractive flathub com.agateau.PixelWheels
 flatpak install --noninteractive flathub org.tuxfamily.StuntRally
 
 # electronics
+flatpak install --noninteractive flathub org.fritzing.Fritzing
 flatpak install --noninteractive flathub org.kicad.KiCad
 
 # desktop publishing
@@ -53,6 +57,9 @@ flatpak install --noninteractive flathub org.audacityteam.Audacity
 flatpak install --noninteractive flathub org.ardour.Ardour
 flatpak install --noninteractive flathub org.kde.kdenlive
 flatpak install --noninteractive flathub com.rosegardenmusic.rosegarden
+
+# audio recording
+flatpak install --noninteractive flathub com.github.ryonakano.reco
 
 # cd ripping
 flatpak install --noninteractive flathub ca.littlesvr.asunder
@@ -146,3 +153,14 @@ flatpak install --noninteractive flathub com.xnview.XnRetro
 # torrent
 flatpak install --noninteractive flathub de.haeckerfelix.Fragments
 
+# remoting
+flatpak install --noninteractive flathub com.anydesk.Anydesk
+
+# TTS
+flatpak install --noninteractive flathub io.gitlab.persiangolf.voicegen
+
+# 3d printing
+flatpak install --noninteractive flathub com.ultimaker.cura
+
+# wine
+flatpak install --noninteractive flathub com.usebottles.bottles
