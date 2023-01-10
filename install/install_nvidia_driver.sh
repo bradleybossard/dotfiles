@@ -1,3 +1,19 @@
+#!/usr/bin/env bash
+
+# with the nvidia drivers available from ubuntu in 22.04, the process for installing them is much easier
+
+# the following lists available ubuntu drivers for your devices
+ubuntu-drivers devices
+
+# installs all available drivers
+sudo ubuntu-drivers autoinstall
+
+# reboot is necessary after install
+sudo reboot
+
+exit
+
+
 # askubuntu.com answers
 # https://askubuntu.com/a/951892/241826
 # https://askubuntu.com/a/149224/241826
