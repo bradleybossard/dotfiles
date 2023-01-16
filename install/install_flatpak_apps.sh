@@ -6,9 +6,6 @@
 
 exit
 
-# run windows software
-flatpak install --noninteractive flathub com.usebottles.bottles
-
 # midi player
 flatpak install --noninteractive flathub net.sourceforge.dmidiplayer
 
@@ -164,3 +161,6 @@ flatpak install --noninteractive flathub com.ultimaker.cura
 
 # wine
 flatpak install --noninteractive flathub com.usebottles.bottles
+
+# view dbus activity
+flatpak install flathub org.freedesktop.Bustle
