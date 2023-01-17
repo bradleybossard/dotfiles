@@ -102,6 +102,7 @@ flatpak install --noninteractive flathub com.wings3d.WINGS
 
 # Image editing
 flatpak install --noninteractive flathub com.xnview.XnRetro
+flatpak install --noninteractive flathub org.gimp.GIMP
 
 # torrent
 flatpak install --noninteractive flathub de.haeckerfelix.Fragments
