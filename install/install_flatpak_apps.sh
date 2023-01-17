@@ -6,35 +6,11 @@
 
 exit
 
-# midi player
-flatpak install --noninteractive flathub net.sourceforge.dmidiplayer
-
-# pipewire patchbay
-flatpak install --noninteractive flathub org.pipewire.Helvum
-
-# pipewire effects
-flatpak install --noninteractive flathub com.github.wwmm.easyeffects
-
-# metronome
-flatpak install --noninteractive flathub net.sourceforge.kmetronome
-
-# midi monitor
-flatpak install --noninteractive flathub net.sourceforge.kmidimon
-
-#audiobooks
-flatpak install --noninteractive flathub com.github.geigi.cozy
+# run windows software
+flatpak install --noninteractive flathub com.usebottles.bottles
 
 #emulators
 flatpak install --noninteractive flathub app.xemu.xemu
-
-# music players
-flatpak install --noninteractive flathub com.github.KRTirtho.Spotube
-flatpak install --noninteractive flathub io.github.cmus.cmus
-flatpak install --noninteractive flathub com.github.alainm23.byte
-flatpak install --noninteractive flathub de.haeckerfelix.Shortwave
-
-# mp3 tagging
-flatpak install --noninteractive flathub org.musicbrainz.Picard
 
 # games
 flatpak install --noninteractive flathub com.agateau.PixelWheels
@@ -49,18 +25,6 @@ flatpak install --noninteractive flathub org.texstudio.TeXstudio
 flatpak install --noninteractive flathub org.kde.okular
 flatpak install --noninteractive flathub org.cvfosammmm.Setzer
 
-# audio editing
-flatpak install --noninteractive flathub org.audacityteam.Audacity
-flatpak install --noninteractive flathub org.ardour.Ardour
-flatpak install --noninteractive flathub org.kde.kdenlive
-flatpak install --noninteractive flathub com.rosegardenmusic.rosegarden
-
-# audio recording
-flatpak install --noninteractive flathub com.github.ryonakano.reco
-
-# cd ripping
-flatpak install --noninteractive flathub ca.littlesvr.asunder
-
 # photo booth
 flatpak install --noninteractive flathub org.gnome.Cheese
 
@@ -72,22 +36,13 @@ flatpak install --noninteractive flathub sa.sy.bluerecorder
 flatpak install --noninteractive flathub org.godotengine.Godot
 flatpak install --noninteractive flathub com.orama_interactive.Pixelorama
 
-# music composition
-flatpak install --noninteractive flathub org.musescore.MuseScore
-
-# music creation
-# flatpak install --noninteractive flathub com.bitwig.BitwigStudio
-flatpak install --noninteractive flathub io.github.muse_sequencer.Muse
-
 # reverse engineering
 flatpak install --noninteractive flathub re.rizin.cutter
 
 # photo editing
 flatpak install --noninteractive flathub com.rawtherapee.RawTherapee
 
-# background sound
-flatpak install --noninteractive flathub com.rafaelmardojai.Blanket
-
+# notetaking
 flatpak install --noninteractive flathub com.adilhanney.saber
 
 # note taking
@@ -97,6 +52,7 @@ flatpak install --noninteractive flathub md.obsidian.Obsidian
 flatpak install --noninteractive flathub org.sqlitebrowser.sqlitebrowser
 flatpak install --noninteractive flathub io.dbeaver.DBeaverCommunity
 
+# media browser
 flatpak install --noninteractive flathub io.github.hydrusnetwork.hydrus
 
 # math
@@ -150,9 +106,6 @@ flatpak install --noninteractive flathub com.xnview.XnRetro
 # torrent
 flatpak install --noninteractive flathub de.haeckerfelix.Fragments
 
-# remoting
-flatpak install --noninteractive flathub com.anydesk.Anydesk
-
 # TTS
 flatpak install --noninteractive flathub io.gitlab.persiangolf.voicegen
 
@@ -163,4 +116,10 @@ flatpak install --noninteractive flathub com.ultimaker.cura
 flatpak install --noninteractive flathub com.usebottles.bottles
 
 # view dbus activity
-flatpak install flathub org.freedesktop.Bustle
+flatpak install --noninteractive flathub org.freedesktop.Bustle
+
+# nmap scanner
+flatpak install --noninteractive flathub org.nmap.Zenmap
+
+# personal document manager
+flatpak install --noninteractive flathub work.openpaper.Paperwork
