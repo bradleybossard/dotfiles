@@ -51,6 +51,7 @@ flatpak install --noninteractive flathub md.obsidian.Obsidian
 # database
 flatpak install --noninteractive flathub org.sqlitebrowser.sqlitebrowser
 flatpak install --noninteractive flathub io.dbeaver.DBeaverCommunity
+flatpak install --noninteractive flathub io.beekeeperstudio.Studio
 
 # media browser
 flatpak install --noninteractive flathub io.github.hydrusnetwork.hydrus
@@ -127,3 +128,7 @@ flatpak install --noninteractive flathub work.openpaper.Paperwork
 
 # gis desktop app
 flatpak install --noninteractive flathub org.qgis.qgis
+
+# developer docs
+flatpak install --noninteractive flathub com.github.mdh34.quickdocs
+
