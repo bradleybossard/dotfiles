@@ -124,3 +124,6 @@ flatpak install --noninteractive flathub org.nmap.Zenmap
 
 # personal document manager
 flatpak install --noninteractive flathub work.openpaper.Paperwork
+
+# gis desktop app
+flatpak install --noninteractive flathub org.qgis.qgis
