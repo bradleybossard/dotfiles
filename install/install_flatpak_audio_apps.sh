@@ -46,3 +46,4 @@ flatpak install --noninteractive flathub com.rafaelmardojai.Blanket
 
 # DJ software
 flatpak install flathub org.mixxx.Mixxx
+flatpak install flathub org.nicotine_plus.Nicotine
