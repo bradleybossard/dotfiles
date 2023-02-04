@@ -182,3 +182,13 @@ flatpak install --noninteractive flathub net.codeindustry.MasterPDFEditor
 
 
 flatpak install --noninteractive flathub flathub org.videolan.VLC
+
+
+flatpak install --noninteractive flathub com.calibre_ebook.calibre
+flatpak install --noninteractive flathub com.github.johnfactotum.Foliate
+flatpak install --noninteractive flathub com.github.babluboy.bookworm
+flatpak install --noninteractive flathub com.github.mgropp.PdfJumbler
+flatpak install --noninteractive flathub com.github.junrrein.PDFSlicer
+flatpak install --noninteractive flathub com.github._4lex4.ScanTailor-Advanced
+flatpak install --noninteractive flathub com.github.unrud.djpdf
+flatpak install --noninteractive flathub org.nmap.Zenmap
