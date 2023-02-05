@@ -51,6 +51,10 @@ function killport {
   lsof -i tcp:${PORT_NUMBER} | awk 'NR!=1 {print $2}' | xargs kill;
 }
 
+function simplify_pdf {
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=${1}-compressed.pdf ${1}.pdf
+}
+
 # tmux aliases
 alias tls='tmux list-session'
 alias tsw='tmux switch -t '
