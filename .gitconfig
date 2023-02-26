@@ -24,6 +24,7 @@
 [alias]
   a = add -A
   ac = commit -a --message
+  bdn = diff --name-only master
   br = branch
   ci = commit
   co = checkout
