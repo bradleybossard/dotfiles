@@ -132,24 +132,48 @@ flatpak install --noninteractive flathub org.qgis.qgis
 # developer docs
 flatpak install --noninteractive flathub com.github.mdh34.quickdocs
 
+# astronomy
 flatpak install --noninteractive flathub org.kde.kstars
-flatpak install --noninteractive flathub com.moonlight_stream.Moonlight
+
+# video editing
 flatpak install --noninteractive flathub org.shotcut.Shotcut
-flatpak install --noninteractive flathub com.github.emmanueltouzery.hotwire
-flatpak install --noninteractive flathub io.github.arunsivaramanneo.GPUViewer
+
+# games
+# not sure i need
+# flatpak install --noninteractive flathub com.moonlight_stream.Moonlight
+
+# not responding on laptop
+# flatpak install --noninteractive flathub io.github.arunsivaramanneo.GPUViewer
+
+# screen cap
 flatpak install --noninteractive flathub com.uploadedlobster.peek
-flatpak install --noninteractive flathub org.cubocore.CoreShot
+# flatpak install --noninteractive flathub org.cubocore.CoreShot
+
+
+# camera manager - does recognize cameras on laptop
 flatpak install --noninteractive flathub org.entangle_photo.Manager
+
+# podman gui
 flatpak install --noninteractive flathub com.github.marhkb.Pods
+
+# authentication
 flatpak install --noninteractive flathub com.authy.Authy
+
+# graph viz
 flatpak install --noninteractive flathub org.gephi.Gephi
+
+# chess
 flatpak install --noninteractive flathub io.github.benini.scid
+
+# music player
 flatpak install --noninteractive flathub org.exaile.Exaile
+
+# document scanner
 flatpak install --noninteractive flathub org.gnome.SimpleScan
+
 flatpak install --noninteractive flathub xyz.safeworlds.midiconn
 
 flatpak install --noninteractive flathub rest.insomnia.Insomnia
-flatpak install --noninteractive flathub org.twinery.Twine
 flatpak install --noninteractive flathub org.shadered.SHADERed
 flatpak install --noninteractive flathub org.processing.processingide
 flatpak install --noninteractive flathub io.gitlab.Turtlico
@@ -161,16 +185,12 @@ flatpak install --noninteractive flathub org.freedesktop.dabrain34.GstPipelineSt
 flatpak install --noninteractive flathub edu.mit.Scratch
 flatpak install --noninteractive flathub com.inklestudios.Inky
 flatpak install --noninteractive flathub org.ghidra_sre.Ghidra
-flatpak install --noninteractive flathub com.inform7.IDE
-flatpak install --noninteractive flathub com.github.mdh34.quickdocs
 
 flatpak install --noninteractive flathub com.getpostman.Postman
 flatpak install --noninteractive flathub com.parsecgaming.parsec
 flatpak install --noninteractive flathub dev.lapce.lapce
 flatpak install --noninteractive flathub com.redis.RedisInsight
 flatpak install --noninteractive flathub com.sweethome3d.Sweethome3d
-flatpak install --noninteractive flathub org.sonic3air.Sonic3AIR
-flatpak install --noninteractive flathub net.sourceforge.pdfchain
 flatpak install --noninteractive flathub com.usebottles.bottles
 flatpak install --noninteractive flathub org.gnome.Boxes
 flatpak install --noninteractive flathub io.github.hmlendea.geforcenow-electron
@@ -178,17 +198,29 @@ flatpak install --noninteractive flathub com.jgraph.drawio.desktop
 flatpak install --noninteractive flathub org.kde.tellico
 flatpak install --noninteractive flathub com.github.flxzt.rnote
 flatpak install --noninteractive flathub ch.theologeek.Manuskript
-flatpak install --noninteractive flathub net.codeindustry.MasterPDFEditor
-
-
-flatpak install --noninteractive flathub flathub org.videolan.VLC
-
 
 flatpak install --noninteractive flathub com.calibre_ebook.calibre
 flatpak install --noninteractive flathub com.github.johnfactotum.Foliate
 flatpak install --noninteractive flathub com.github.babluboy.bookworm
-flatpak install --noninteractive flathub com.github.mgropp.PdfJumbler
-flatpak install --noninteractive flathub com.github.junrrein.PDFSlicer
-flatpak install --noninteractive flathub com.github._4lex4.ScanTailor-Advanced
-flatpak install --noninteractive flathub com.github.unrud.djpdf
 flatpak install --noninteractive flathub org.nmap.Zenmap
+
+
+flatpak install --noninteractive flathub flathub org.videolan.VLC
+
+# interactive storytelling
+flatpak install --noninteractive flathub org.twinery.Twine
+flatpak install --noninteractive flathub com.inform7.IDE
+
+
+flatpak install --noninteractive flathub net.sourceforge.pdfchain
+flatpak install --noninteractive flathub com.github.junrrein.PDFSlicer
+
+flatpak install --noninteractive flathub com.github._4lex4.ScanTailor-Advanced
+
+# scans to PDF
+flatpak install --noninteractive flathub com.github.unrud.djpdf
+
+# cost money
+# flatpak install --noninteractive flathub net.codeindustry.MasterPDFEditor
+# too simple
+#flatpak install --noninteractive flathub com.github.mgropp.PdfJumbler
