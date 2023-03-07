@@ -29,6 +29,9 @@ if [[ $OSTYPE == *"linux"* ]]; then
 fi
 
 com () {COM=$(echo -n git commit -m \"\[`git rev-parse --abbrev-ref HEAD | sed -r 's/^.*\/(.*)-([0-9]*)-.*/\1-\2/ '`\]); echo $COM | pbcopy}
+comf () {COM=$(echo -n git commit -m \"fixup: ); echo $COM | pbcopy}
+combp () {COM=$(echo -n git commit -m \"aside: bump poetry dependencies\" ); echo $COM | pbcopy}
+coma () {COM=$(echo -n git commit -m \"aside: ); echo $COM | pbcopy}
 
 # Show active ports
 if [[ $OSTYPE == *"linux"* ]]; then
