@@ -224,3 +224,8 @@ flatpak install --noninteractive flathub com.github.unrud.djpdf
 # flatpak install --noninteractive flathub net.codeindustry.MasterPDFEditor
 # too simple
 #flatpak install --noninteractive flathub com.github.mgropp.PdfJumbler
+
+# legos
+flatpak install --noninteractive flathub org.leocad.LeoCAD
+flatpak install --noninteractive flathub io.github.trevorsandy.LPub3D
+flatpak install --noninteractive flathub io.github.tcobbs.LDView
