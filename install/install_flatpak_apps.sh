@@ -120,7 +120,7 @@ flatpak install --noninteractive flathub com.usebottles.bottles
 # view dbus activity
 flatpak install --noninteractive flathub org.freedesktop.Bustle
 
-# nmap scanner
+# nmap sflatpak run org.gnome.SimpleScancanner
 flatpak install --noninteractive flathub org.nmap.Zenmap
 
 # personal document manager
@@ -229,3 +229,6 @@ flatpak install --noninteractive flathub com.github.unrud.djpdf
 flatpak install --noninteractive flathub org.leocad.LeoCAD
 flatpak install --noninteractive flathub io.github.trevorsandy.LPub3D
 flatpak install --noninteractive flathub io.github.tcobbs.LDView
+
+# games
+flatpak install --noninteractive flathub info.urbanterror.UrbanTerror
