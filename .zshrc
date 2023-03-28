@@ -62,7 +62,7 @@ zplug "plugins/common-aliases",   from:oh-my-zsh
 # zplug "sharkdp/fd", from:gh-r, as:command, rename-to:fd, use:"*x86_64-unknown-linux-gnu.tar.gz"
 
 #zplug "zsh-users/zsh-completions"
-# zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-autosuggestions"
 # zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # zplug 'wfxr/forgit'
