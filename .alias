@@ -32,6 +32,10 @@ com () {COM=$(echo -n git commit -m \"\[`git rev-parse --abbrev-ref HEAD | sed -
 comf () {COM=$(echo -n git commit -m \"fixup: ); echo $COM | pbcopy}
 combp () {COM=$(echo -n git commit -m \"aside: bump poetry dependencies\" ); echo $COM | pbcopy}
 coma () {COM=$(echo -n git commit -m \"aside: ); echo $COM | pbcopy}
+jenk () {COM=$(echo -n https://jenkins.internal.cloud.torc.tech/torc-robotics/job/gis/job/gis-dashboard/job/bradley.bossard%2F`git rev-parse --abbrev-ref HEAD   | sed -r 's/^.*\/(.*)/\1/ '`); echo $COM | pbcopy}
+
+# https://jenkins.internal.cloud.torc.tech/torc-robotics/job/gis/job/gis-dashboard/job/bradley.bossard%2FMAP3-445-indexer-for-rrs-tilesets/
+
 
 # Show active ports
 if [[ $OSTYPE == *"linux"* ]]; then
