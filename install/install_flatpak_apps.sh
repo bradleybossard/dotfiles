@@ -118,5 +118,3 @@ flatpak install --noninteractive flathub com.github.flxzt.rnote
 flatpak install --noninteractive flathub ch.theologeek.Manuskript
 
 flatpak install --noninteractive flathub org.nmap.Zenmap
-
-
