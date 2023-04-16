@@ -232,3 +232,6 @@ flatpak install --noninteractive flathub io.github.tcobbs.LDView
 
 # games
 flatpak install --noninteractive flathub info.urbanterror.UrbanTerror
+
+flatpak install flathub org.wezfurlong.wezterm
+
