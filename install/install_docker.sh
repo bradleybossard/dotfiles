@@ -37,6 +37,10 @@ sudo addgroup --system docker
 sudo adduser $USER docker
 sudo docker run hello-world
 
+# This is needed b/c podman isn't setup to talk to dockerhub by default
+# TODO: ideally this is a sed command to replace the existing commented out line
+echo 'unqualified-search-registries=["docker.io"]' >> /etc/containers/registries.conf
+
 # configure docker to run on boot
 # sudo systemctl enable docker
 
