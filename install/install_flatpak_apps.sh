@@ -40,13 +40,6 @@ flatpak install --noninteractive flathub io.beekeeperstudio.Studio
 # media browser
 flatpak install --noninteractive flathub io.github.hydrusnetwork.hydrus
 
-# math
-flatpak install --noninteractive flathub org.geogebra.GeoGebra
-
-# fractals
-flatpak install --noninteractive flathub io.github.xaos_project.XaoS
-flatpak install --noninteractive flathub com.github.buddhi1980.mandelbulber2
-
 # Office apps
 flatpak install --noninteractive flathub com.slack.Slack
 flatpak install --noninteractive flathub us.zoom.Zoom
@@ -71,9 +64,6 @@ flatpak install --noninteractive flathub work.openpaper.Paperwork
 
 # gis desktop app
 flatpak install --noninteractive flathub org.qgis.qgis
-
-# astronomy
-flatpak install --noninteractive flathub org.kde.kstars
 
 # screen cap
 flatpak install --noninteractive flathub com.uploadedlobster.peek
@@ -118,3 +108,9 @@ flatpak install --noninteractive flathub com.github.flxzt.rnote
 flatpak install --noninteractive flathub ch.theologeek.Manuskript
 
 flatpak install --noninteractive flathub org.nmap.Zenmap
+
+# astronomy
+flatpak install --noninteractive flathub org.kde.kstars
+
+# planetarium
+flatpak install flathub org.stellarium.Stellarium
