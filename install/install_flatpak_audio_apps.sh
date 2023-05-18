@@ -22,11 +22,15 @@ flatpak install --noninteractive flathub io.github.cmus.cmus
 flatpak install --noninteractive flathub com.github.alainm23.byte
 flatpak install --noninteractive flathub de.haeckerfelix.Shortwave
 
+# youtube music streamer
+flatpak install --noninteractive flathub io.gitlab.zehkira.Monophony
+
 # drum machine
 flatpak install flathub org.hydrogenmusic.Hydrogen
 
 # audio editing
 flatpak install --noninteractive flathub org.audacityteam.Audacity
+flatpak install --noninteractive flathub org.tenacityaudio.Tenacity
 flatpak install --noninteractive flathub org.ardour.Ardour
 flatpak install --noninteractive flathub org.kde.kdenlive
 flatpak install --noninteractive flathub com.rosegardenmusic.rosegarden
@@ -46,4 +50,6 @@ flatpak install --noninteractive flathub com.rafaelmardojai.Blanket
 
 # DJ software
 flatpak install --noninteractive flathub org.mixxx.Mixxx
+
+# soulseek client
 flatpak install --noninteractive flathub org.nicotine_plus.Nicotine
