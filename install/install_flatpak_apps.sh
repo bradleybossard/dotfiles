@@ -95,10 +95,6 @@ flatpak install --noninteractive flathub edu.mit.Scratch
 flatpak install --noninteractive flathub com.inklestudios.Inky
 flatpak install --noninteractive flathub org.ghidra_sre.Ghidra
 
-flatpak install --noninteractive flathub com.getpostman.Postman
-
-flatpak install --noninteractive flathub dev.lapce.lapce
-flatpak install --noninteractive flathub com.redis.RedisInsight
 flatpak install --noninteractive flathub com.sweethome3d.Sweethome3d
 flatpak install --noninteractive flathub org.gnome.Boxes
 
@@ -109,8 +105,5 @@ flatpak install --noninteractive flathub ch.theologeek.Manuskript
 
 flatpak install --noninteractive flathub org.nmap.Zenmap
 
-# astronomy
-flatpak install --noninteractive flathub org.kde.kstars
-
-# planetarium
-flatpak install flathub org.stellarium.Stellarium
+# browsers
+flatpak install flathub dev.vieb.Vieb
