@@ -1,5 +1,5 @@
 # terminals
-flatpak install flathub org.wezfurlong.wezterm
+flatpak install --noninteractive flathub org.wezfurlong.wezterm
 
 # developer docs
 flatpak install --noninteractive flathub com.github.mdh34.quickdocs

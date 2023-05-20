@@ -26,7 +26,7 @@ flatpak install --noninteractive flathub de.haeckerfelix.Shortwave
 flatpak install --noninteractive flathub io.gitlab.zehkira.Monophony
 
 # drum machine
-flatpak install flathub org.hydrogenmusic.Hydrogen
+flatpak install --noninteractive flathub org.hydrogenmusic.Hydrogen
 
 # audio editing
 flatpak install --noninteractive flathub org.audacityteam.Audacity
@@ -51,5 +51,12 @@ flatpak install --noninteractive flathub com.rafaelmardojai.Blanket
 # DJ software
 flatpak install --noninteractive flathub org.mixxx.Mixxx
 
+# samples manager
+flatpak install --noninteractive flathub io.github.dagargo.Elektroid
+
 # soulseek client
 flatpak install --noninteractive flathub org.nicotine_plus.Nicotine
+
+# puredata ides
+flatpak install --noninteractive flathub info.puredata.Pd-extended
+flatpak install --noninteractive flathub net.purrdata.PurrData
