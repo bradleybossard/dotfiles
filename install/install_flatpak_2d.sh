@@ -17,4 +17,4 @@ flatpak install --noninteractive flathub com.boxy_svg.BoxySVG
 
 # photo editing
 flatpak install --noninteractive flathub com.rawtherapee.RawTherapee
-
+flatpak install --noninteractive flathub org.upscayl.Upscayl

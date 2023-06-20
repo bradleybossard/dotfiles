@@ -1,4 +1,4 @@
-flatpak install flathub cc.arduino.IDE2
+flatpak install --noninteractive flathub cc.arduino.IDE2
 
 # electronics
 flatpak install --noninteractive flathub org.fritzing.Fritzing
