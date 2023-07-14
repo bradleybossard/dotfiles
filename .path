@@ -71,6 +71,9 @@ fi
 #  export PATH="$HOME/.fastlane/bin:$PATH"
 #fi
 
+export FLYCTL_INSTALL="/home/bradleybossard/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
 # flutter
 export PATH=$PATH:$HOME/flutter/bin
 
