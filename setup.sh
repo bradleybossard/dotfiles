@@ -10,6 +10,7 @@ function install_basics () {
       apt-file \
       curl \
       exuberant-ctags \
+      feh \
       git \
       jq \
       ncdu \
