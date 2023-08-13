@@ -1,4 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# after the exit are instructions for installing the latest texlive,
+# but i've decided i'm not advanced enough to need the latest yet
+sudo apt-get update
+sudo apt install --yes texlive-full
+
+exit
+
 pushd .
 cd /tmp
 wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
@@ -17,5 +24,4 @@ echo ''
 echo 'usr/local/texlive/2022/bin/x86_64-linux'
 echo ''
 echo 'in the Commands field'
-
 
