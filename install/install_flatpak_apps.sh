@@ -31,6 +31,7 @@ flatpak install --noninteractive flathub re.rizin.cutter
 # notetaking
 flatpak install --noninteractive flathub com.adilhanney.saber
 flatpak install --noninteractive flathub md.obsidian.Obsidian
+flatpak install --noninteractive flathub com.logseq.Logseq
 
 # database
 flatpak install --noninteractive flathub org.sqlitebrowser.sqlitebrowser
