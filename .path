@@ -101,6 +101,13 @@ if [[ $OSTYPE == *"linux"* ]]; then
   export PATH="$HOME/.ops/bin:$PATH"
 fi
 
+
+if [ -x "$HOME/.modular" ]; then
+  export MODULAR_HOME="$HOME/.modular"
+  export PATH="$HOME/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
+fi
+
+
 # pip3, notably aws-cli
 #if [[ $OSTYPE == *"darwin"* ]]; then
 #  pip3_installs=~/Library/Python/3.6/bin
