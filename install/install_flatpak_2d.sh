@@ -2,6 +2,9 @@
 # art programs
 flatpak install --noninteractive flathub org.kde.krita
 
+# image viewing
+flatpak install flathub org.geeqie.Geeqie
+
 # Image editing
 flatpak install --noninteractive flathub com.xnview.XnRetro
 flatpak install --noninteractive flathub org.gimp.GIMP
