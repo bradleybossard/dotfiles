@@ -37,7 +37,7 @@ jenk () {COM=$(echo -n https://jenkins.internal.cloud.torc.tech/torc-robotics/jo
 
 # https://jenkins.internal.cloud.torc.tech/torc-robotics/job/gis/job/gis-dashboard/job/bradley.bossard%2FMAP3-445-indexer-for-rrs-tilesets/
 
-alias yt-list='yt-dlp --playlist-reverse --download-archive ./downloaded.txt -i -o "%(uploader)s/%(playlist)s/%(playlist)s - S01E%(playlist_index)s - %(title)s [%(id)s].%(ext)s" --merge-output-format mp4 --add-metadata --write-thumbnail --batch-file=./list.txt'
+alias yt-list='yt-dlp --write-auto-subs --write-subs --embed-subs --playlist-reverse --download-archive ./downloaded.txt -i -o "%(uploader)s/%(playlist)s/%(playlist)s - S01E%(playlist_index)s - %(title)s [%(id)s].%(ext)s" --merge-output-format mp4 --add-metadata --write-description --write-info-json --write-thumbnail --batch-file=./list.txt'
 
 
 # Show active ports
