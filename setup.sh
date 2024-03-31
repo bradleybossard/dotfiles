@@ -13,6 +13,7 @@ function install_basics () {
       feh \
       git \
       jq \
+      nala \
       ncdu \
       neovim \
       rename \
