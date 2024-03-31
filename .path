@@ -66,6 +66,10 @@ if [[ $OSTYPE == *"linux"* ]]; then
   export LD_LIBRARY_PATH=/usr/local/cuda-11.4/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 fi
 
+#distrobox
+# exporting the following automatically puts new container home directories under ~/dbx
+export DBX_CONTAINER_HOME_PREFIX=~/dbx
+
 # fastlane
 #if [[ $OSTYPE == *"darwin"* ]]; then
 #  export PATH="$HOME/.fastlane/bin:$PATH"
