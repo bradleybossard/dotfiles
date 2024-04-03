@@ -32,10 +32,16 @@ sudo add-apt-repository --yes \
 sudo apt-get update
 sudo apt-get install --yes docker-ce docker-ce-cli containerd.io
 
-newgrp docker
-sudo addgroup --system docker
-sudo adduser $USER docker
-sudo docker run hello-world
+#newgrp docker
+#sudo addgroup --system docker
+#sudo adduser $USER docker
+#sudo docker run hello-world
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
+echo "Must logout/login to re-evalate group memberships"
+echo "Then run docker run hello-world"
 
 # This is needed b/c podman isn't setup to talk to dockerhub by default
 # TODO: ideally this is a sed command to replace the existing commented out line
