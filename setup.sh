@@ -8,6 +8,7 @@ function install_basics () {
     sudo apt-get install --yes \
       autojump \
       apt-file \
+      copyq \
       curl \
       exuberant-ctags \
       feh \
