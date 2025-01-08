@@ -22,6 +22,7 @@ function install_basics () {
       tree \
       tmux \
       tig \
+      units \
       wget \
       xclip \
       zsh
