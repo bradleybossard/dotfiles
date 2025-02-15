@@ -1,12 +1,9 @@
 #!/bin/bash
 
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
+# asdf v0.16.2 was re-written in go, much simpler
+# install latest amd64 release package
+gh install asdf-vm/asdf
 
-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-
-asdf install nodejs latest
-
-asdf global nodejs latest
 
 exit
 
