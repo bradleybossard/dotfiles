@@ -65,6 +65,10 @@ function simplify_pdf {
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=${1}-compressed.pdf ${1}.pdf
 }
 
+
+alias ebook-convert-bulk='for book in $(ls *.epub); do flatpak --command="sh" run com.calibre_ebook.calibre \
+-c "ebook-convert $book $book.pdf"; done;'
+
 # tmux aliases
 alias tls='tmux list-session'
 alias tsw='tmux switch -t '
