@@ -157,11 +157,19 @@ alias activate_ros2='source /opt/ros/humble/setup.zsh  &&  export ROS_DOMAIN_ID=
 alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
 
 alias dbx="distrobox"
-alias dbx-stop="distrobox stop --yes $(distrobox ls | grep Up | cut -d\| -f2)"
+alias dbx-stop='for INSTANCE in $(distrobox ls | grep Up | cut -d\| -f2); do distrobox stop --yes $INSTANCE; done;'
+alias dbx-upgrade=\
+'for INSTANCE in $(distrobox ls | grep -v STATUS | cut -d\| -f2); do \
+distrobox enter $INSTANCE -- sudo rm -rf /var/lib/apt/lists/*; \
+distrobox enter $INSTANCE -- sudo apt update --yes --fix-missing;\
+distrobox enter $INSTANCE -- sudo apt upgrade --yes --fix-missing;
+done;'
 
 function dbx-clone {
-  APP_NAME=$1;
-  dbx create --clone ubuntu-base --name $APP_NAME
-  dbx enter ${APP_NAME} -- distrobox-export --app brave-browser --export-label brave-$APP_NAME
+  # APP_NAME=$1;
+  for APP_NAME in "$@"; do
+    dbx create --clone ubuntu-base --name ${APP_NAME}
+    dbx enter ${APP_NAME} -- distrobox-export --app brave-browser --export-label brave-$APP_NAME
+  done;
 }
 
