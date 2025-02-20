@@ -1,7 +1,7 @@
 [Flatpak Ref]
-Name=org.gnome.glabels-3
+Name=com.github.jeromerobert.pdfarranger
 Branch=stable
-Title=org.gnome.glabels-3 from flathub
+Title=com.github.jeromerobert.pdfarranger from flathub
 IsRuntime=false
 Url=https://dl.flathub.org/repo/
 SuggestRemoteName=flathub
