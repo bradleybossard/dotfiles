@@ -1,10 +1,7 @@
 alias ll='ls -l'
 alias mkdir='mkdir -vp'
 alias cp='cp -v'
-alias vi='vim'
-
-
-
+alias vi='nvim'
 
 # Android compilation commands
 alias andrun='./gradlew android:installDebug android:run'
@@ -28,12 +25,12 @@ if [[ $OSTYPE == *"linux"* ]]; then
   alias pbpaste='xclip -selection clipboard -o'
 fi
 
-com () {COM=$(echo -n git commit -m \"\[`git rev-parse --abbrev-ref HEAD | sed -r 's/^.*\/(.*)-([0-9]*)-.*/\1-\2/ '`\]); echo $COM | pbcopy}
-comf () {COM=$(echo -n git commit -m \"fixup: ); echo $COM | pbcopy}
-combp () {COM=$(echo -n git commit -m \"aside: bump poetry dependencies\" ); echo $COM | pbcopy}
-coma () {COM=$(echo -n git commit -m \"aside: ); echo $COM | pbcopy}
-jenk () {COM=$(echo -n https://jenkins.internal.cloud.torc.tech/torc-robotics/job/gis/job/`basename $(git rev-parse --show-toplevel)
-  `/job/bradley.bossard%2F`git rev-parse --abbrev-ref HEAD   | sed -r 's/^.*\/(.*)/\1/ '`); echo $COM | pbcopy}
+# com () {COM=$(echo -n git commit -m \"\[`git rev-parse --abbrev-ref HEAD | sed -r 's/^.*\/(.*)-([0-9]*)-.*/\1-\2/ '`\]); echo $COM | pbcopy}
+#comf () {COM=$(echo -n git commit -m \"fixup: ); echo $COM | pbcopy}
+#combp () {COM=$(echo -n git commit -m \"aside: bump poetry dependencies\" ); echo $COM | pbcopy}
+#coma () {COM=$(echo -n git commit -m \"aside: ); echo $COM | pbcopy}
+#jenk () {COM=$(echo -n https://jenkins.internal.cloud.torc.tech/torc-robotics/job/gis/job/`basename $(git rev-parse --show-toplevel)
+#  `/job/bradley.bossard%2F`git rev-parse --abbrev-ref HEAD   | sed -r 's/^.*\/(.*)/\1/ '`); echo $COM | pbcopy}
 
 # https://jenkins.internal.cloud.torc.tech/torc-robotics/job/gis/job/gis-dashboard/job/bradley.bossard%2FMAP3-445-indexer-for-rrs-tilesets/
 
@@ -47,14 +44,14 @@ elif [[ $OSTYPE == *"darwin"* ]]; then
   alias ports='lsof -i'
 fi
 
-if [[ $(which ag | wc -c) -ne 0 ]]; then
-  export TAG_SEARCH_PROG=rg  # replace with rg for ripgrep
-  tag() {
-    command tag "$@";
-    source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null
-  }
+#if [[ $(which ag | wc -c) -ne 0 ]]; then
+#  export TAG_SEARCH_PROG=rg  # replace with rg for ripgrep
+#  tag() {
+#    command tag "$@";
+#    source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null
+#  }
 #  alias rg='tag'  # replace with rg for ripgrep
-fi
+#fi
 
 function killport {
   PORT_NUMBER=$1;
