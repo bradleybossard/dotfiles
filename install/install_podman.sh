@@ -1,13 +1,17 @@
 #!/usr/bin/env bash
 
-if [[ $(/usr/bin/id -u) -ne 0 ]]; then
-  echo "Not running as root, use 'sudo -s' to become root"
-  exit
-fi
 
-apt install --yes podman
+sudo apt install --yes podman
 
-# This is needed b/c podman isn't setup to talk to dockerhub by default
-# TODO: ideally this is a sed command to replace the existing commented out line
-echo 'unqualified-search-registries=["docker.io"]' >> /etc/containers/registries.conf
+exit
+
+# To install podman compose, use the following
+
+sudo apt install -y podman-docker
+
+sudo curl -SL https://github.com/docker/compose/releases/download/v2.36.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose\n
+sudo chmod +x /usr/local/bin/docker-compose\n
+
+systemctl --user enable --now podman.socket
+systemctl --user status podman.socket
 
