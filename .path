@@ -99,9 +99,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # node/npm - for globally installed npm packages with needing sudo
-NPM_PACKAGES="${HOME}/.npm-packages"
+NPM_PACKAGES=$(npm config get prefix)
 export PATH="$PATH:$NPM_PACKAGES/bin"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+
 
 # OPS config
 if [[ $OSTYPE == *"linux"* ]]; then
