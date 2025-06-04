@@ -14,7 +14,7 @@ function install_basics () {
       feh \
       git \
       jq \
-      nala \
+
       ncdu \
       neovim \
       rename \
@@ -29,8 +29,9 @@ function install_basics () {
     sudo apt-file update
   fi
 
-  # Removing in favor of neovim
-  # vim
+# TODO: nala (and possibly others) are not available on Ubuntu 20.04, i.e. Github Codespaces
+# Perhaps add a different script for installing these on higher versions
+#       nala
 }
 
 # Create symlinks from home dir to files in this repo
