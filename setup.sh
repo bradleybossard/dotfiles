@@ -8,13 +8,15 @@ function install_basics () {
     sudo apt-get install --yes \
       autojump \
       apt-file \
+      chrome-gnome-shell \
       copyq \
       curl \
       exuberant-ctags \
       feh \
       git \
       jq \
-
+      libfuse2 \
+      nala \
       ncdu \
       neovim \
       rename \
