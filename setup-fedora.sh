@@ -4,8 +4,8 @@ set -o nounset
 
 function install_basics () {
   if [[ $OSTYPE == *"linux"* ]]; then
-    sudo dnf update
-    sudo dnf install --skip-unavailable \
+    sudo dnf update --assumeyes
+    sudo dnf install --assumeyes --skip-unavailable \
       autojump \
       apt-file \
       copyq \
