@@ -3,8 +3,7 @@ alias mkdir='mkdir -vp'
 alias cp='cp -v'
 alias vi='nvim'
 
-# Android compilation commands
-alias andrun='./gradlew android:installDebug android:run'
+alias activate='source .venv/bin/activate'
 
 alias hisgrep='history | grep $0'
 alias psgrep='ps aux | head -1; ps aux | grep $0'
@@ -15,24 +14,12 @@ alias initreadme='echo "# $(basename $PWD)" > README.md'
 
 alias replacespaaces='for file in *; do mv -n "$file" `echo $file | tr " " "-"` ; done'
 
-alias brave-personal-1='brave-browser --user-data-dir=$HOME/.config/brave-personal-1 &'
-alias brave-work-1='brave-browser --user-data-dir=$HOME/.config/brave-work-1 &'
-
 alias lg='lazygit'
 
 if [[ $OSTYPE == *"linux"* ]]; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 fi
-
-# com () {COM=$(echo -n git commit -m \"\[`git rev-parse --abbrev-ref HEAD | sed -r 's/^.*\/(.*)-([0-9]*)-.*/\1-\2/ '`\]); echo $COM | pbcopy}
-#comf () {COM=$(echo -n git commit -m \"fixup: ); echo $COM | pbcopy}
-#combp () {COM=$(echo -n git commit -m \"aside: bump poetry dependencies\" ); echo $COM | pbcopy}
-#coma () {COM=$(echo -n git commit -m \"aside: ); echo $COM | pbcopy}
-#jenk () {COM=$(echo -n https://jenkins.internal.cloud.torc.tech/torc-robotics/job/gis/job/`basename $(git rev-parse --show-toplevel)
-#  `/job/bradley.bossard%2F`git rev-parse --abbrev-ref HEAD   | sed -r 's/^.*\/(.*)/\1/ '`); echo $COM | pbcopy}
-
-# https://jenkins.internal.cloud.torc.tech/torc-robotics/job/gis/job/gis-dashboard/job/bradley.bossard%2FMAP3-445-indexer-for-rrs-tilesets/
 
 alias yt-list='yt-dlp --write-auto-subs --write-subs --embed-subs --playlist-reverse --download-archive ./downloaded.txt -i -o "%(uploader)s/%(playlist)s/%(playlist)s - S01E%(playlist_index)s - %(title)s [%(id)s].%(ext)s" --merge-output-format mp4 --add-metadata --write-description --write-info-json --write-thumbnail --batch-file=./list.txt'
 
@@ -129,24 +116,10 @@ gitprunelocal() {
   done
 }
 
-if [[ $OSTYPE == *"darwin"* ]]; then
-  # The closest substitute for lsusb on OSX
-  alias lsusb='ioreg -p IOUSB -l -w 0'
-fi
-
 function tmux-resurrect-reset-last() {
   pushd .
   cd ~/.tmux/resurrect && ln -f -s $(/bin/ls -t tmux_resurrect_*.txt | head -n 1) last && /bin/ls -l last
   popd
-}
-
-
-function reset_urb() {
-	for i in /sys/bus/pci/drivers/[uoex]hci_hcd/*:*; do
-		[ -e "$i" ] || continue
-		echo "${i##*/}" > "${i%/*}/unbind"
-		echo "${i##*/}" > "${i%/*}/bind"
-	done
 }
 
 alias activate_ros2='source /opt/ros/humble/setup.zsh  &&  export ROS_DOMAIN_ID=25'
