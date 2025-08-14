@@ -143,3 +143,4 @@ function dbx-clone {
   done;
 }
 
+alias copyparty='uv tool run copyparty'
