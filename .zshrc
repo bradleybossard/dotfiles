@@ -175,3 +175,4 @@ complete -C '/usr/local/bin/aws_completer' aws
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
+eval "$(~/.local/bin/mise activate zsh)"
