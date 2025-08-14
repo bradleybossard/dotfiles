@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-gh install mkasberg/ghostty-ubuntu
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
+
+# gh install mkasberg/ghostty-ubuntu
