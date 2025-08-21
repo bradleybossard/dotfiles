@@ -22,30 +22,34 @@
   excludesfile = ~/.gitignore
   pager = less -F -X
 [alias]
-  a = add -A
+  # Find the name of the primary branch, either "main" or "master".
+  primary = "!f() { \
+    git branch -a | \
+    sed -n -E -e '/remotes.origin.ma(in|ster)$/s@remotes/origin/@@p'; \
+  }; f"
   ac = commit -a --message
-  bdn = diff --name-only master
+  bdn = !git diff --name-only $(git primary)
   br = branch
   ci = commit
   co = checkout
   cob = checkout -b
   col = checkout @{-1}
-  com = checkout master
+  com = !git checkout $(git primary)
   diffc = diff --cached
   edit = !vim $(git status -s | cut -c4-)
-  editbranch = !vim $(git diff --name-only  master)
+  editbranch = !vim $(git diff --name-only  $(git primary))
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-  incoming = log origin/master ^master
+  incoming = !git log origin/$(git primary) ^$(git primary)
   last = log -1 HEAD
   logpretty = log -10 --pretty=oneline
   ll = log --oneline
   lol = log --oneline --graph --decorate
-  outgoing = log master ^origin/master
-  pom = push --set-upstream origin master
+  outgoing = !git log $(git primary) ^origin/$(git primary)
+  pom = !git push --set-upstream origin $(git primary)
   pob = !git push --set-upstream origin $(git branch | grep \\* | cut -d ' ' -f2)
-  pullsubs = submodule foreach git pull origin master
-  rem = rebase master
-  remi = rebase -i master
+  pullsubs = !git submodule foreach git pull origin $(git primary)
+  rem = !git rebase $(git primary)
+  remi = !git rebase -i $(git primary)
   spa = !"git stash; git pull; git stash apply"
   spp = !"git stash; git pull; git stash pop"
   st = status
