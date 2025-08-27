@@ -176,3 +176,7 @@ complete -C '/usr/local/bin/aws_completer' aws
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 eval "$(~/.local/bin/mise activate zsh)"
+
+. "$HOME/.local/bin/env"
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
