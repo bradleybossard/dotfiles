@@ -181,6 +181,9 @@ eval "$(~/.local/bin/mise activate zsh)"
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 
+# atuin
 . "$HOME/.atuin/bin/env"
-
 eval "$(atuin init zsh)"
+
+# kiro
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"

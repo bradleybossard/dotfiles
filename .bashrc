@@ -233,8 +233,12 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
+# atuin
 . "$HOME/.atuin/bin/env"
 
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 eval "$(atuin init bash)"
+
+# kiro
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)"
+. "$HOME/.cargo/env"
