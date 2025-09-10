@@ -182,8 +182,10 @@ eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 
 # atuin
+if [ -x "$HOME/.atuin" ]; then
 . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
+fi
 
 # kiro
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
