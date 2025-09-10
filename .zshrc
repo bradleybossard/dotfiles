@@ -175,16 +175,21 @@ complete -C '/usr/local/bin/aws_completer' aws
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
-eval "$(~/.local/bin/mise activate zsh)"
+if [ -x "$HOME/.local/bin/mise" ]; then
+  eval "$(~/.local/bin/mise activate zsh)"
+fi
 
-. "$HOME/.local/bin/env"
-eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx --generate-shell-completion zsh)"
+if [ -x "$HOME/.local/bin/uv" ]; then
+  eval "$(uv generate-shell-completion zsh)"
+fi
+if [ -x "$HOME/.local/bin/uvx" ]; then
+  eval "$(uvx --generate-shell-completion zsh)"
+fi
 
 # atuin
 if [ -x "$HOME/.atuin" ]; then
-. "$HOME/.atuin/bin/env"
-eval "$(atuin init zsh)"
+  . "$HOME/.atuin/bin/env"
+  eval "$(atuin init zsh)"
 fi
 
 # kiro
