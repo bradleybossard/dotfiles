@@ -11,6 +11,7 @@ function install_basics () {
       chrome-gnome-shell \
       copyq \
       curl \
+      exfatprogs \
       exuberant-ctags \
       feh \
       git \
@@ -28,7 +29,7 @@ function install_basics () {
       wget \
       xclip \
       zsh
-    sudo apt-file update
+    sudo apt-file --yes update
   fi
 
 # TODO: nala (and possibly others) are not available on Ubuntu 20.04, i.e. Github Codespaces
