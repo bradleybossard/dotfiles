@@ -2,6 +2,7 @@
 Name=org.gephi.Gephi
 Branch=stable
 Title=org.gephi.Gephi from flathub
+Description="A tool for visualizing graphs"
 IsRuntime=false
 Url=https://dl.flathub.org/repo/
 SuggestRemoteName=flathub
