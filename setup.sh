@@ -29,7 +29,7 @@ function install_basics () {
       wget \
       xclip \
       zsh
-    sudo apt-file --yes update
+    sudo apt-file update
   fi
 
 # TODO: nala (and possibly others) are not available on Ubuntu 20.04, i.e. Github Codespaces
