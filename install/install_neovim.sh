@@ -1,6 +1,4 @@
 #!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
 
 # Install Neovim
 sudo add-apt-repository --yes ppa:neovim-ppa/stable
