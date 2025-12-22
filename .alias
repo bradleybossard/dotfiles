@@ -16,6 +16,9 @@ alias replacespaaces='for file in *; do mv -n "$file" `echo $file | tr " " "-"` 
 
 alias lg='lazygit'
 
+alias m4b-tool='docker run -it --rm -v "$(pwd)":/mnt sandreas/m4b-tool:latest'
+alias m4b-tool-example='echo m4b-tool split --audio-format mp3 --audio-bitrate 96k --audio-channels 1 --audio-samplerate 22050 "file-to-split.m4b"'
+
 if [[ $OSTYPE == *"linux"* ]]; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
