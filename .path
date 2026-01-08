@@ -183,7 +183,7 @@ if [ -x "$HOME/bin" ]; then
 fi
 
 if [[ $OSTYPE == *"darwin"* ]]; then
-  export ZPLUG_HOME=/usr/local/opt/zplug
+  export ZPLUG_HOME=/opt/homebrew/opt/zplug
   source $ZPLUG_HOME/init.zsh
 fi
 
