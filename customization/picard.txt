@@ -1,0 +1,7 @@
+The following is the output format I like to use in Picard via
+
+Options -> Options -> File Naming -> Edit file naming script
+
+```
+$swapprefix(%albumartist%) - %album%/$num(%tracknumber%,2) - %title%
+```
