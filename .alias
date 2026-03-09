@@ -117,6 +117,7 @@ gitprunelocal() {
     done
     [[ -n $skip ]] || { echo -e "\033[31m $(git branch -D $i) \033[0m"; }
   done
+  git fetch --prune
 }
 
 function tmux-resurrect-reset-last() {
