@@ -9,14 +9,35 @@ if ! command -v yad &> /dev/null; then
     exit 1
 fi
 
-# 1. Build the data list
+# 1. Get a list of currently installed Flatpak IDs
+# We store this in a string for quick grepping
+INSTALLED_APPS=$(flatpak list --columns=application)
+
+# 2. Build the data list
 YAD_DATA=()
 while IFS= read -r -d '' FILE_PATH; do
     CATEGORY=$(basename "$(dirname "$FILE_PATH")")
-    FILENAME=$(basename "$FILE_PATH" .flatpakref) # Strip extension for cleaner UI
+    FILENAME=$(basename "$FILE_PATH" .flatpakref)
     
-    # Format: Checkbox | Category | App Name | Hidden Full Path
-    YAD_DATA+=("FALSE" "$CATEGORY" "$FILENAME" "$FILE_PATH")
+    # Extract the Application ID from the .flatpakref file
+    # Most .flatpakref files have a line: Name=org.domain.App
+    APP_ID=$(grep -m 1 "Name=" "$FILE_PATH" | cut -d'=' -f2)
+    
+    # If we can't find the ID in the file, we fallback to checking the filename
+    # (Some refs use the ID as the filename)
+    CHECK_ID="${APP_ID:-$FILENAME}"
+
+    if echo "$INSTALLED_APPS" | grep -qxw "$CHECK_ID"; then
+        # App is already installed: Add tag and keep checkbox FALSE
+        APP_LABEL="[INSTALLED] $FILENAME"
+        IS_INSTALLED="FALSE"
+    else
+        # App is not installed
+        APP_LABEL="$FILENAME"
+        IS_INSTALLED="FALSE"
+    fi
+    
+    YAD_DATA+=("$IS_INSTALLED" "$CATEGORY" "$APP_LABEL" "$FILE_PATH")
 done < <(find "$REPO_DIR" -type f -name "*.flatpakref" -print0)
 
 if [ ${#YAD_DATA[@]} -eq 0 ]; then
@@ -24,12 +45,10 @@ if [ ${#YAD_DATA[@]} -eq 0 ]; then
     exit 1
 fi
 
-# 2. Present the GUI Tree with Search
-# --search-column=3 targets the Application name by default
-# Users can also use Ctrl+F in the window to trigger search
+# 3. Present the GUI Tree
 SELECTED_PATHS=$(yad --list --checklist --tree --tree-expanded \
     --title="Flatpakref Manager" \
-    --text="Search by typing or use the 'Application' column search." \
+    --text="Apps marked [INSTALLED] are already on your system." \
     --column="Select":CHK \
     --column="Category" \
     --column="Application" \
@@ -40,31 +59,33 @@ SELECTED_PATHS=$(yad --list --checklist --tree --tree-expanded \
     --button="Install":0 --button="Cancel":1 \
     --print-column=4 --separator="|")
 
-# 3. Exit if Cancelled
+# 4. Exit if Cancelled
 if [ $? -ne 0 ] || [ -z "$SELECTED_PATHS" ]; then
     echo "Installation cancelled."
     exit 0
 fi
 
-# 4. Install with Progress Bar
+# 5. Install with Progress Bar
 IFS="|"
 (
-    COUNT=0
-    TOTAL=$(echo "$SELECTED_PATHS" | tr '|' '\n' | wc -l)
+    # Filter out empty entries from the pipe separator
+    CLEAN_PATHS=()
+    for P in $SELECTED_PATHS; do [[ -n "$P" ]] && CLEAN_PATHS+=("$P"); done
     
-    for REF in $SELECTED_PATHS; do
-        [[ -z "$REF" ]] && continue
+    TOTAL=${#CLEAN_PATHS[@]}
+    COUNT=0
+    
+    for REF in "${CLEAN_PATHS[@]}"; do
         COUNT=$((COUNT + 1))
         PERCENT=$((COUNT * 100 / TOTAL))
         
-        # Update progress bar text
-        echo "# Installing ($COUNT/$TOTAL): $(basename "$REF")"
+        APP_NAME=$(basename "$REF" .flatpakref)
+        echo "# Installing ($COUNT/$TOTAL): $APP_NAME"
         echo "$PERCENT"
         
-        # Run flatpak install
         flatpak install --user --noninteractive -y "$REF" > /dev/null 2>&1
     done
 ) | yad --progress --title="Installing Flatpaks" --text="Initializing..." \
     --percentage=0 --auto-close --width=400
 
-yad --info --text="All selected Flatpaks have been installed." --width=300
+yad --info --text="Process complete!" --width=300
