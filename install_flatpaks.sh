@@ -1,37 +1,61 @@
 #!/bin/bash
 
-# Define the directory where your .flatpak files are stored
+# Define the root directory for your .flatpakref files
 REPO_DIR="./flatpaks"
 
-# 1. Find all .flatpak files recursively and format them for Zenity
-# We use a null-separated loop to handle spaces in filenames safely
-mapfile -d '' FILES < <(find "$REPO_DIR" -type f -name "*.flatpakref" -print0)
-
-if [ ${#FILES[@]} -eq 0 ]; then
-    zenity --error --text="No .flatpak files found in $REPO_DIR"
+# Check if yad is installed
+if ! command -v yad &> /dev/null; then
+    echo "Error: 'yad' is required for the tree view. Please install it."
     exit 1
 fi
 
-# 2. Present the GUI list
-# --list creates the table, --checklist adds the toggle boxes
-SELECTED_FILES=$(zenity --list --checklist \
-    --title="Select Flatpaks to Install" \
-    --column="Select" --column="File Path" \
-    $(for f in "${FILES[@]}"; do echo "FALSE"; echo "$f"; done) \
-    --width=600 --height=400 --separator="|")
+# 1. Build the data list for the YAD tree
+# Format: TRUE/FALSE (checked) | Category | Filename | Full Path
+YAD_DATA=()
+
+# Find all .flatpakref files
+while IFS= read -r -d '' FILE_PATH; do
+    # Get the parent directory name (Category)
+    CATEGORY=$(basename "$(dirname "$FILE_PATH")")
+    # Get just the filename
+    FILENAME=$(basename "$FILE_PATH")
+    
+    # Add to array: Checkbox (False) | Category | Filename | Path (hidden)
+    YAD_DATA+=("FALSE" "$CATEGORY" "$FILENAME" "$FILE_PATH")
+done < <(find "$REPO_DIR" -type f -name "*.flatpakref" -print0)
+
+if [ ${#YAD_DATA[@]} -eq 0 ]; then
+    yad --error --text="No .flatpakref files found in $REPO_DIR" --width=300
+    exit 1
+fi
+
+# 2. Present the GUI Tree
+# --list with --tree makes it collapsible by the first column after the checkbox
+SELECTED_PATHS=$(yad --list --checklist --tree --tree-expanded \
+    --title="Flatpakref Manager" \
+    --column="Select":CHK \
+    --column="Category" \
+    --column="Application" \
+    --column="Path":HIDE \
+    "${YAD_DATA[@]}" \
+    --width=800 --height=600 \
+    --button="Install":0 --button="Cancel":1 \
+    --print-column=4 --separator="|")
 
 # 3. Exit if the user hits Cancel
-if [ $? -ne 0 ] || [ -z "$SELECTED_FILES" ]; then
+if [ $? -ne 0 ] || [ -z "$SELECTED_PATHS" ]; then
     echo "Installation cancelled."
     exit 0
 fi
 
 # 4. Install the selected files
-# We change the IFS to the pipe separator we defined in Zenity
 IFS="|"
-for FILE in $SELECTED_FILES; do
-    echo "Installing: $FILE"
-    flatpak install --user --noninteractive "$FILE" -y
+for REF in $SELECTED_PATHS; do
+    # Remove any trailing separators from YAD output
+    [[ -z "$REF" ]] && continue
+    echo "--------------------------------------"
+    echo "Installing: $REF"
+    flatpak install --user --noninteractive -y "$REF"
 done
 
-zenity --info --text="Installation process complete."
+yad --info --text="Installation complete!" --width=300
