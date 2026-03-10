@@ -22,33 +22,35 @@ while IFS= read -r -d '' FILE_PATH; do
     APP_ID=$(grep -m 1 "Name=" "$FILE_PATH" | cut -d'=' -f2)
     CHECK_ID="${APP_ID:-$FILENAME}"
 
+    # Determine if the app is installed for the "Status" column
+    # gtk-apply is a standard checkmark icon in most Linux icon themes
     if echo "$INSTALLED_APPS" | grep -qxw "$CHECK_ID"; then
-        APP_LABEL="[INSTALLED] $FILENAME"
-        IS_INSTALLED="FALSE"
+        STATUS_ICON="gtk-apply" 
     else
-        APP_LABEL="$FILENAME"
-        IS_INSTALLED="FALSE"
+        STATUS_ICON=""
     fi
     
-    YAD_DATA+=("$IS_INSTALLED" "$CATEGORY" "$APP_LABEL" "$FILE_PATH")
+    # Format: Checkbox | Category | Application | Status Icon | Hidden Path
+    YAD_DATA+=("FALSE" "$CATEGORY" "$FILENAME" "$STATUS_ICON" "$FILE_PATH")
 done < <(find "$REPO_DIR" -type f -name "*.flatpakref" -print0)
 
 # 3. Present the GUI Tree
-# Button codes: Install=0, Update All=2, Cancel=1
+# --column="":IMG tells YAD to render the text as an icon
 SELECTED_PATHS=$(yad --list --checklist --tree --tree-expanded \
     --title="Flatpak Manager" \
-    --text="Manage your Flatpak repository. Search by typing or use Ctrl+F." \
+    --text="Manage your Flatpak repository. Checkmarks indicate installed apps." \
     --column="Select":CHK \
     --column="Category" \
     --column="Application" \
+    --column="Installed":IMG \
     --column="Path":HIDE \
     "${YAD_DATA[@]}" \
-    --width=800 --height=600 \
+    --width=850 --height=600 \
     --search-column=3 \
     --button="Install Selected":0 \
     --button="Update All Apps":2 \
     --button="Cancel":1 \
-    --print-column=4 --separator="|")
+    --print-column=5 --separator="|")
 
 EXIT_STATUS=$?
 
