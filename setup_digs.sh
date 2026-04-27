@@ -24,6 +24,7 @@ brew install \
   hasura-cli \
   jq \
   mise \
+  ngrok \
   nvim \
   proj \
   rectangle \
