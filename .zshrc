@@ -163,9 +163,9 @@ if type "direnv" > /dev/null; then
   eval "$(direnv hook $SHELL)"
 fi
 
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-complete -C '/usr/local/bin/aws_completer' aws
+# autoload bashcompinit && bashcompinit
+# autoload -Uz compinit && compinit
+# complete -C '/usr/local/bin/aws_completer' aws
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -177,6 +177,10 @@ complete -C '/usr/local/bin/aws_completer' aws
 
 if [ -x "$HOME/.local/bin/mise" ]; then
   eval "$(~/.local/bin/mise activate zsh)"
+fi
+
+if [ -x /opt/homebrew/bin/mise ]; then
+  eval "$(mise activate zsh)"
 fi
 
 if [ -x "$HOME/.local/bin/uv" ]; then
@@ -194,3 +198,5 @@ fi
 
 # kiro
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+# eval "$(mise activate zsh)"
